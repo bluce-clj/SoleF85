@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_dashboard"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.dyaco.spiritbike.workout.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.dyaco.spiritbike.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_castFragment"
+            app:destination="@id/castFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/programsFragment"
+        android:name="com.dyaco.spiritbike.programs.ProgramsFragment"
+        android:label="fragment_programs"
+        tools:layout="@layout/fragment_programs" >
+        <action
+            android:id="@+id/action_programsFragment_to_homeScreenGuestFragment"
+            app:destination="@id/homeScreenGuestFragment" />
+
+        <action
+            android:id="@+id/action_programsFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_programsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_programsFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_programsFragment_to_castFragment"
+            app:destination="@id/castFragment" />
+        <action
+            android:id="@+id/action_programsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_programsFragment_to_programsDetailsFragment"
+            app:destination="@id/programsDetailsFragment" />
+    </fragment>
+
+<!--    app:enterAnim="@anim/slide_in_right"-->
+<!--    app:exitAnim="@anim/slide_out_left"-->
+<!--    app:popEnterAnim="@anim/slide_in_left"-->
+<!--    app:popExitAnim="@anim/slide_out_right"-->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dyaco.spiritbike.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_castFragment"
+            app:destination="@id/castFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/internetFragment"
+        android:name="com.dyaco.spiritbike.internet.InternetFragment"
+        android:label="fragment_internet"
+        tools:layout="@layout/fragment_internet" >
+        <action
+            android:id="@+id/action_internetFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_internetFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_internetFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_internetFragment_to_castFragment"
+            app:destination="@id/castFragment" />
+        <action
+            android:id="@+id/action_internetFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/castFragment"
+        android:name="com.dyaco.spiritbike.mirroring.MirroringFragment"
+        android:label="fragment_cast"
+        tools:layout="@layout/fragment_mirroring" >
+        <action
+            android:id="@+id/action_castFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_castFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_castFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_castFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_castFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_castFragment"
+            app:destination="@id/castFragment" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_settingSleepFragment"
+            app:destination="@id/settingSleepFragment" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_settingUnitFragment"
+            app:destination="@id/settingUnitFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingWifiFragment"
+            app:destination="@id/settingWifiFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingLanguageFragment"
+            app:destination="@id/settingLanguageFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingDateFragment"
+            app:destination="@id/settingDateFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingTimeFragment"
+            app:destination="@id/settingTimeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingSoftwareFragment"
+            app:destination="@id/settingSoftwareFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingDisplayFragment"
+            app:destination="@id/settingDisplayFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingChildLockFragment"
+            app:destination="@id/settingChildLockFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/programsDetailsFragment"
+        android:name="com.dyaco.spiritbike.programs.ProgramsDetailsFragment"
+        android:label="fragment_programs_details"
+        tools:layout="@layout/fragment_programs_details" >
+
+<!--        清除所有stack-->
+        <action
+            android:id="@+id/action_programsDetailsFragment_to_programsFragment"
+            app:popUpTo="@+id/navigation_dashboard"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:destination="@id/programsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingWifiFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingWifiFragment"
+        android:label="fragment_setting_wifi"
+        tools:layout="@layout/fragment_setting_wifi" />
+    <fragment
+        android:id="@+id/settingUnitFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingUnitFragment"
+        android:label="fragment_setting_unit"
+        tools:layout="@layout/fragment_setting_unit" />
+
+    <fragment
+        android:id="@+id/settingSleepFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingSleepFragment"
+        android:label="fragment_setting_sleep"
+        tools:layout="@layout/fragment_setting_sleep" />
+    <fragment
+        android:id="@+id/settingLanguageFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingLanguageFragment"
+        android:label="fragment_setting_language"
+        tools:layout="@layout/fragment_setting_language" />
+    <fragment
+        android:id="@+id/settingDateFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingDateFragment"
+        android:label="fragment_setting_date"
+        tools:layout="@layout/fragment_setting_date" />
+    <fragment
+        android:id="@+id/settingTimeFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingTimeFragment"
+        android:label="fragment_setting_time"
+        tools:layout="@layout/fragment_setting_time" />
+    <fragment
+        android:id="@+id/settingSoftwareFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingSoftwareFragment"
+        android:label="fragment_setting_software"
+        tools:layout="@layout/fragment_setting_software" />
+    <fragment
+        android:id="@+id/settingDisplayFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingDisplayFragment"
+        android:label="fragment_setting_display"
+        tools:layout="@layout/fragment_setting_display" />
+    <fragment
+        android:id="@+id/homeScreenGuestFragment"
+        android:name="com.dyaco.spiritbike.HomeScreenGuestFragment"
+        android:label="HomeScreenGuestFragment" >
+        <action
+            android:id="@+id/action_homeScreenGuestFragment_to_programsFragment"
+            app:destination="@id/programsFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/manualAdjustFragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustManualFragment"
+        android:label="fragment_manual_adjust"
+        tools:layout="@layout/fragment_adjust_manual" />
+
+    <fragment
+        android:id="@+id/programsSummaryFragment"
+        android:name="com.dyaco.spiritbike.workout.WorkoutResultSummaryFragment"
+        android:label="fragment_programs_summary"
+        tools:layout="@layout/fragment_programs_summary" >
+        <!--        清除所有stack-->
+        <action
+            android:id="@+id/action_programsSummaryFragment_to_homeScreenFragment"
+            app:popUpTo="@+id/navigation_dashboard"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adjustHeartRateFragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustHeartRate_1Fragment"
+        android:label="AdjustHeartRateFragment" />
+    <fragment
+        android:id="@+id/adjustHillFragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustFiveProgramFragment"
+        android:label="AdjustHillFragment" />
+    <fragment
+        android:id="@+id/adjustRunFragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustRunFragment"
+        android:label="AdjustRunFragment" />
+    <fragment
+        android:id="@+id/adjustCustomFragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustCustom_1Fragment"
+        android:label="AdjustCustomFragment" />
+    <fragment
+        android:id="@+id/adjustHeartRate_2Fragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustHeartRate_2Fragment"
+        android:label="fragment_adjust_heart_rate_2"
+        tools:layout="@layout/fragment_adjust_heart_rate_2" />
+    <fragment
+        android:id="@+id/adjustCustom_2Fragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustCustom_2Fragment"
+        android:label="AdjustCustom_2Fragment" />
+    <fragment
+        android:id="@+id/adjustCustom_3Fragment"
+        android:name="com.dyaco.spiritbike.programs.AdjustCustom_3Fragment"
+        android:label="AdjustCustom_3Fragment" />
+
+    <fragment
+        android:id="@+id/guestProfileFragment"
+        android:name="com.dyaco.spiritbike.profile.GuestProfileFragment"
+        android:label="fragment_guest_profile"
+        tools:layout="@layout/fragment_guest_profile" >
+        <action
+            android:id="@+id/action_guestProfileFragment_to_newQrCodeFragment2"
+            app:destination="@id/newQrCodeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newQrCodeFragment2"
+        android:name="com.dyaco.spiritbike.newprofile.NewQrCodeFragment"
+        android:label="fragment_new_qr_code"
+        tools:layout="@layout/fragment_new_qr_code" />
+
+    <fragment
+        android:id="@+id/settingChildLockFragment"
+        android:name="com.dyaco.spiritbike.settings.SettingChildLockFragment"
+        android:label="SettingChildLockFragment" />
+</navigation>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F8F9"
+    tools:context=".settings.SettingUnitFragment">
+
+    <TextView
+        style="@style/NormalTitleText2"
+        android:id="@+id/unit_title"
+        android:text="@string/unit_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/sc_unit"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorDEE2E6"
+        app:draggable="true"
+        app:ripple="false"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs"
+        app:position="0"
+        app:radius="32dp"
+        app:selectedBackground="@color/colorE4002B"
+        app:selectedButtonRadius="32dp"
+        app:selectionAnimationDuration="200">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/colorFFFFFF"
+            app:selectedTextStyle="bold"
+            app:text="IMPERIAL"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/colorFFFFFF"
+            app:selectedTextStyle="bold"
+            app:text="METRIC"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <ImageView
+        android:id="@+id/ivTopLine_Programs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintBottom_toTopOf="@+id/unit_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc_unit" />
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:layout_marginStart="28dp"
+        android:id="@+id/unit_1"
+        android:layout_width="wrap_content"
+        android:text="Distance"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs2" />
+
+    <TextView
+        android:layout_marginEnd="28dp"
+        android:gravity="end"
+        android:layout_height="32dp"
+        android:layout_width="320dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:id="@+id/unit_1_2"
+        android:text="mi"
+        app:layout_constraintBottom_toBottomOf="@+id/unit_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/unit_1" />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@+id/unit_2"
+        android:id="@+id/ivTopLine_Programs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_1" />
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:layout_marginStart="28dp"
+        android:id="@+id/unit_2"
+        android:layout_width="wrap_content"
+        android:text="Speed"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs3" />
+
+    <TextView
+        android:layout_marginEnd="28dp"
+        android:gravity="end"
+        android:layout_height="32dp"
+        android:layout_width="320dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:id="@+id/unit_2_2"
+        android:text="mph"
+        app:layout_constraintBottom_toBottomOf="@+id/unit_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/unit_2" />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@+id/unit_3"
+        android:id="@+id/ivTopLine_Programs4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_2" />
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:layout_marginStart="28dp"
+        android:id="@+id/unit_3"
+        android:layout_width="wrap_content"
+        android:text="Height"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs4" />
+
+    <TextView
+        android:layout_marginEnd="28dp"
+        android:gravity="end"
+        android:layout_height="32dp"
+        android:layout_width="320dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:id="@+id/unit_3_2"
+        android:text="ft, in"
+        app:layout_constraintBottom_toBottomOf="@+id/unit_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/unit_3" />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@+id/unit_4"
+        android:id="@+id/ivTopLine_Programs5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_3" />
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:layout_marginStart="28dp"
+        android:id="@+id/unit_4"
+        android:layout_width="wrap_content"
+        android:text="Weight"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs5" />
+
+    <TextView
+        android:layout_marginEnd="28dp"
+        android:gravity="end"
+        android:layout_height="32dp"
+        android:layout_width="320dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textFontWeight="500"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="25sp"
+        android:lineSpacingExtra="1.23sp"
+        android:id="@+id/unit_4_2"
+        android:text="lb"
+        app:layout_constraintBottom_toBottomOf="@+id/unit_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/unit_4" />
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:id="@+id/ivTopLine_Programs6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

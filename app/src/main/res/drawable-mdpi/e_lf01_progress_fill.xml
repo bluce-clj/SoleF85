@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:height="10dp"
+        android:width="504dp"
+        android:id="@android:id/progress"
+        android:drawable="@drawable/bar_diagram_level_finish_01">
+    </item>
+
+</layer-list>

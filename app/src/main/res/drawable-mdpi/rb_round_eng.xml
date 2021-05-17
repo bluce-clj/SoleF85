@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/panel_box_eng_rb2"
+        android:state_checked="true"
+        android:state_enabled="true"/>
+
+    <item android:drawable="@drawable/panel_box_eng_rb1"
+        android:state_checked="false"
+        android:state_enabled="true"/>
+
+</selector>

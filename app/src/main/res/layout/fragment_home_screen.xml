@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clHomeScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenFragment">
+
+    <com.dyaco.spiritbike.support.banner.indicator.RectangleIndicator
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivTopLine_HomeScreen"
+        android:id="@+id/indicator"
+        android:layout_width="61dp"
+        android:layout_height="16dp"
+        android:visibility="visible" />
+
+    <com.dyaco.spiritbike.support.banner.Banner
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btQuickStart_HomeScreen"
+        app:layout_constraintTop_toBottomOf="@+id/indicator"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="56dp"
+        android:id="@+id/b_banner"
+        android:layout_width="350dp"
+        android:layout_height="112dp"/>
+
+    <Button
+        android:textColor="@color/colorFFFFFF"
+        style="@style/NormalButton"
+        android:id="@+id/btQuickStart_HomeScreen"
+        android:layout_width="288dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="336dp"
+        android:background="@drawable/btn_rrect_9d2227_288"
+        android:text="START WORKOUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivTopLine_HomeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivUnderLine_HomeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="288dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:scrollbarStyle="outsideOverlay"
+        android:id="@+id/rcvFavorite_HomerScreen"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginTop="536dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

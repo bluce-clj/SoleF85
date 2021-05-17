@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">SPIRIT CONSOLE</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_date">Set Date</string>
+    <string name="next">Next</string>
+    <string name="day">day</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
+    <string name="set_time">Set Time</string>
+    <string name="am_pm_format">AM/PM format</string>
+    <string name="get_started">Get Started</string>
+    <string name="hours_24_format">24 hours format</string>
+    <string name="icon">Icon</string>
+    <string name="all_done">All Done!</string>
+    <string name="back">Back</string>
+    <string name="birthday">Birthday</string>
+    <string name="user_name">User Name</string>
+    <string name="up_to_12_letter">Up to 12 letters/symbols</string>
+    <string name="gender">Gender</string>
+    <string name="gender_prompt">CALCULATIONS ARE BASED ON AGE, WEIGHT, HEIGHT AND GENDER</string>
+    <string name="biodata">Biodata</string>
+    <string name="kg">kg</string>
+    <string name="weight">WEIGHT</string>
+    <string name="cm">cm</string>
+    <string name="q_sole_account">Do you have a SPIRIT app account?</string>
+    <string name="q_sole_account_desc">If you do, please scan the QR code with your SPIRIT app\nto create a profile based on your account data.</string>
+    <string name="i_dont">I don\'t</string>
+    <string name="height">HEIGHT</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="ft">ft</string>
+    <string name="in">in</string>
+    <string name="profile_success_created">Your profile was successfully\ncreated!</string>
+    <string name="see_profile">See Profile</string>
+    <string name="data_be_lost">Your data will be lost. Do you want\nto close the window?</string>
+    <string name="delete_profile_text">Are you sure you want to delete\nyour profile?</string>
+    <string name="delete_program_text">Are you sure you want to delete\nthis program?</string>
+    <string name="delete_history_text">Are you sure you want to delete\nthis history?</string>
+    <string name="cancel">Cancel</string>
+    <string name="f85_no">No</string>
+    <string name="f85_yes">Yes</string>
+    <string name="something_wrong">Something went wrong</string>
+    <string name="something_wrong_desc">Please, check your internet connection or try againlater.</string>
+    <string name="try_again">Try Again</string>
+    <string name="edit_user_name">Edit User Name</string>
+    <string name="save">Save</string>
+    <string name="total_distance">TOTAL DISTANCE</string>
+    <string name="avg_pace">AVG PACE</string>
+    <string name="total_runs">TOTAL WORKOUTS</string>
+    <string name="hello_guest">Hello, Guest!</string>
+    <string name="hello_guest_content">Providing your age and weight will help\ncalculate more accurate results</string>
+    <string name="years">years</string>
+    <string name="manual">Manual</string>
+    <string name="hill">Hill</string>
+    <string name="fatburn">Fatburn</string>
+    <string name="cardio">Cardio</string>
+    <string name="strength">Strength</string>
+    <string name="hiit">HIIT</string>
+    <string name="k5_run">5K Run</string>
+    <string name="k10_run">10K Run</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="custom">Custom</string>
+    <string name="programs">Programs</string>
+    <string name="fitness_tests">Fitness Tests</string>
+    <string name="templates">Templates</string>
+    <string name="choose">CHOOSE</string>
+    <string name="air_force">Air Force</string>
+    <string name="army">Army</string>
+    <string name="coast_guard">Coast Guard</string>
+    <string name="gerkin">Gerkin</string>
+    <string name="marine_corps">Marine Corps</string>
+    <string name="navy">Navy</string>
+    <string name="peb">PEB</string>
+    <string name="manual_desc">Both level and incline are controlled by the user. Increase\n or decrease levels at any time during your workout.</string>
+    <string name="manual_desc2">Level is controlled by the user. Increase or decrease levels at any time during your workout.</string>
+
+    <string name="hill_desc">Level: This program follows a triangle or pyramid type of \ngradual progression from approximately 10% of maximum \neffort (the level that you choose before starting this \nprogram) up to a maximum effort which lasts for 10% of the\n total workout time, then a gradual regression of Level back\nto approximately 10% of maximum effort.\n\nIncline: This deck elevation is a more gradual and sustained \nprogression.Maximum elevation is in the \nmiddle of the workout and lasts for 10% of the duration.</string>
+    <string name="hill_desc2">Level: This program follows a triangle or pyramid type of gradual progression from approximately 10% of maximum effort (the level that you choose before starting this program) up to a maximum effort which lasts for 10% of the total workout time, then a gradual regression of level back to approximately 10% of maximum effort.</string>
+
+    <string name="fatburn_desc">Level: This program follows a fast progression up to the \nmaximum level (default or user input level) that is sustained \nfor 2/3 of the workout. This program will challenge your\nability to sustain your energy output for an extended period\nof time.\n\nIncline: The deck elevation is a fast and sustained \nprogression up to the maximum value (default or user \ninput) for 90% of the workout duration.</string>
+    <string name="fatburn_desc2">Level: This program follows a fast progression up to the maximum level (default or user input level) that is sustained for 2/3 of the workout. This program will challenge your ability to sustain your energy output for an extended period of time.</string>
+
+    <string name="cardio_desc">Level: This program presents a fast progression up to near \nmaximum level (default or user input level). It has slight\nfluctuations up and down to allow your heart rate to elevate,\nand then recover repeatedly,before beginning a cool down.\nThis will build up your heart muscle and increase\nblood flow and lung capacity.\n\nIncline: The elevation in this program is moderate. There are \nseveral elevation spikes at different points of the workout. \nSegments 4, 9, and 14 are maximum elevation for this \nprogram.</string>
+    <string name="cardio_desc2">Level: This program presents a fast progression up to near \nmaximum level (default or user input level). It has slight\nfluctuations up and down to allow your heart rate to elevate,\nand then recover repeatedly,before beginning a cool down.\nThis will build up your heart muscle and increase\nblood flow and lung capacity.</string>
+
+    <string name="strength_desc">Level: This program has a gradual progression of level up to\n100% of maximum effort that is sustained for 25% of \nworkout duration. This will help build strength and muscular \nendurance in the lower body and glutes. A brief cool down \nfollows.\n\nIncline: There is a rapid climb to a moderate, sustained \nelevation that lasts the majority of the workout length.</string>
+    <string name="strength_desc2">Level: This program has a gradual progression of level up to\n100% of maximum effort that is sustained for 25% of \nworkout duration. This will help build strength and muscular \nendurance in the lower body and glutes. A brief cool down \nfollows.</string>
+
+    <string name="hiit_desc">Level: This program takes you through high levels\nof intensity followed by recovery periods of low intensity.\nThis program utilizes and develops your “Fast Twitch”\nmuscle fibers which are used when performing tasks that\nare intense and short in duration.\n\nIncline: Elevation will spike in different segments; this means\nthat all of your lower extremity muscles will be equally\nchallenged throughout this program.</string>
+    <string name="hiit_desc2">During the program you will perform short bursts of high intensity sprinting followed by short rest periods. HIIT is a fully customizable interval training program. You can enter the number of intervals, time of each interval Sprint and Rest periods and the work intensity of the levels.</string>
+
+    <string name="heart_rate_desc">Choose your target heart rate and follow level\nrecommendations. The machine will attempt to keep you\nwithin 5 beats of your target.</string>
+    <string name="heart_rate_desc2">Choose your target heart rate and follow level\nrecommendations. The machine will attempt to keep you\nwithin 5 beats of your target.</string>
+
+    <string name="custom_desc">You will create the desired level and incline for each \nof the 20 segments of the program using the pop out \nkeyboard on this screen.\n\nafter the program has started, you still have the ability \nof changing these levels whenever you desire.</string>
+    <string name="custom_desc2">You will create the desired level for each of the 20 segments\nof the program using the pop out keyboard on this screen.\n\nAfter the program has started, you still have the ability of changing this level whenever you desire.</string>
+
+    <string name="k5_run_desc">Both LEVEL and Incline are controlled by the user. Increase or\ndecrease levels at any time during your workout.\n\nThe Track Display will set the distance of 1 Lap to 5 kilometers\n(metric) or 3.1 miles (standard measurement).</string>
+    <string name="k10_run_desc">Both LEVEL and Incline are controlled by the user. Increase or\ndecrease levels at any time during your workout.\n\nThe Track Display will set the distance of 1 Lap to 10 kilometers\n(metric) or 6.2 miles (standard measurement).</string>
+    <string name="air_force_desc">A timed 1.5 mile run. You control the speed manually.</string>
+    <string name="army_desc">A timed 2 mile run. You control the speed manually.</string>
+    <string name="coast_guard_desc">A timed 1.5 mile run. You control the speed manually.</string>
+    <string name="gerkin_desc">The Gerkin protocol, also known as the fireman’s protocol,\nis a sub maximal VO2 (volume of oxygen) test. The test will\nincrease speed and elevation alternately until you reach 85%\nof your Max heart rate. The time it takes for you to reach 85%\ndetermines the test score (VO2 Max).\n\nNote: Use a heart rate strap for better results.</string>
+    <string name="marine_corps_desc">A timed 3 mile run. You control the speed manually.</string>
+    <string name="navy_desc">A timed 1.5 mile run. You control the speed manually.</string>
+    <string name="peb_desc">A timed 1.5 mile run. You control the speed manually.</string>
+    <string name="speed">LEVEL</string>
+    <string name="incline">INCLINE</string>
+    <string name="time">TIME</string>
+    <string name="save_as">Save As…</string>
+    <string name="start">Start</string>
+    <string name="minute">min</string>
+    <string name="choose_a_program">Choose a Program</string>
+    <string name="complete_a_test">Complete a Test</string>
+    <string name="choose_from_saved">Choose from Saved</string>
+    <string name="template_01">Template 01</string>
+    <string name="template_02">Template 02</string>
+    <string name="template_03">Template 03</string>
+    <string name="template_04">Template 04</string>
+    <string name="template_05">Template 05</string>
+    <string name="template_06">Template 06</string>
+    <string name="template_07">Template 07</string>
+    <string name="template_08">Template 08</string>
+    <string name="template_09">Template 09</string>
+    <string name="template_10">Template 10</string>
+    <string name="template_11">Template 11</string>
+    <string name="template_12">Template 12</string>
+    <string name="delete_profile">DELETE PROFILE</string>
+    <string name="age">AGE</string>
+    <string name="sole_account">SPIRIT ACCOUNT</string>
+    <string name="summary">SUMMARY</string>
+    <string name="km">KM</string>
+    <string name="min">MIN</string>
+    <string name="avg_pace_this_month">AVG POWER THIS MONTH</string>
+    <string name="in658">6\'58\"</string>
+    <string name="info">Info</string>
+    <string name="history">History</string>
+    <string name="favorites">Favorites</string>
+    <string name="settings_title">Settings</string>
+    <string name="setting_unit">Unit</string>
+    <string name="setting_wifi">Wi-Fi</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_date">Date</string>
+    <string name="setting_time">Time</string>
+    <string name="setting_software">Software</string>
+    <string name="setting_display">Display</string>
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="display_title">Display</string>
+    <string name="language_title">Language</string>
+    <string name="date_title">Date</string>
+    <string name="software_title">Software</string>
+    <string name="time_title">Time</string>
+    <string name="unit_title">Units</string>
+<!--    <string name="ios_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Press the\n‘Screen Mirroring’ button on your\ndevice, then select the ‘%1$s’ device.</string>-->
+    <string name="ios_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Press the\n‘Screen Mirroring’ button on your\ndevice, then select the SPIRIT device.</string>
+    <string name="ios_top_text2">Connect your device to the\nsame WiFi network as the\nequipment. Press the\n‘Screen Mirroring’ button\non your device,then select\nthe SPIRIT device.</string>
+    <string name="ios_bottom_text">WIFI NAME: %1$s\n(A STRONG CONNECTION IS REQUIRED)\nDEVICE NAME: %2$s</string>
+    <string name="ios_bottom_text2">WIFI NAME: %1$s\n(A STRONG CONNECTION IS REQUIRED)\nDEVICE NAME: %2$s</string>
+    <string name="android_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Scan the\nQR code or search for ‘SPIRIT\nMirroring’ app in Google Play on your\ndevice and download it. \n\nIn the app, select the SPIRIT device,\nthen press ‘Start Mirroring’.</string>
+    <string name="android_top_text2">Connect your device to the\nsame WiFi network as the\nequipment. Scan the QR\ncode or search for ‘SPIRIT\nMirroring’ app in Google\nPlay on your device and\ndownload it. In the app,\nselect the SPIRIT device,\nthen press ‘Start Mirroring’.</string>
+    <string name="guest_main_text_2">Providing your age and weight will help \ncalculate more accurate results</string>
+
+    <string name="indicator_color_error">指示器的顏色只能設置成@color/colorID or #000000</string>
+    <string name="indicator_null_error">請先調用setIndicator()方法來設置指示器</string>
+    <string name="banner_adapter_null_error">Banner setAdapter() 參數不能為空</string>
+    <string name="banner_adapter_use_error">你還沒有調用 setAdapter() 方法</string>
+    <string name="save_changes">Save changes</string>
+    <string name="save_program_success_text">Program has been successfully \nsaved to Templates</string>
+    <string name="link_sole_app_text">To share your workout data with the SPIRIT app, link your \nprofile to your SPIRIT app account. \nScan the QR code and follow further instructions.</string>
+    <string name="nodata_templates">To create a template, choose a default program, adjust its settings, complete it and save it.</string>
+    <string name="nodata_favorites">Here you can manage your favorite programs, after you choose which you like the most.</string>
+    <string name="nodata_history">Here you can check out your latest workout records, after you complete the first workout.</string>
+    <string name="tap_text">Tap on the segment \nand slide to adjust</string>
+    <string name="level_profile">Level Profile</string>
+    <string name="incline_profile">Incline Profile</string>
+    <string name="lb">lb</string>
+    <string name="time_elapsed">time elapsed</string>
+    <string name="time_left">time left</string>
+    <string name="hr_hint_maintaining">your heart rate reached the target. \nmaintain level</string>
+    <string name="hr_hint_not_high">your heart rate is not high enough! \nincrease level to</string>
+
+    <string-array name="item1">
+        <item>METRIC</item>
+        <item>IMPERIAL</item>
+    </string-array>
+
+    <string name="img">No Img</string>
+
+    <string name="app_id">16332</string>
+    <string name="app_secret">7b2f2a70f872daa499bfb73b5dd9c926</string>
+    <string name="child_lock_summary">When the child lock is enabled, the console will not allow the keypad to operate \nunless you press and hold <b>START</b> and <b>LEVEL +</b> buttons at the same time \nfor 3 seconds to unlock the console.</string>
+    <string name="hr_hint_too_high">your heart rate is too high! \ndecrease level to</string>
+    <string name="hr_hint_high_finish">your heart rate is too high! \nfinishing program…</string>
+    <string name="no_hr_toast_text">NO HR DETECTED! \nRECONNECT OR FINISH \nTHE PROGRAM</string>
+    <string name="no_internet_toast_text">NOT AVAILABLE \nWITHOUT INTERNET \nCONNECTION</string>
+
+    <string name="register_name_digits">
+    ._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ
+    </string>
+    <string name="get_appp">Scan the QR code \nor search for <b>SPIRIT+</b>\nin App Store or Google\nPlay to download\nthe <b>SPIRIT+</b> app.</string>
+    <string name="get_app3">Scan the QR code with the\n<b>SPIRIT+</b> app to link your\nprofile to the <b>SPIRIT+</b> account\nand sync your workout data.</string>
+    <string name="get_app4">Use the <b>SPIRIT+</b> app to create\nan account, then scan the QR\ncode with the app to sync\nyour profile and workout data.</string>
+    <string name="sleep_text_off">With the Display Mode off, the machine\n will go to sleep after several minutes without using.</string>
+    <string name="sleep_text_on">With the Display Mode on, the machine\n will not go to sleep.</string>
+    <string name="skip_this_step">SKIP THIS STEP</string>
+    <string name="less_30"><![CDATA[<30]]></string>
+    <string name="large_60"><![CDATA[60<]]></string>
+    <string name="time_and_date"><![CDATA[Time & Date]]></string>
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clNewGender"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newprofile.NewGenderFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/element_pagination_profile_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tvTitle_NewGender"
+        android:text="@string/gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle_Desc_NewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:text="@string/gender_prompt"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btClose_NewGender"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:textColor="@color/color597084"
+        android:id="@+id/btBack_NewGender"
+        style="@style/NormalButton"
+        android:layout_marginStart="444dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btNext_NewGender"
+        style="@style/NormalButton"
+        android:layout_marginEnd="444dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="NEXT"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgGender_NewGender"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rbMale_NewGender"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:button="@drawable/rb_round_male" />
+
+        <RadioButton
+            android:layout_marginStart="32dp"
+            android:id="@+id/rbFemale_NewGender"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:button="@drawable/rb_round_female"
+            android:fontFamily="sans-serif-medium" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvMale_NewGender"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/male"
+        android:textColor="@color/colorE4002B"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgGender_NewGender"
+        app:layout_constraintStart_toStartOf="@+id/rgGender_NewGender"
+        app:layout_constraintTop_toTopOf="@+id/rgGender_NewGender" />
+
+    <TextView
+        android:id="@+id/tvFemale_NewGender"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/female"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgGender_NewGender"
+        app:layout_constraintEnd_toEndOf="@+id/rgGender_NewGender"
+        app:layout_constraintStart_toEndOf="@+id/tvMale_NewGender"
+        app:layout_constraintTop_toTopOf="@+id/rgGender_NewGender" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

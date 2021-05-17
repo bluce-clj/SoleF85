@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogDataLost"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings.UsbUpdateActivity">
+
+    <Button
+        android:id="@+id/bt_close"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:textAllCaps="true"
+        android:fontFamily="@font/hanzel_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Software"
+        android:textColor="@color/color597084"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:letterSpacing="0.14062"
+        android:textAllCaps="true"
+        android:fontFamily="@font/hanzel_bold"
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/tvtv"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.14062"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorB4BEC7"
+        android:text=""
+        android:layout_marginStart="526dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="376dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_text"
+        android:layout_marginStart="4dp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.14062"
+        android:fontFamily="@font/open_sans_regular"
+        android:textSize="26sp"
+        android:textColor="@color/color162735"
+        app:layout_constraintTop_toTopOf="@+id/tvtv"
+        app:layout_constraintBottom_toBottomOf="@+id/tvtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:enabled="true"
+        android:layout_marginBottom="96dp"
+        android:id="@+id/btn_osOTA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/colorFFFFFF"
+        android:text="UPDATE"
+        android:background="@drawable/btn_rrect_9d2227_288"
+        style="@style/NormalButton"
+        android:layout_width="260dp"
+        android:layout_height="64dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

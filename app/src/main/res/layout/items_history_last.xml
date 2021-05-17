@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="24dp"
+    tools:context=".profile.ProfileHistoryFragment">
+
+    <TextView
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/colorB4BEC7"
+        android:id="@+id/tv_history_text"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/panel_box"
+        android:gravity="center"
+        android:text="For more workout records, download the SPIRIT+ app"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileHistoryFragment">
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/cl_base"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginBottom="22dp">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerview"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:fadeScrollbars="false"-->
+<!--            android:scrollbars="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clListFitnessTests_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btAirForce_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/air_force"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btArmy_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/army"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btAirForce_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btAirForce_Programs" />
+
+
+        <Button
+            android:id="@+id/btCoastGuard_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/coast_guard"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btArmy_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btArmy_Programs" />
+
+        <Button
+            android:id="@+id/btGerkin_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/gerkin"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btCoastGuard_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btCoastGuard_Programs" />
+
+        <Button
+            android:id="@+id/btPeb_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/peb"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btAirForce_Programs" />
+
+        <Button
+            android:id="@+id/btMarineCorps_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/marine_corps"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btPeb_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btPeb_Programs" />
+
+        <Button
+            android:id="@+id/btNavy_Programs"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="158dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/navy"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btMarineCorps_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btMarineCorps_Programs" />
+
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagAirForce_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btAirForce_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btAirForce_Programs" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagArmy_Programs"
+            android:layout_width="23dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/btArmy_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btArmy_Programs" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagCoastGuard_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btCoastGuard_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btCoastGuard_Programs" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagGerkin_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btGerkin_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btGerkin_Programs" />
+
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagPeb_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btPeb_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btPeb_Programs" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagMarineCorps_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btMarineCorps_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btMarineCorps_Programs" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivTagNavy_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="39dp"
+            android:src="@drawable/icon_preview_favorite_yes"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/btNavy_Programs"
+            app:layout_constraintTop_toTopOf="@+id/btNavy_Programs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <View
+        android:background="@drawable/dialog_workout_stats2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="208dp"
+        android:layout_height="120dp"/>
+
+    <TextView
+        android:letterSpacing="0.07"
+        android:includeFontPadding="false"
+        android:gravity="end"
+        android:id="@+id/xxcl"
+        android:textColor="@color/colorFFFFFF"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/tctc"
+        app:layout_constraintBottom_toTopOf="@+id/tctc"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginBottom="2dp"
+        android:id="@+id/cccc"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/xxcl"
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:text="/"
+        app:layout_constraintStart_toEndOf="@+id/xxcl"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginBottom="2dp"
+        android:letterSpacing="0.07"
+        android:id="@+id/xxml"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/xxcl"
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/cccc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tctc"
+        android:letterSpacing="0.1"
+        android:textColor="@color/colorB4BEC7"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:text="level / Max"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogDataLost"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.EditWeightActivity">
+
+    <Button
+        android:id="@+id/btClose"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tvTitle_UserName"
+        android:text="Edit Weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:includeFontPadding="false"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/weight_unit"
+        android:layout_marginTop="144dp"
+        android:gravity="center"
+        android:id="@+id/tv_sound_text"
+        android:textColor="@color/color597084"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle_UserName"
+        android:textSize="80sp"
+        android:text=""
+        android:fontFamily="@font/roboto_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_marginEnd="540dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sound_text"
+        android:layout_marginTop="144dp"
+        android:gravity="center"
+        android:id="@+id/weight_unit"
+        android:textColor="@color/color597084"
+        android:textSize="38sp"
+        android:text=""
+        android:fontFamily="@font/hanzel_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+
+
+    <ImageButton
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="44dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_left"
+        android:id="@+id/bt_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="331dp"
+        android:background="@null"
+        android:onClick="onM"
+        app:layout_constraintBottom_toBottomOf="@+id/v_movable_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_movable_center" />
+
+    <ImageButton
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="44dp"
+        android:paddingStart="10dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_right"
+        android:id="@+id/bt_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="471dp"
+        android:background="@null"
+        android:onClick="onP"
+        app:layout_constraintBottom_toBottomOf="@+id/v_movable_center"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="@+id/v_movable_center" />
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:id="@+id/height_ruler"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/v_movable_center"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="@+id/v_movable_center"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="180"
+        app:rulerMinValue="30"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="5dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/v_movable_center"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:background="@color/colorE4002B"
+        android:layout_marginTop="432dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+    <Button
+        style="@style/NormalButton"
+        android:id="@+id/btNo_DialogDataLost"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="Cancel"
+        android:textColor="@color/color597084"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        style="@style/NormalButton"
+        android:id="@+id/btYes_DialogDataLost"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:text="Save"
+        android:textColor="@color/colorFFFFFF"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        app:layout_constraintBottom_toBottomOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintTop_toTopOf="@+id/btNo_DialogDataLost" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_black"
+    tools:context=".workout.WorkoutDiagramFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="381dp"
+        android:layout_marginEnd="380dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_red"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/index_level_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/hanzel_bold"
+            android:gravity="center_vertical"
+            android:text="Level Profile"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_orange"
+            app:layout_constraintStart_toEndOf="@+id/iv_red"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_orange"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/index_incline_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_incline"
+            app:layout_constraintStart_toEndOf="@+id/tv_speed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:id="@+id/tv_incline"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/hanzel_bold"
+            android:gravity="start|center_vertical"
+            android:text="Incline Profile"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_orange"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/title_text2"-->
+<!--        android:layout_width="187dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:fontFamily="@font/open_sans_bold"-->
+<!--        android:text=""-->
+<!--        android:textColor="@color/colorFFFFFF"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/line_inversion_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    seekbar (504 * 17), 間隔 13, 前後 350,   504/2-350=-98 + 13 = 111 , 17+13每個加30-->
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_marginBottom="111dp"-->
+<!--        android:visibility="invisible"-->
+<!--        android:id="@+id/cl_incline_one"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="576dp"-->
+<!--        android:layout_marginStart="111dp"-->
+<!--        android:layout_marginEnd="111dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_1"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_2"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_3"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="60dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_4"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="90dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_5"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="120dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_6"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="150dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_7"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="180dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_8"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="210dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_9"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="240dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_10"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="270dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_11"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="300dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_12"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="330dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_13"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="360dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_14"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="390dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_15"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="420dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_16"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="450dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_17"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="480dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_18"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="510dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_19"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="540dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/sb_inc_pen_02_20"-->
+<!--            style="@style/DiagramIncline02"-->
+<!--            android:layout_marginStart="570dp"-->
+<!--            android:progress="1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <!--    seekbar (504 * 10), 兩個一組20 間隔 10, 前後 350,   504/2-344=-92 + 10 = 102 , 20+10每個加30-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="111dp"
+        android:id="@+id/cl_diagram_all"
+        android:layout_width="match_parent"
+        android:layout_height="576dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_all_level_1"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="10dp"
+            android:id="@+id/sb_all_incline_1"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="30dp"
+            android:id="@+id/sb_all_level_2"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="40dp"
+            android:id="@+id/sb_all_incline_2"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="60dp"
+            android:id="@+id/sb_all_level_3"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="70dp"
+            android:id="@+id/sb_all_incline_3"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="90dp"
+            android:id="@+id/sb_all_level_4"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="100dp"
+            android:id="@+id/sb_all_incline_4"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="120dp"
+            android:id="@+id/sb_all_level_5"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="130dp"
+            android:id="@+id/sb_all_incline_5"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="150dp"
+            android:id="@+id/sb_all_level_6"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="160dp"
+            android:id="@+id/sb_all_incline_6"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="180dp"
+            android:id="@+id/sb_all_level_7"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="190dp"
+            android:id="@+id/sb_all_incline_7"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="210dp"
+            android:id="@+id/sb_all_level_8"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="220dp"
+            android:id="@+id/sb_all_incline_8"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="240dp"
+            android:id="@+id/sb_all_level_9"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="250dp"
+            android:id="@+id/sb_all_incline_9"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="270dp"
+            android:id="@+id/sb_all_level_10"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="280dp"
+            android:id="@+id/sb_all_incline_10"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="300dp"
+            android:id="@+id/sb_all_level_11"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="310dp"
+            android:id="@+id/sb_all_incline_11"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="330dp"
+            android:id="@+id/sb_all_level_12"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="340dp"
+            android:id="@+id/sb_all_incline_12"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="360dp"
+            android:id="@+id/sb_all_level_13"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="370dp"
+            android:id="@+id/sb_all_incline_13"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="390dp"
+            android:id="@+id/sb_all_level_14"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="400dp"
+            android:id="@+id/sb_all_incline_14"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="420dp"
+            android:id="@+id/sb_all_level_15"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="430dp"
+            android:id="@+id/sb_all_incline_15"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="450dp"
+            android:id="@+id/sb_all_level_16"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="460dp"
+            android:id="@+id/sb_all_incline_16"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="480dp"
+            android:id="@+id/sb_all_level_17"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="490dp"
+            android:id="@+id/sb_all_incline_17"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="510dp"
+            android:id="@+id/sb_all_level_18"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="520dp"
+            android:id="@+id/sb_all_incline_18"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="540dp"
+            android:id="@+id/sb_all_level_19"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="550dp"
+            android:id="@+id/sb_all_incline_19"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <SeekBar
+            android:layout_marginStart="570dp"
+            android:id="@+id/sb_all_level_20"
+            style="@style/DiagramLevel01"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <SeekBar
+            android:layout_marginStart="580dp"
+            android:id="@+id/sb_all_incline_20"
+            style="@style/DiagramIncline01"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <ImageView-->
+<!--        android:visibility="invisible"-->
+<!--        android:cropToPadding="true"-->
+<!--        android:padding="24dp"-->
+<!--        android:scaleType="centerInside"-->
+<!--        android:id="@+id/iv_diagram"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="128dp"-->
+<!--        android:layout_marginEnd="253dp"-->
+<!--        android:src="@drawable/icon_plus"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

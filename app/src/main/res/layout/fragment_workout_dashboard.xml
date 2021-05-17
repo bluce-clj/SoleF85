@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPrograms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".workout.WorkoutDashboardFragment">
+
+    <TextView
+        android:id="@+id/tv_workout_title"
+        android:layout_width="392dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="Goal Status"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/line_inversion_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_normal"
+        android:layout_width="600dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="320dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_time_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="132sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/time_center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/time_center"
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="132sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_time_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="132sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time_center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:includeFontPadding="false"
+        android:id="@+id/tv_normal_text"
+        android:layout_width="392dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginEnd="444dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.14062"
+        android:lineSpacingExtra="1.5sp"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_normal" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_hr_view"
+        android:layout_width="600dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginEnd="340dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_current_hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="132sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/hr_center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:layout_marginStart="360dp"
+            android:id="@+id/hr_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="/"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_current_hr"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:layout_marginStart="12dp"
+            android:id="@+id/tv_target_hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hr_center"
+            app:layout_constraintStart_toEndOf="@+id/hr_center" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:letterSpacing="0.14062"
+            android:textColor="@color/colorFFFFFF"
+            android:fontFamily="@font/open_sans_bold"
+            android:id="@+id/tv_hr_xx_text"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hr_center"
+            android:text="CURRENT HR"
+            android:layout_width="392dp"
+            android:layout_height="24dp"/>
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_hr_hint"
+            android:layout_width="600dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:lineHeight="24dp"
+            android:letterSpacing="0.14062"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hr_xx_text" />
+
+        <TextView
+            android:includeFontPadding="false"
+            android:id="@+id/tv_hr_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="38sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hr_hint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

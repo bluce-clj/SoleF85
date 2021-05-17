@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clNewQrCode"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newprofile.NewQrCodeFragment">
+
+    <TextView
+        android:gravity="center"
+        android:textSize="16sp"
+        android:letterSpacing="0.1"
+        android:textColor="@color/colorB4BEC7"
+        android:fontFamily="@font/open_sans_bold"
+        android:id="@+id/tv_skip"
+        android:padding="12dp"
+        android:background="@drawable/panel_box2"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/btIdont_NewQrCode"
+        app:layout_constraintTop_toTopOf="@+id/btIdont_NewQrCode"
+        app:layout_constraintBottom_toBottomOf="@+id/btIdont_NewQrCode"
+        android:text="@string/skip_this_step"
+        android:layout_width="196dp"
+        android:layout_height="64dp"/>
+
+    <Button
+        android:id="@+id/btIdont_NewQrCode"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_mockup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_spirit_appstore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="448dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_spirit_android"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="480dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/element_indicator_link_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="256dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginBottom="97dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="start"
+        android:text="@string/get_appp"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="720dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/element_indicator_link_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivQrCode_NewQrCode"
+        android:layout_width="292dp"
+        android:layout_height="292dp"
+        android:layout_marginStart="806dp"
+        android:layout_marginTop="230dp"
+        android:contentDescription="@string/img"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:gravity="start"
+        android:text="@string/get_app4"
+        android:fontFamily="@font/open_sans_regular"
+        android:textSize="22sp"
+        android:textColor="@color/color162735"
+        android:layout_marginBottom="96dp"
+        android:layout_marginStart="812dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="313dp"
+        android:layout_height="128dp"/>
+
+
+
+<!--    <TextView-->
+<!--        style="@style/NormalTitleText"-->
+<!--        android:id="@+id/tvTitle_NewQrCode"-->
+<!--        android:text="@string/q_sole_account"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:contentDescription="@string/img"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:id="@+id/ivQrCode_NewQrCode"-->
+<!--        android:layout_width="184dp"-->
+<!--        android:layout_height="184dp"-->
+<!--        android:layout_marginTop="64dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitle_NewQrCode" />-->
+
+<!--    <TextView-->
+<!--        android:lineSpacingExtra="8dp"-->
+<!--        android:id="@+id/tvContent_NewQrCode"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="456dp"-->
+<!--        android:gravity="center_horizontal|center_vertical"-->
+<!--        android:text="@string/q_sole_account_desc"-->
+<!--        android:textColor="@color/color162735"-->
+<!--        android:textSize="26sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:visibility="invisible"
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:id="@+id/btIdont_NewQrCode2"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="620dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:keyboardNavigationCluster="false"
+        android:text="@string/i_dont"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btTestSoleAccount"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:text="test SOLE app account"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="30sp"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btIdont_NewQrCode"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btIdont_NewQrCode" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

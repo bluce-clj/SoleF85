@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_track"
+    android:background="@drawable/background_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".workout.WorkoutTrackFragment">
+
+    <TextView
+        android:textAllCaps="true"
+        android:letterSpacing="0.14062"
+        android:id="@+id/tv_workout_title"
+        android:layout_width="392dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:text="Track View"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/line_inversion_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_base_track_img"-->
+<!--        android:src="@drawable/img_track"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginBottom="111dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <com.dyaco.spiritbike.support.LevelImageView
+        android:scaleType="fitEnd"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/iv_lap_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="602dp"
+        android:layout_height="432dp"/>
+
+    <ImageView
+        android:layout_marginTop="495dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="701dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/img"
+        android:src="@drawable/icon_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="TOTAL LAPS"
+        android:gravity="center"
+        android:textColor="@color/colorFFFFFF"
+        android:id="@+id/tv_normal_text"
+        app:layout_constraintBottom_toTopOf="@+id/tv_lap_count"
+        app:layout_constraintStart_toStartOf="@+id/tv_lap_count"
+        app:layout_constraintEnd_toEndOf="@+id/tv_lap_count"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.14062"
+        android:textSize="16sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_width="392dp"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:includeFontPadding="false"
+        android:layout_marginEnd="444dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginBottom="320dp"
+        android:id="@+id/tv_lap_count"
+        android:gravity="center"
+        android:textColor="@color/colorFFFFFF"
+        android:fontFamily="@font/roboto_bold"
+        android:text="0"
+        android:textSize="132sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="392dp"
+        android:layout_height="152dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

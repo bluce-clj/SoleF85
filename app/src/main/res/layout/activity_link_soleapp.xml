@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogDataLost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_popup_down"
+    tools:context=".profile.LinkSoleAppActivity">
+
+    <Button
+        android:id="@+id/btClose"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        android:onClick="onClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_mockup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_spirit_appstore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="448dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/img_spirit_android"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="480dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/element_indicator_link_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="256dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginBottom="97dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="start"
+        android:text="@string/get_appp"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="720dp"
+        android:layout_marginTop="111dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/element_indicator_link_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_QRCode"
+        android:layout_width="292dp"
+        android:layout_height="292dp"
+        android:layout_marginStart="806dp"
+        android:layout_marginTop="230dp"
+        android:contentDescription="@string/img"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:gravity="start"
+        android:text="@string/get_app3"
+        android:fontFamily="@font/open_sans_regular"
+        android:textSize="22sp"
+        android:textColor="@color/color162735"
+        android:layout_marginBottom="96dp"
+        android:layout_marginStart="812dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="313dp"
+        android:layout_height="128dp"/>
+
+
+    <!--    <TextView-->
+    <!--        style="@style/NormalTitleText"-->
+    <!--        android:text="Link spirit App Account"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:contentDescription="@string/img"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:id="@+id/img_QRCode"-->
+    <!--        android:layout_marginBottom="352dp"-->
+    <!--        android:layout_marginTop="264dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_width="184dp"-->
+    <!--        android:layout_height="184dp"/>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_version"-->
+    <!--        android:layout_width="808dp"-->
+    <!--        android:layout_height="112dp"-->
+    <!--        android:layout_marginTop="509dp"-->
+    <!--        android:gravity="center_horizontal|center_vertical"-->
+    <!--        android:text="@string/link_sole_app_text"-->
+    <!--        android:textColor="@color/color162735"-->
+    <!--        android:textSize="26sp"-->
+    <!--        android:fontFamily="@font/open_sans_regular"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    -->
+    <!--    -->
+    <!--    <ImageView-->
+    <!--        android:contentDescription="@string/img"-->
+    <!--        android:id="@+id/ssiv"-->
+    <!--        android:src="@drawable/icon_attention"-->
+    <!--        android:layout_marginBottom="24dp"-->
+    <!--        android:layout_marginStart="28dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:layout_width="25dp"-->
+    <!--        android:layout_height="24dp"/>-->
+
+    <!--    <TextView-->
+    <!--        android:lineSpacingExtra="1.5sp"-->
+    <!--        android:letterSpacing="0.14062"-->
+    <!--        android:fontFamily="@font/open_sans_bold"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textColor="@color/colorB4BEC7"-->
+    <!--        android:textAllCaps="true"-->
+    <!--        android:text="once paired with the SPIRIT account, the profile can’t be unpaired"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ssiv"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ssiv"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/ssiv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="24dp"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

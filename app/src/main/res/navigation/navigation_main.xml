@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/blankFragmentWorkout">
+
+
+    <fragment
+        android:id="@+id/blankFragmentWorkout"
+        android:name="com.dyaco.spiritbike.workout.BlankFragmentWorkout"
+        android:label="fragment_blank_workout"
+        tools:layout="@layout/fragment_blank_workout" />
+
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.dyaco.spiritbike.LogoFragment"
+        android:label="fragment_logo"
+        tools:layout="@layout/fragment_logo">
+        <action
+            android:id="@+id/action_logoFragment_to_firstLaunchWifiWidgetFragment"
+            app:destination="@id/firstLaunchWifiWidgetFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/startScreenFragment"
+            android:id="@+id/action_logoFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+        <action
+            android:id="@+id/action_logoFragment_to_firstLaunchSetDateFragment"
+            app:destination="@id/firstLaunchSetDateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstLaunchWifiWidgetFragment"
+        android:name="com.dyaco.spiritbike.newprofile.FirstLaunchWifiWidgetFragment"
+        android:label="fragment_first_launch_wifi_widget"
+        tools:layout="@layout/fragment_first_launch_wifi_widget" >
+        <action
+            android:id="@+id/action_firstLaunchWifiWidgetFragment_to_firstLaunchSetDateFragment"
+            app:destination="@id/firstLaunchSetDateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstLaunchSetDateFragment"
+        android:name="com.dyaco.spiritbike.newprofile.FirstLaunchSetDateFragment"
+        android:label="fragment_first_launch_set_date"
+        tools:layout="@layout/fragment_first_launch_set_date" >
+        <action
+            android:id="@+id/action_firstLaunchSetDateFragment_to_firstLaunchSetTimeFragment"
+            app:destination="@id/firstLaunchSetTimeFragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetDateFragment_to_firstLaunchSetTime12Fragment"
+            app:destination="@id/firstLaunchSetTime12Fragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetDateFragment_to_firstLaunchWifiWidgetFragment"
+            app:destination="@id/firstLaunchWifiWidgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstLaunchSetTimeFragment"
+        android:name="com.dyaco.spiritbike.newprofile.FirstLaunchSetTimeFragment"
+        android:label="fragment_first_launch_set_time"
+        tools:layout="@layout/fragment_first_launch_set_time" >
+        <action
+            android:id="@+id/action_firstLaunchSetTimeFragment_to_firstLaunchSetTime12Fragment"
+            app:destination="@id/firstLaunchSetTime12Fragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetTimeFragment_to_firstLaunchSetDateFragment"
+            app:destination="@id/firstLaunchSetDateFragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetTimeFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstLaunchSetTime12Fragment"
+        android:name="com.dyaco.spiritbike.newprofile.FirstLaunchSetTime12Fragment"
+        android:label="fragment_first_launch_set_time12"
+        tools:layout="@layout/fragment_first_launch_set_time12" >
+        <action
+            android:id="@+id/action_firstLaunchSetTime12Fragment_to_firstLaunchSetTimeFragment"
+            app:destination="@id/firstLaunchSetTimeFragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetTime12Fragment_to_firstLaunchSetDateFragment"
+            app:destination="@id/firstLaunchSetDateFragment" />
+        <action
+            android:id="@+id/action_firstLaunchSetTime12Fragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newQrCodeFragment"
+        android:name="com.dyaco.spiritbike.newprofile.NewQrCodeFragment"
+        android:label="fragment_new_qr_code"
+        tools:layout="@layout/fragment_new_qr_code" >
+        <action
+            android:id="@+id/action_newQrCodeFragment_to_userNameFragment"
+            app:destination="@id/userNameFragment" />
+        <action
+            android:id="@+id/action_newQrCodeFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+        <action
+            android:id="@+id/action_newQrCodeFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+        <action
+            android:id="@+id/action_newQrCodeFragment_to_dialogProfileCreatedFragment"
+            app:destination="@id/dialogProfileCreatedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBirthdayFragment"
+        android:name="com.dyaco.spiritbike.newprofile.NewBirthdayFragment"
+        android:label="fragment_new_birthday"
+        tools:layout="@layout/fragment_new_birthday" >
+        <action
+            android:id="@+id/action_newBirthdayFragment_to_newGenderFragment"
+            app:destination="@id/newGenderFragment" />
+        <action
+            android:id="@+id/action_newBirthdayFragment_to_userNameFragment"
+            app:destination="@id/userNameFragment" />
+        <action
+            android:id="@+id/action_newBirthdayFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGenderFragment"
+        android:name="com.dyaco.spiritbike.newprofile.NewGenderFragment"
+        android:label="fragment_new_gender"
+        tools:layout="@layout/fragment_new_gender" >
+        <action
+            android:id="@+id/action_newGenderFragment_to_newBiodataFragment"
+            app:destination="@id/newBiodataFragment" />
+        <action
+            android:id="@+id/action_newGenderFragment_to_newBirthdayFragment"
+            app:destination="@id/newBirthdayFragment" />
+        <action
+            android:id="@+id/action_newGenderFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBiodataFragment"
+        android:name="com.dyaco.spiritbike.newprofile.NewBiodataFragment"
+        android:label="fragment_new_biodata"
+        tools:layout="@layout/fragment_new_biodata" >
+        <action
+            android:id="@+id/action_newBiodataFragment_to_avatarIconFragment"
+            app:destination="@id/avatarIconFragment" />
+        <action
+            android:id="@+id/action_newBiodataFragment_to_newGenderFragment"
+            app:destination="@id/newGenderFragment" />
+        <action
+            android:id="@+id/action_newBiodataFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startScreenFragment"
+        android:name="com.dyaco.spiritbike.StartScreenFragment"
+        android:label="fragment_start_screen"
+        tools:layout="@layout/fragment_start_screen" >
+        <action
+            android:id="@+id/action_startScreenFragment_to_newQrCodeFragment"
+            app:destination="@id/newQrCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogProfileCreatedFragment"
+        android:name="com.dyaco.spiritbike.newprofile.DialogProfileCreatedFragment"
+        android:label="fragment_dialog_profile_created"
+        tools:layout="@layout/fragment_dialog_profile_created" />
+    <fragment
+        android:id="@+id/dialogSomethingWrongFragment"
+        android:name="com.dyaco.spiritbike.DialogSomethingWrongFragment"
+        android:label="fragment_dialog_something_wrong"
+        tools:layout="@layout/fragment_dialog_something_wrong" />
+    <fragment
+        android:id="@+id/dialogDataLostFragment"
+        android:name="com.dyaco.spiritbike.DialogDataLostFragment"
+        android:label="fragment_dialog_data_lost"
+        tools:layout="@layout/fragment_dialog_data_lost" >
+        <action
+            android:id="@+id/action_dialogDataLostFragment_to_startScreenFragment"
+            app:destination="@id/startScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userNameFragment"
+        android:name="com.dyaco.spiritbike.newprofile.UserNameFragment"
+        android:label="fragment_user_name"
+        tools:layout="@layout/fragment_user_name" >
+        <action
+            android:id="@+id/action_userNameFragment_to_avatarIconFragment"
+            app:destination="@id/avatarIconFragment" />
+        <action
+            android:id="@+id/action_userNameFragment_to_newBirthdayFragment"
+            app:destination="@id/newBirthdayFragment" />
+        <action
+            android:id="@+id/action_userNameFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/avatarIconFragment"
+        android:name="com.dyaco.spiritbike.newprofile.AvatarIconFragment"
+        android:label="fragment_avatar_icon"
+        tools:layout="@layout/fragment_avatar_icon" >
+        <action
+            android:id="@+id/action_avatarIconFragment_to_newBiodataFragment"
+            app:destination="@id/newBiodataFragment" />
+        <action
+            android:id="@+id/action_avatarIconFragment_to_dialogDataLostFragment"
+            app:destination="@id/dialogDataLostFragment" />
+        <action
+            android:id="@+id/action_avatarIconFragment_to_dialogSomethingWrongFragment"
+            app:destination="@id/dialogSomethingWrongFragment" />
+        <action
+            android:id="@+id/action_avatarIconFragment_to_dialogProfileCreatedFragment"
+            app:destination="@id/dialogProfileCreatedFragment" />
+    </fragment>
+
+</navigation>

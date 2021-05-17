@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".workout.WorkoutDashboardActivity">
+
+    <View
+        android:background="@color/black75"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_bottom_line"
+        app:layout_constraintTop_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivLineV1_Dashboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <View
+        app:layout_constraintStart_toStartOf="@+id/ivLineV2_Dashboard"
+        android:background="@color/black75"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_bottom_line"
+        app:layout_constraintTop_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <View
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"/>
+
+    <View
+        android:visibility="visible"
+        android:background="@color/black75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_sound"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_sound_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_sound_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sound"
+        app:layout_constraintTop_toTopOf="@+id/btn_sound"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <!--分階段-->
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_fan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_fan0_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_fna_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fan"
+        app:layout_constraintTop_toTopOf="@+id/btn_fan"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV1_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btHome_InternetDashboard"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="564dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_workout_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btFullScreen_InternetDashboard"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/btn_round_workout_fullscreen"
+        app:layout_constraintStart_toEndOf="@+id/btHome_InternetDashboard"
+        app:layout_constraintTop_toTopOf="@+id/btHome_InternetDashboard" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV2_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:src="@drawable/icon_wifi_inversion_lv4"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_wifi"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toStartOf="@id/ivLineV3_Dashboard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV3_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_workout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text=""
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:background="@color/color162735"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="112dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    DISTANCE-->
+    <TextView
+        android:maxLength="5"
+        android:id="@+id/tv_distance"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/tv_total_distance_unit"
+        app:layout_constraintStart_toStartOf="@+id/tv_completed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_total_distance_unit"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="130dp"
+        android:text=""
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintTop_toTopOf="@+id/tv_distance"
+        app:layout_constraintBottom_toTopOf="@+id/tv_distance_unit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_distance_unit"
+        app:layout_constraintStart_toStartOf="@+id/tv_distance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance"
+        style="@style/WorkoutUnitTextStyle"
+        android:text="SPEED"
+        android:layout_marginTop="4dp"
+        android:layout_width="192dp"
+        android:layout_height="24dp"/>
+
+    <ImageView
+        android:visibility="invisible"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_switch_distance"
+        app:layout_constraintTop_toTopOf="@+id/iv_workout_top_line"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_baseline_add_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--CALORIES-->
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_switch_calories"
+        app:layout_constraintBottom_toTopOf="@+id/tv_calories_text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="178dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_baseline_add_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:maxLength="5"
+        android:id="@+id/tv_calories"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="254dp"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/tv_unit_kcal"
+        app:layout_constraintStart_toStartOf="@+id/tv_completed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_unit_kcal"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text=""
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintTop_toTopOf="@+id/tv_calories"
+        app:layout_constraintBottom_toTopOf="@+id/tv_calories_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit"/>
+
+    <TextView
+        android:id="@+id/tv_calories_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_calories"
+        app:layout_constraintTop_toBottomOf="@+id/tv_calories"
+        style="@style/WorkoutUnitTextStyle"
+        android:text=""
+        android:layout_marginTop="4dp"
+        android:layout_width="192dp"
+        android:layout_height="24dp"/>
+
+    <!--    TIME-->
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_switch_time"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time_text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="178dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_add_16"
+        android:padding="8dp"
+        android:cropToPadding="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="91dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="366dp"
+        android:text=""
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_3_unit"
+        app:layout_constraintStart_toStartOf="@+id/tv_completed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_3_unit"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text=""
+        app:layout_constraintTop_toTopOf="@+id/tv_total_time"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time_text"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit" />
+
+
+    <TextView
+        android:id="@+id/tv_time_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_time"
+        style="@style/WorkoutUnitTextStyle"
+        android:text=""
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"/>
+
+    <!--HR-->
+    <ImageView
+        android:padding="8dp"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_baseline_add_16"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_switch_hr"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hr_text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="178dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_hr"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="91dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="478dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/tv_completed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hr_unit"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="BPM"
+        app:layout_constraintTop_toTopOf="@+id/tv_hr"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hr_text"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit" />
+
+    <TextView
+        android:id="@+id/tv_hr_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_hr"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hr"
+        style="@style/WorkoutUnitTextStyle"
+        android:text=""
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"/>
+
+
+    <!--PACE-->
+
+    <TextView
+        android:maxLength="5"
+        android:id="@+id/tv_pace"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="91dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="590dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/tv_completed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/tv_pace_unit"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="W"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"
+        app:layout_constraintTop_toTopOf="@+id/tv_pace"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit"/>
+
+    <TextView
+        android:id="@+id/tv_pace_text"
+        app:layout_constraintStart_toStartOf="@+id/tv_pace"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pace"
+        style="@style/WorkoutUnitTextStyle"
+        android:text="POWER"
+        android:layout_marginTop="4dp"
+        android:layout_width="192dp"
+        android:layout_height="24dp"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_switch_speed"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"-->
+<!--        android:layout_marginBottom="28dp"-->
+<!--        android:layout_marginStart="189dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:src="@drawable/plus_white"-->
+<!--        android:layout_width="16dp"-->
+<!--        android:layout_height="16dp"/>-->
+
+    <ImageView
+        android:visibility="invisible"
+        android:contentDescription="@string/img"
+        android:padding="8dp"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_baseline_add_16"
+        android:id="@+id/iv_switch_speed"
+        app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="178dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/iv_workout_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/NormalButton"
+        android:enabled="true"
+        android:id="@+id/btn_stop"
+        android:layout_width="196dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_rrect_9d2227_288"
+        android:text="Stop"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_completed"
+        style="@style/WorkoutNumberStyle"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/tv_completedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_workout_bottom_line" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:letterSpacing="0.14062"
+        android:lineSpacingExtra="1.5sp"
+        android:text="%"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_completedText"
+        app:layout_constraintTop_toTopOf="@+id/tv_completed"
+        app:layout_constraintStart_toEndOf="@id/tv_completed" />
+
+    <TextView
+        android:id="@+id/tv_completedText"
+        style="@style/WorkoutUnitTextStyle"
+        android:layout_width="192dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="COMPLETED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+<!--    右邊LEVEL-->
+
+    <TextView
+        android:textAllCaps="true"
+        style="@style/WorkoutNumberStyle"
+        android:text="Level"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_level"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="179dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_level"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_level"
+        android:src="@drawable/icon_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvLevelCurrent"
+        style="@style/WorkoutNumberStyle"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/tv_level"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level"
+        android:layout_marginTop="16dp"
+        android:layout_width="61dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintTop_toTopOf="@+id/tvLevelCurrent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLevelCurrent"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvLevelCurrent"
+        style="@style/WorkoutUnitTextStyle"
+        android:text="CURRENT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/colorB4BEC7"
+        style="@style/WorkoutNumberStyle"
+        android:id="@+id/tvMaxLevel"
+        app:layout_constraintStart_toStartOf="@+id/tvLevelCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevelCurrent"
+        android:text=""
+        android:layout_width="61dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:text="MAX"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorFFFFFF"
+        style="@style/WorkoutUnitTextStyle"
+        app:layout_constraintTop_toTopOf="@+id/tvMaxLevel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMaxLevel"
+        app:layout_constraintStart_toEndOf="@+id/tvMaxLevel"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_level_plus"
+        android:background="@drawable/btn_workout_minus_xml"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="@+id/tvLevelCurrent"
+        app:layout_constraintTop_toBottomOf="@id/tvLevelCurrent"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/btn_level_plus"
+        android:id="@+id/btn_level_minus"
+        app:layout_constraintTop_toTopOf="@+id/btn_level_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_level_plus"
+        android:background="@drawable/btn_workout_plus_xml"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+<!--    右邊 INCLINE-->
+
+    <TextView
+        android:textAllCaps="true"
+        style="@style/WorkoutNumberStyle"
+        android:text="Incline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_incline"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="424dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="179dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:id="@+id/iv_incline_img"
+        android:contentDescription="@string/img"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_incline"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_incline"
+        android:src="@drawable/icon_incline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvInclineCurrent"
+        style="@style/WorkoutNumberStyle"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="@+id/tv_incline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_incline"
+        android:layout_marginTop="16dp"
+        android:layout_width="61dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:text="--"
+        style="@style/WorkoutNumberStyle"
+        android:id="@+id/hideInclineCurrent"
+        app:layout_constraintStart_toStartOf="@+id/tv_incline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_incline"
+        android:layout_marginTop="16dp"
+        android:layout_width="61dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="@+id/tvInclineCurrent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInclineCurrent"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvInclineCurrent"
+        style="@style/WorkoutUnitTextStyle"
+        android:text="CURRENT"
+        android:id="@+id/tv_incline_current_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        style="@style/WorkoutNumberStyle"
+        android:id="@+id/tvMaxIncline"
+        app:layout_constraintStart_toStartOf="@+id/tvInclineCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInclineCurrent"
+        android:text=""
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_incline_max_text"
+        android:textColor="@color/colorFFFFFF"
+        android:text="MAX"
+        style="@style/WorkoutUnitTextStyle"
+        app:layout_constraintTop_toTopOf="@+id/tvMaxIncline"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMaxIncline"
+        app:layout_constraintStart_toEndOf="@+id/tvMaxIncline"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_incline_plus"
+        android:background="@drawable/btn_workout_minus_xml"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="@+id/tvInclineCurrent"
+        app:layout_constraintTop_toBottomOf="@id/tvInclineCurrent"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/btn_incline_plus"
+        android:id="@+id/btn_incline_minus"
+        app:layout_constraintTop_toTopOf="@+id/btn_incline_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_incline_plus"
+        android:background="@drawable/btn_workout_plus_xml"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+
+
+<!--    MENU-->
+
+    <RadioGroup
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/rg_workout_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivLineV2_Dashboard"
+        app:layout_constraintStart_toEndOf="@id/ivLineV1_Dashboard"
+        app:layout_constraintTop_toTopOf="@+id/iv_workout_bottom_line">
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rb_dashboard_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_round_dashboard_xml"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rb_diagram_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_round_diagram_xml" />
+
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rb_track_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_round_track_xml" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rb_internet_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_round_internet_xml"/>
+
+        <RadioButton
+            android:checked="true"
+            android:layout_weight="1"
+            android:id="@+id/rb_cast_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_round_cast_xml"/>
+    </RadioGroup>
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_incline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_incline,iv_incline_img,btn_incline_plus,btn_incline_minus,tv_incline_max_text,tv_incline_current_text,tvMaxIncline,tvInclineCurrent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

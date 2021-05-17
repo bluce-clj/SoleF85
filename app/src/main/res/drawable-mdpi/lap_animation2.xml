@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/element_track_stage_24" android:maxLevel="1"/>
+    <item android:drawable="@drawable/element_track_stage_1" android:maxLevel="2"/>
+    <item android:drawable="@drawable/element_track_stage_2" android:maxLevel="3"/>
+    <item android:drawable="@drawable/element_track_stage_3" android:maxLevel="4"/>
+    <item android:drawable="@drawable/element_track_stage_4" android:maxLevel="5"/>
+    <item android:drawable="@drawable/element_track_stage_5" android:maxLevel="6"/>
+    <item android:drawable="@drawable/element_track_stage_6" android:maxLevel="7"/>
+    <item android:drawable="@drawable/element_track_stage_7" android:maxLevel="8"/>
+    <item android:drawable="@drawable/element_track_stage_8" android:maxLevel="9"/>
+    <item android:drawable="@drawable/element_track_stage_9" android:maxLevel="10"/>
+    <item android:drawable="@drawable/element_track_stage_10" android:maxLevel="11"/>
+    <item android:drawable="@drawable/element_track_stage_11" android:maxLevel="12"/>
+    <item android:drawable="@drawable/element_track_stage_12" android:maxLevel="13"/>
+    <item android:drawable="@drawable/element_track_stage_13" android:maxLevel="14"/>
+    <item android:drawable="@drawable/element_track_stage_14" android:maxLevel="15"/>
+    <item android:drawable="@drawable/element_track_stage_15" android:maxLevel="16"/>
+    <item android:drawable="@drawable/element_track_stage_16" android:maxLevel="17"/>
+    <item android:drawable="@drawable/element_track_stage_17" android:maxLevel="18"/>
+    <item android:drawable="@drawable/element_track_stage_18" android:maxLevel="19"/>
+    <item android:drawable="@drawable/element_track_stage_19" android:maxLevel="20"/>
+    <item android:drawable="@drawable/element_track_stage_20" android:maxLevel="21"/>
+    <item android:drawable="@drawable/element_track_stage_21" android:maxLevel="22"/>
+    <item android:drawable="@drawable/element_track_stage_22" android:maxLevel="23"/>
+    <item android:drawable="@drawable/element_track_stage_23" android:maxLevel="24"/>
+</level-list>
+
+
+<!--<level-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item android:drawable="@drawable/element_track_stage_18" android:maxLevel="1"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_19" android:maxLevel="2"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_20" android:maxLevel="3"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_21" android:maxLevel="4"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_22" android:maxLevel="5"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_23" android:maxLevel="6"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_24" android:maxLevel="7"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_1" android:maxLevel="8"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_2" android:maxLevel="9"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_3" android:maxLevel="10"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_4" android:maxLevel="11"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_5" android:maxLevel="12"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_6" android:maxLevel="13"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_7" android:maxLevel="14"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_8" android:maxLevel="15"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_9" android:maxLevel="16"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_10" android:maxLevel="17"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_11" android:maxLevel="18"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_12" android:maxLevel="19"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_13" android:maxLevel="20"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_14" android:maxLevel="21"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_15" android:maxLevel="22"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_16" android:maxLevel="23"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_17" android:maxLevel="24"/>-->
+<!--</level-list>-->
+
+    <!--<item android:drawable="@drawable/element_track_stage_1" android:maxLevel="25"/>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<level-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item android:drawable="@drawable/element_track_stage_1" android:maxLevel="1"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_2" android:maxLevel="2"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_3" android:maxLevel="3"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_4" android:maxLevel="4"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_5" android:maxLevel="5"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_6" android:maxLevel="6"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_7" android:maxLevel="7"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_8" android:maxLevel="8"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_9" android:maxLevel="9"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_10" android:maxLevel="10"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_11" android:maxLevel="11"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_12" android:maxLevel="12"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_13" android:maxLevel="13"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_14" android:maxLevel="14"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_15" android:maxLevel="15"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_16" android:maxLevel="16"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_17" android:maxLevel="17"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_18" android:maxLevel="18"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_19" android:maxLevel="19"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_20" android:maxLevel="20"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_21" android:maxLevel="21"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_22" android:maxLevel="22"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_23" android:maxLevel="23"/>-->
+<!--    <item android:drawable="@drawable/element_track_stage_24" android:maxLevel="24"/>-->
+<!--</level-list>-->
+
+<!--&lt;!&ndash;<item android:drawable="@drawable/element_track_stage_1" android:maxLevel="25"/>&ndash;&gt;-->

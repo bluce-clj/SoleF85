@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F8F9"
+    tools:context=".programs.AdjustCustom_2Fragment" >
+
+    <ImageView
+        android:src="@drawable/element_pagination_program_adjust_02"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="16dp"/>
+
+    <TextView
+        android:id="@+id/display_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="104dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:text="@string/custom" />
+
+    <ImageView
+        android:layout_marginTop="32dp"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display_title" />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="Set Incline Profile, %"
+        android:letterSpacing="0.14062"
+        android:textSize="16sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/color597084"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+
+    <!--    seekbar 176 * 32, 間隔 30, 前後 32,   176/2 = 88 , 每個加62-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="-56dp"
+        android:layout_marginEnd="-56dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_2">
+
+        <TextView
+            android:id="@+id/sb1_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sb1"
+            style="@style/custom_seekbar_15"
+            android:progress="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sb2_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="64dp"
+            android:id="@+id/sb2"
+            style="@style/custom_seekbar_15"
+            android:progress="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sb3_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="126dp"
+            android:id="@+id/sb3"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sb4_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="188dp"
+            android:id="@+id/sb4"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sb5_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="250dp"
+            android:id="@+id/sb5"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/sb6_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="312dp"
+            android:id="@+id/sb6"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb7_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="374dp"
+            android:id="@+id/sb7"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb8_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="436dp"
+            android:id="@+id/sb8"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb9_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="498dp"
+            android:id="@+id/sb9"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb10_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="560dp"
+            android:id="@+id/sb10"
+            style="@style/custom_seekbar_15"
+            android:progress="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb11_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="622dp"
+            android:id="@+id/sb11"
+            style="@style/custom_seekbar_15"
+            android:progress="6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb12_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="684dp"
+            android:id="@+id/sb12"
+            style="@style/custom_seekbar_15"
+            android:progress="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb13_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="746dp"
+            android:id="@+id/sb13"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb14_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="808dp"
+            android:id="@+id/sb14"
+            style="@style/custom_seekbar_15"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb15_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="870dp"
+            android:id="@+id/sb15"
+            style="@style/custom_seekbar_15"
+            android:progress="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb16_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="932dp"
+            android:id="@+id/sb16"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb17_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="994dp"
+            android:id="@+id/s17"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb18_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="1056dp"
+            android:id="@+id/sb18"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb19_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="1118dp"
+            android:id="@+id/sb19"
+            style="@style/custom_seekbar_15"
+            android:progress="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sb20_text"
+            style="@style/SeekBarText"
+            app:layout_constraintEnd_toEndOf="@+id/sb1"
+            app:layout_constraintStart_toStartOf="@+id/sb1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="1180dp"
+            android:id="@+id/sb20"
+            style="@style/custom_seekbar_15"
+            android:progress="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivBottomLine_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="304dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <ImageView
+        android:src="@drawable/icon_tap"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="32dp"
+        android:layout_height="32dp"/>
+
+    <TextView
+        android:textAllCaps="true"
+        android:text="@string/tap_text"
+        android:textSize="16sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/colorB4BEC7"
+        android:letterSpacing="0.14062"
+        android:lineSpacingExtra="1.5dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="184dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="223dp"
+        android:layout_height="48dp"/>
+
+    <Button
+        android:id="@+id/btNext_SetDate"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="444dp"
+        android:background="@drawable/btn_rrect_e6e6e6_288"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btBack"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="444dp"
+        android:background="@drawable/btn_rrect_e6e6e6_288"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

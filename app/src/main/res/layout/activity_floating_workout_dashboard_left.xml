@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    tools:context=".workout.WorkoutDashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/black75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="237dp"
+        android:layout_height="577dp">
+
+        <!--    DISTANCE-->
+
+        <TextView
+            android:layout_marginStart="32dp"
+            android:maxLength="5"
+            android:id="@+id/tv_distance"
+            style="@style/WorkoutNumberStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="8dp"
+            android:text=""
+            app:layout_constraintEnd_toStartOf="@+id/tv_total_distance_unit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_total_distance_unit"
+            style="@style/WorkoutUnitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:text="rpm"
+            android:textColor="@color/colorFFFFFF"
+            app:layout_constraintTop_toTopOf="@+id/tv_distance"
+            app:layout_constraintBottom_toTopOf="@+id/tv_distance_unit"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_distance_unit"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_distance"
+            style="@style/WorkoutBUnitTextStyle"
+            android:text="SPEED"
+            android:layout_marginTop="4dp"
+            android:layout_width="192dp"
+            android:layout_height="24dp"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_switch_distance"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="178dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="8dp"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_baseline_add_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--CALORIES-->
+        <View
+            android:id="@+id/switch_2"
+            app:layout_constraintEnd_toEndOf="@+id/iv_switch_calories"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_calories_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_calories"
+            app:layout_constraintTop_toTopOf="@+id/iv_switch_calories"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_switch_calories"
+            app:layout_constraintBottom_toTopOf="@+id/tv_calories_text"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="178dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="8dp"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_baseline_add_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginEnd="8dp"
+            android:maxLength="5"
+            android:id="@+id/tv_calories"
+            style="@style/WorkoutNumberStyle"
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="143dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/tv_distance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_unit_kcal"
+            style="@style/WorkoutUnitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text=""
+            android:textColor="@color/colorFFFFFF"
+            app:layout_constraintTop_toTopOf="@+id/tv_calories"
+            app:layout_constraintBottom_toTopOf="@+id/tv_calories_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit"/>
+
+        <TextView
+            android:id="@+id/tv_calories_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_calories"
+            app:layout_constraintTop_toBottomOf="@+id/tv_calories"
+            style="@style/WorkoutBUnitTextStyle"
+            android:text=""
+            android:layout_marginTop="4dp"
+            android:layout_width="192dp"
+            android:layout_height="24dp"/>
+
+        <!--    TIME-->
+        <View
+            android:id="@+id/switch_3"
+            app:layout_constraintEnd_toEndOf="@+id/iv_switch_time"
+            app:layout_constraintTop_toTopOf="@+id/iv_switch_time"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_time_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_time_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_switch_time"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time_text"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="178dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_baseline_add_16"
+            android:padding="8dp"
+            android:cropToPadding="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            style="@style/WorkoutNumberStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="255dp"
+            android:text=""
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textAllCaps="false"
+            android:id="@+id/tv_3_unit"
+            style="@style/WorkoutUnitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@+id/tv_total_time"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time_text"
+            android:textColor="@color/colorFFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit" />
+
+
+        <TextView
+            android:id="@+id/tv_time_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_time"
+            style="@style/WorkoutBUnitTextStyle"
+            android:text=""
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"/>
+
+        <!--HR-->
+
+        <View
+            android:id="@+id/switch_4"
+            app:layout_constraintEnd_toEndOf="@+id/iv_switch_hr"
+            app:layout_constraintTop_toTopOf="@+id/iv_switch_hr"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_hr_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_hr_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <ImageView
+            android:padding="8dp"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_baseline_add_16"
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_switch_hr"
+            app:layout_constraintBottom_toTopOf="@+id/tv_hr_text"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="178dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_hr"
+            style="@style/WorkoutNumberStyle"
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="367dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/tv_distance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hr_unit"
+            style="@style/WorkoutUnitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bpm"
+            app:layout_constraintTop_toTopOf="@+id/tv_hr"
+            app:layout_constraintBottom_toTopOf="@+id/tv_hr_text"
+            android:textColor="@color/colorFFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit" />
+
+        <TextView
+            android:id="@+id/tv_hr_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_hr"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hr"
+            style="@style/WorkoutBUnitTextStyle"
+            android:text=""
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"/>
+
+
+        <!--PACE-->
+
+        <TextView
+            android:maxLength="5"
+            android:id="@+id/tv_pace"
+            style="@style/WorkoutNumberStyle"
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="479dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/tv_distance"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pace_unit"
+            style="@style/WorkoutUnitTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textColor="@color/colorFFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"
+            app:layout_constraintTop_toTopOf="@+id/tv_pace"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_distance_unit"/>
+
+        <TextView
+            android:id="@+id/tv_pace_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_pace"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pace"
+            style="@style/WorkoutBUnitTextStyle"
+            android:text="POWER"
+            android:layout_marginTop="4dp"
+            android:layout_width="192dp"
+            android:layout_height="24dp"/>
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/iv_switch_speed"-->
+        <!--        app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"-->
+        <!--        android:layout_marginBottom="28dp"-->
+        <!--        android:layout_marginStart="189dp"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        android:src="@drawable/plus_white"-->
+        <!--        android:layout_width="16dp"-->
+        <!--        android:layout_height="16dp"/>-->
+
+        <ImageView
+            android:visibility="invisible"
+            android:contentDescription="@string/img"
+            android:padding="8dp"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_baseline_add_16"
+            android:id="@+id/iv_switch_speed"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pace_text"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="178dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPrograms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".programs.ProgramsFragment">
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgOption_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbPrograms_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/rb_rect_programs"
+            android:checked="true"
+            android:text="" />
+
+        <RadioButton
+            android:id="@+id/rbFitnessTests_Programs"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:button="@drawable/rb_rect_fitness_tests"
+            android:checked="false"
+            android:text=""
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rbTemplates_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="79dp"
+            android:button="@drawable/rb_rect_templates"
+            android:checked="false"
+            android:text="" />
+
+    </RadioGroup>
+
+    <TextView
+        android:textColor="@color/colorE4002B"
+        style="@style/slide_menu_text"
+        android:id="@+id/tvPrograms_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/programs"
+        app:layout_constraintStart_toStartOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/rgOption_Programs" />
+
+    <TextView
+        android:id="@+id/tvFitnessTests_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/fitness_tests"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/rgOption_Programs"
+        app:layout_constraintStart_toStartOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/tvPrograms_Programs" />
+
+    <TextView
+        style="@style/slide_menu_text"
+        android:id="@+id/tvTemplates_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/templates"
+        app:layout_constraintEnd_toEndOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/rgOption_Programs" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

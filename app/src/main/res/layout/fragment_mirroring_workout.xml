@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPrograms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mirroring.MirroringFragment">
+
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="112dp"
+        android:id="@+id/iv_workout_top_line"
+        android:background="@color/color33FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_workout_top_line"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="112dp"-->
+<!--        android:src="@drawable/line_inversion_full_screen_length"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivTopLine_Programs"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="192dp"-->
+<!--        android:src="@drawable/line_full_screen_length"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <RadioGroup
+        android:id="@+id/rgOption_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line">
+
+        <RadioButton
+            android:background="@drawable/rb_rect_workout_ios"
+            android:id="@+id/rbPrograms_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:checked="true"
+            android:text="" />
+
+        <RadioButton
+            android:background="@drawable/rb_rect_workout_android"
+            android:id="@+id/rbFitnessTests_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="80dp"
+            android:button="@null"
+            android:checked="false"
+            android:text="" />
+
+    </RadioGroup>
+
+
+    <TextView
+        style="@style/slide_menu_text"
+        android:textColor="@color/colorE4002B"
+        android:id="@+id/tvPrograms_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IOS"
+        app:layout_constraintStart_toStartOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/rgOption_Programs" />
+
+    <TextView
+        android:id="@+id/tvFitnessTests_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/slide_menu_text"
+        android:text="ANDROID"
+        app:layout_constraintEnd_toEndOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/tvPrograms_Programs" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/iv_workout_top_line">
+
+<!--        lineSpacingMultiplier-->
+<!--        lineSpacingExtra-->
+        <TextView
+            android:gravity="start"
+            android:id="@+id/ios_top_text"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="22sp"
+            android:textColor="@color/colorFFFFFF"
+            android:layout_marginTop="119dp"
+            android:text="@string/ios_top_text2"
+            android:layout_marginStart="340dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/ios_bottom_text"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.226"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorB4BEC7"
+            android:layout_marginTop="40dp"
+            android:text="@string/ios_bottom_text2"
+            app:layout_constraintStart_toStartOf="@+id/ios_top_text"
+            app:layout_constraintTop_toBottomOf="@+id/ios_top_text"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_marginEnd="340dp"
+            android:layout_marginTop="95dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/img_workout_cast_instruction_ios"
+            android:layout_width="288dp"
+            android:layout_height="400dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/iv_workout_top_line">
+
+
+        <TextView
+            android:gravity="start"
+            android:id="@+id/android_top_text"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="22sp"
+            android:textColor="@color/colorFFFFFF"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/android_top_text2"
+            android:layout_marginStart="340dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_image_android"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/android_bottom_text"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.226"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorB4BEC7"
+            android:layout_marginTop="43dp"
+            android:text="@string/ios_bottom_text2"
+            app:layout_constraintStart_toStartOf="@+id/android_top_text"
+            app:layout_constraintTop_toBottomOf="@+id/android_top_text"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:src="@drawable/img_workout_cast_android"
+            android:layout_marginEnd="340dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginBottom="192dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/iv_image_android"
+            android:layout_width="288dp"
+            android:layout_height="400dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="true"
+    android:packageNames="com.android.packageinstaller"
+    android:notificationTimeout="100" />
+
+
+    <!--
+        android:description 輔助功能描述
+        android:packageNames 指定輔助功能監聽的包名，不指定表示監聽所有應用
+        android:accessibilityEventTypes 事件類型，typeAllMask表示接收所有事件
+        android:accessibilityFlags 查找截點方式，一般配置為flagDefault默認方式
+        android:accessibilityFeedbackType 操作按鈕以後給用戶的反饋類型，包括聲音，震動等
+        android:notificationTimeout 響應超時
+        android:canRetrieveWindowContent 是否允許提取窗口的節點信息
+        -->

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clListInfo_Profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    tools:context=".profile.ProfileInfoFragment">
+
+    <Button
+        android:layout_marginStart="28dp"
+        android:id="@+id/btInfoAvatar_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivInfoAvatar_Profile"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="98dp"
+        app:layout_constraintEnd_toEndOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintStart_toStartOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoAvatar_Profile" />
+
+    <Button
+        android:id="@+id/btInfoDeleteProfile_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="243dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/btn_rrect_info_delete"
+        android:fontFamily="@font/open_sans_bold"
+        android:letterSpacing="0.14062"
+        android:lineSpacingExtra="1.5sp"
+        android:paddingStart="26dp"
+        android:paddingEnd="0dp"
+        android:text="@string/delete_profile"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintEnd_toEndOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/btInfoAvatar_Profile" />
+
+    <Button
+        android:layout_marginStart="24dp"
+        android:id="@+id/btInfoUserName_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info"
+        app:layout_constraintStart_toEndOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoAvatar_Profile" />
+
+    <TextView
+        android:id="@+id/tvInfoItemUserName_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="53dp"
+        android:text="USERNAME"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/btInfoUserName_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoUserName_Profile" />
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:layout_marginEnd="22dp"
+        android:id="@+id/tvInfoUserName_Profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        tools:text="AR"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="36sp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color597084"
+        app:layout_constraintEnd_toEndOf="@+id/btInfoUserName_Profile"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemUserName_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemUserName_Profile" />
+
+    <Button
+        android:id="@+id/btInfoHeight_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/btInfoUserName_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoUserName_Profile" />
+
+    <TextView
+        android:id="@+id/tvInfoItemHeight_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:text="@string/height"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/btInfoHeight_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoHeight_Profile" />
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:id="@+id/tvInfoHeight_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        tools:text="170"
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemHeight_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemHeight_Profile" />
+
+    <TextView
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/tvInfoHeightUnit_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/cm"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:fontFamily="@font/open_sans_semibold"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoHeight_Profile"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoHeight_Profile" />
+
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:id="@+id/tvHeight_ft"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text=""
+        android:includeFontPadding="false"
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoHeight_Profile"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoHeight_Profile"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoHeight_Profile" />
+
+    <TextView
+        android:id="@+id/height_unit_ft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:includeFontPadding="false"
+        android:text="ft"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoHeightUnit_Profile"
+        app:layout_constraintStart_toEndOf="@+id/tvHeight_ft" />
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:layout_marginStart="8dp"
+        android:id="@+id/tvHeight_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="@+id/tvHeight_ft"
+        app:layout_constraintStart_toEndOf="@+id/height_unit_ft"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHeight_ft" />
+
+    <TextView
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHeight_ft"
+        app:layout_constraintStart_toEndOf="@+id/tvHeight_in"
+        android:textAllCaps="false"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:includeFontPadding="false"
+        android:text="in"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:id="@+id/height_unit_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btInfoAge_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/btn_rrect_info"
+        app:layout_constraintStart_toEndOf="@+id/btInfoHeight_Profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoItemAge_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:text="@string/age"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/btInfoAge_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoAge_Profile" />
+
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:id="@+id/tvInfoAge_Profile"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        tools:text="12"
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemAge_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemAge_Profile" />
+
+
+    <Button
+        android:id="@+id/btInfoGender_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info"
+        app:layout_constraintBottom_toBottomOf="@+id/btInfoAvatar_Profile"
+        app:layout_constraintStart_toStartOf="@+id/btInfoUserName_Profile" />
+
+    <TextView
+        android:id="@+id/tvInfoItemGender_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:text="@string/gender"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/btInfoGender_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoGender_Profile" />
+
+    <TextView
+        android:letterSpacing="0.01"
+        android:textAllCaps="false"
+        android:id="@+id/tvInfoGender_Profile"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        tools:text="Female"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="36sp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color597084"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemGender_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemGender_Profile" />
+
+    <Button
+        android:id="@+id/btInfoWeight_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info"
+        app:layout_constraintStart_toStartOf="@+id/btInfoHeight_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoGender_Profile" />
+
+    <TextView
+        android:id="@+id/tvInfoItemWeight_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:text="@string/weight"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/btInfoWeight_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoWeight_Profile" />
+
+    <TextView
+        tools:text="70.5"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.01"
+        android:id="@+id/tvInfoWeight_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemWeight_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemWeight_Profile" />
+
+    <TextView
+        android:fontFamily="@font/open_sans_semibold"
+        android:id="@+id/tvInfoWeightUnit_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="kg"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoWeight_Profile"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfoWeight_Profile" />
+
+    <Button
+        android:id="@+id/btInfoSoleAccount_Profile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_info"
+        app:layout_constraintStart_toStartOf="@+id/btInfoAge_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoWeight_Profile" />
+
+    <TextView
+        android:id="@+id/tvInfoItemSoleAccount_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="@string/sole_account"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemAge_Profile"
+        app:layout_constraintTop_toTopOf="@+id/btInfoSoleAccount_Profile" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_account_icon"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="@+id/tvInfoItemSoleAccount_Profile"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoItemSoleAccount_Profile"
+        android:layout_width="25dp"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:layout_marginEnd="22dp"
+        android:id="@+id/tv_account"
+        android:lineSpacingExtra="1.5sp"
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        android:text=""
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btInfoSoleAccount_Profile"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_account_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_account_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.constraintlayout.widget.Group
+        android:visibility="invisible"
+        app:constraint_referenced_ids="tvHeight_ft,tvHeight_in,height_unit_ft,height_unit_in"
+        android:id="@+id/imperial_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Group
+        android:visibility="visible"
+        app:constraint_referenced_ids="tvInfoHeight_Profile,tvInfoHeightUnit_Profile"
+        android:id="@+id/mm_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

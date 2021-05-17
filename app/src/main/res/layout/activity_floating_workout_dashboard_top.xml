@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    tools:context=".workout.WorkoutDashboardActivity">
+
+
+    <View
+        android:visibility="visible"
+        android:background="@color/black75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_sound"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_sound_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_sound_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sound"
+        app:layout_constraintTop_toTopOf="@+id/btn_sound"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <!--分階段-->
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_fan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_fan0_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_fna_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fan"
+        app:layout_constraintTop_toTopOf="@+id/btn_fan"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV1_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btHome_InternetDashboard"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="564dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_workout_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btFullScreen_InternetDashboard"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/btn_round_workout_fullscreen"
+        app:layout_constraintStart_toEndOf="@+id/btHome_InternetDashboard"
+        app:layout_constraintTop_toTopOf="@+id/btHome_InternetDashboard" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV2_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:alpha="0.7"
+        android:padding="10dp"
+        android:src="@drawable/icon_wifi_inversion_lv4"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toStartOf="@id/ivLineV3_Dashboard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV3_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_workout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text=""
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:background="@color/color162735"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="112dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

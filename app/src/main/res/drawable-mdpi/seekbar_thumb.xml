@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorAccent"/>
+            <corners android:radius="25dp"/>
+
+            <padding android:bottom="8dp" android:top="8dp" android:left="16dp" android:right="16dp" />
+        </shape>
+    </item>
+
+
+    <item android:drawable="@drawable/icon_inversion_next_left" android:gravity="center" android:height="32dp" android:width="44dp"/>
+</layer-list>

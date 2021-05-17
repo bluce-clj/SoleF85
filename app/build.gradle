@@ -1,0 +1,220 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    ext {
+        HardWareVersion = "V1.1"
+        SoftWareVersion = "A1.2.0"
+        sVersion = "A"
+        SerialNumber = getDate() + sVersion
+        FirmWareVersion = "30"
+    }
+//    V1.1.A1.2.1.xxxxA.30
+    defaultConfig {
+        applicationId "com.dyaco.spiritbike"
+        minSdkVersion 28
+        targetSdkVersion 30
+        versionCode 68
+        versionName HardWareVersion + "." + SoftWareVersion + "." + SerialNumber + "." + FirmWareVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+
+        //指定room.schemaLocation生成的文件路徑
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString(), eventBusIndex: 'com.dyaco.spiritbike.MyEventBusIndex']
+            }
+        }
+
+        sourceSets {
+            androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+        }
+    }
+
+    //   packagingOptions {
+    //      doNotStrip "*/*/*.so"
+    //     }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+        debug {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    //signingConfig要在buildTypes前面
+    buildTypes {
+        debug {
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+            debuggable true
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            debuggable false
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            //  applicationIdSuffix ".dev"
+            buildConfigField "String", "API_TOKEN", '"asdfeoruf932sskldl4566646422"'
+            buildConfigField "String", "API_DOMAIN", '"http://demo.digifly.com.tw/dyaco/api/"'
+            buildConfigField "String", "UPDATE_URL", '"http://192.168.2.83:8080/"'
+        }
+        production {
+            buildConfigField "String", "API_TOKEN", '"asdfeoruf932sskldl4566646422"'
+            buildConfigField "String", "API_DOMAIN", '"http://cloud.dyaco.com/api/"'
+            //   buildConfigField "String", "UPDATE_URL", '"http://ugymota.azurewebsites.net/spirit/debug/"'
+            buildConfigField "String", "UPDATE_URL", '"https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/"'
+        }
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Spirit" + defaultConfig.versionName + "_" + productFlavors.name + ".apk"
+            variant.getAssembleProvider().configure() {
+                it.doLast {
+                    delete {
+                        delete "build/outputs/apk/output.json"
+                    }
+                }
+            }
+        }
+    }
+
+
+//    lintOptions {
+//        abortOnError false
+//    }
+}
+
+static def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('MMdd')
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+//    implementation 'androidx.fragment:fragment:1.3.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.addisonelliott:SegmentedButton:3.1.9'
+    implementation "com.google.android.material:material:1.3.0"
+    implementation 'com.tencent:mmkv:1.0.23'
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+
+    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    testImplementation "android.arch.persistence.room:testing:1.1.1"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+//    implementation 'com.hacknife:wifimanager:1.0.2'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation(name: 'corestarlib-v0.1.0-0330a-release', ext: 'aar')
+    implementation(name: 'LibraryCalculationUniversal-release', ext: 'aar')
+    implementation(name: 'sdk-lecast-release', ext: 'aar')
+    implementation(name: 'libusb-release', ext: 'aar')
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.2'
+
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
+
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
+
+    implementation 'com.google.zxing:core:3.4.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    //USB
+    implementation 'me.jahnen:libaums:0.8.0'
+
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+//    implementation 'com.uber.autodispose2:autodispose:2.0.0'
+
+   // implementation 'ru.fomenkov:rx-disposable-watcher:1.0.0'
+
+    //  implementation 'jp.wasabeef:picasso-transformations:2.4.0'
+//    implementation('com.squareup.picasso:picasso:2.71828') {
+//        exclude group: 'com.squareup', module: 'picasso'
+//    }
+
+//      debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+//      implementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+
+}

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F8F9"
+    tools:context=".newprofile.FirstLaunchSetTime12Fragment">
+
+<!--    <Button-->
+<!--        android:id="@+id/btBack_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="64dp"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:background="@drawable/btn_round_back_e6e6e6_64"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvTitle_SetTime12"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        android:text="@string/set_time"-->
+<!--        android:textColor="@color/color2F3031"-->
+<!--        android:textSize="48sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btFormat_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="340dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        android:background="@drawable/btn_rrect_e6e6e6_288"-->
+<!--        android:text="@string/hours_24_format"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btGetStarted_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginEnd="340dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        android:background="@drawable/btn_rrect_9d2227_288"-->
+<!--        android:text="@string/get_started"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@android:color/background_light"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btFormat_SetTime12" />-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGroup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="7dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/view1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view2">-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/rbAm_SetTime12"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/rb_round_am" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/rbPm_SetTime12"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:button="@drawable/rb_round_pm"-->
+<!--            android:checked="true" />-->
+<!--    </RadioGroup>-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvAM_SetTime12"-->
+<!--        android:layout_width="128dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="31dp"-->
+<!--        android:layout_marginTop="103dp"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:gravity="center_horizontal|center_vertical"-->
+<!--        android:text="@string/am"-->
+<!--        android:textSize="26sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/radioGroup"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/radioGroup" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPM_SetTime12"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="61dp"-->
+<!--        android:layout_marginEnd="15dp"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:gravity="center_horizontal|center_vertical"-->
+<!--        android:text="@string/pm"-->
+<!--        android:textSize="26sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/radioGroup"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvAM_SetTime12"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/tvAM_SetTime12" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvHour_SetTime12"-->
+<!--        android:layout_width="128dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="153dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:text="01"-->
+<!--        android:textColor="@color/color2F3031"-->
+<!--        android:textSize="80sp"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view2" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvMin_SetTime12"-->
+<!--        android:layout_width="128dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginBottom="152dp"-->
+<!--        android:text="05"-->
+<!--        android:textColor="@color/color2F3031"-->
+<!--        android:textSize="80sp"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/view"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btLeftMin_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="12dp"-->
+<!--        android:layout_height="15dp"-->
+<!--        android:layout_marginStart="165dp"-->
+<!--        android:background="@drawable/icon_next_left"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btRightHour_SetTime12"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btRightHour_SetTime12" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btRightMin_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="12dp"-->
+<!--        android:layout_height="15dp"-->
+<!--        android:layout_marginStart="249dp"-->
+<!--        android:background="@drawable/icon_next_right"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btLeftMin_SetTime12"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btLeftMin_SetTime12" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btLeftHour_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="12dp"-->
+<!--        android:layout_height="15dp"-->
+<!--        android:layout_marginStart="83dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/icon_next_left"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ivLeftLine_SetTime12" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btRightHour_SetTime12"-->
+<!--        style="?android:attr/borderlessButtonStyle"-->
+<!--        android:layout_width="12dp"-->
+<!--        android:layout_height="15dp"-->
+<!--        android:layout_marginStart="236dp"-->
+<!--        android:background="@drawable/icon_next_right"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btLeftHour_SetTime12"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btLeftHour_SetTime12" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivLeftLine_SetTime12"-->
+<!--        android:layout_width="4dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="212dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:src="@drawable/line_vertical_fixed"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvHour_SetTime12" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivRightLine_SetTime12"-->
+<!--        android:layout_width="4dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="428dp"-->
+<!--        android:src="@drawable/line_vertical_fixed"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ivLeftLine_SetTime12"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ivLeftLine_SetTime12" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvColon_SetTime12"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:text=":"-->
+<!--        android:textColor="@color/color2F3031"-->
+<!--        android:textSize="80sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/tvMin_SetTime12"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvHour_SetTime12"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/vTopLine_SetTime12" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/vTopLine_SetTime12"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="256dp"-->
+<!--        android:background="@color/colorE6E6E6"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/vBottomLine_SetTime12"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="296dp"-->
+<!--        android:layout_marginBottom="248dp"-->
+<!--        android:background="@color/colorE6E6E6"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/vTopLine_SetTime12" />-->
+
+
+
+<!--    <View-->
+<!--        android:id="@+id/view4"-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="432dp"-->
+<!--        android:background="@color/colorE6E6E6"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/vBottomLine_SetTime12"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/vTopLine_SetTime12" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

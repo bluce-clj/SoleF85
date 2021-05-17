@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAvatarIcon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_popup_down"
+    tools:context=".newprofile.AvatarIconFragment">
+
+    <Button
+        android:id="@+id/btClose_AvatarIcon"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tvTitle_AvatarIcon"
+        android:text="Change Icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="800dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="228dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/rgUp_AvatarIcon"
+            android:layout_width="800dp"
+
+            android:layout_height="160dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:tag="1"
+                android:id="@+id/rbAvatar01_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar01" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar02_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar02" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar03_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar03" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar04_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar04" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar05_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar05" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rgDown_AvatarIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAvatar06_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar06" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar07_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar07" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar08_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar08" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar09_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar09" />
+
+            <RadioButton
+                android:id="@+id/rbAvatar10_AvatarIcon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:button="@drawable/rb_round_icon_avatar10" />
+        </RadioGroup>
+
+
+    </RadioGroup>
+
+    <Button
+        android:textColor="@color/color597084"
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:id="@+id/btNo_DialogDataLost"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:id="@+id/btYes_DialogDataLost"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="Save"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintTop_toTopOf="@+id/btNo_DialogDataLost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

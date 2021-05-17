@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F8F9"
+    tools:context=".programs.AdjustHeartRate_2Fragment">
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/element_pagination_hr_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/display_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="@string/heart_rate"
+        android:textColor="@color/color597084"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="41dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.226"
+        android:text="TIME"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:includeFontPadding="false"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="280dp"
+        android:id="@+id/display_text"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_marginEnd="553dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="min"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/display_text" />
+
+    <ImageButton
+        android:paddingEnd="0dp"
+        android:paddingStart="24dp"
+        android:paddingTop="34dp"
+        android:paddingBottom="34dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_left"
+        android:id="@+id/bt_left"
+        android:background="@null"
+        android:layout_marginStart="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/v_center"
+        app:layout_constraintTop_toTopOf="@+id/v_center"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/height_ruler"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:background="@color/colorF6F8F9"
+        app:layout_constraintBottom_toBottomOf="@+id/v_center"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="@+id/v_center"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="99"
+        app:rulerMinValue="9"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/v_center"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:background="@color/colorE4002B"
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:paddingEnd="24dp"
+        android:paddingStart="0dp"
+        android:paddingTop="34dp"
+        android:paddingBottom="34dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_right"
+        android:id="@+id/bt_right"
+        android:background="@null"
+        android:layout_marginEnd="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/v_center"
+        app:layout_constraintTop_toTopOf="@+id/v_center"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <View
+        android:id="@+id/ivBottomLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="304dp"
+        android:background="@color/colorDEE2E6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btNext_SetDate"
+        style="@style/NormalButton"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="@string/start"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBottomLine_Programs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

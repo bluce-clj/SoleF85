@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".programs.AdjustHeartRate_1Fragment" >
+
+    <ImageView
+        android:src="@drawable/element_pagination_hr_1"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="32dp"
+        android:layout_height="16dp"/>
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/display_title"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="Heart Rate"
+        android:textColor="@color/color597084"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/m24oo1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="548dp"
+        android:layout_marginEnd="548dp"
+        android:background="@color/colorDEE2E6"
+        app:layout_constraintBottom_toTopOf="@id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTopLine_Programs" />
+
+    <TextView
+        android:layout_width="640dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.14062"
+        android:text="TARGET"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:includeFontPadding="false"
+        android:layout_marginStart="210dp"
+        android:id="@+id/tv_left_show_num"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/mintext"
+        app:layout_constraintBottom_toTopOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:layout_marginEnd="233dp"
+        app:layout_constraintEnd_toEndOf="@+id/m24oo1"
+        android:gravity="start|bottom"
+        android:id="@+id/mintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="BPM"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_left_show_num" />
+
+
+    <TextView
+        android:textAllCaps="true"
+        android:layout_width="640dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.14062"
+        android:text="Target HR (% of Max)"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <RadioGroup
+        android:layout_marginStart="141dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/m24oo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbAm_SetTime12"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:button="@drawable/rb_round_hr"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:layout_marginStart="32dp"
+            android:id="@+id/rbPm_SetTime12"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:button="@drawable/rb_round_hr"
+            android:checked="true" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginStart="14dp"
+        android:id="@+id/tvMale_NewGender"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="65%"
+        android:textColor="@color/color597084"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tvFemale_NewGender"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="80%"
+        android:textColor="@color/colorE4002B"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toEndOf="@+id/tvMale_NewGender"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewLeft"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_hours"
+        app:layout_constraintEnd_toStartOf="@+id/bt_left_plus"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_minus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="200"
+        app:rulerMinValue="50"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <ImageButton
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_left"
+        android:id="@+id/bt_left_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@id/v_24_hours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours" />
+
+
+    <!--        24 時 紅線-->
+    <View
+        android:id="@+id/v_24_hours"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="201dp"
+        android:background="@color/colorE4002B"
+        app:layout_constraintEnd_toEndOf="@+id/m24oo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <ImageButton
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="24dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/r_arrow_right"
+        android:id="@+id/bt_left_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="481dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_hours"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_minus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours" />
+
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivBottomLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="304dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btNext_SetDate"
+        style="@style/NormalButton"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/btn_rrect_e6e6e6_288"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

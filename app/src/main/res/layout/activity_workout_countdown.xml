@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".workout.WorkoutCountdownActivity">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/countdown_ball"-->
+<!--        android:src="@drawable/cooldown_ball"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_width="480dp"-->
+<!--        android:layout_height="480dp"/>-->
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/iv_rotate_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_rotate_ball"
+        app:layout_constraintStart_toStartOf="@+id/iv_rotate_ball"
+        app:layout_constraintEnd_toEndOf="@+id/iv_rotate_ball"
+        android:id="@+id/countdown_ball"
+        android:src="@drawable/red_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_rotate_ball"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/oval_countown"
+        android:layout_width="480dp"
+        android:layout_height="480dp"/>
+
+
+    <TextView
+        android:fontFamily="@font/hanzel_bold"
+        android:text="1"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="132sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/countdown_number"
+        android:background="@color/colorE4002B"
+        app:layout_constraintTop_toTopOf="@+id/countdown_ball"
+        app:layout_constraintStart_toStartOf="@+id/countdown_ball"
+        app:layout_constraintEnd_toEndOf="@+id/countdown_ball"
+        app:layout_constraintBottom_toBottomOf="@+id/countdown_ball"
+        android:layout_width="300dp"
+        android:layout_height="152dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_countdown_starting"
+        android:text="Starting in"
+        android:textColor="@color/colorFFFFFF"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="132dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

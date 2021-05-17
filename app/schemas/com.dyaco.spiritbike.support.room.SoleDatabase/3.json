@@ -1,0 +1,599 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "32bec7252d80ddad8fb5fd1e7ce65446",
+    "entities": [
+      {
+        "tableName": "user_profile",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `userName` TEXT, `userId` INTEGER NOT NULL, `userImage` INTEGER NOT NULL, `userType` INTEGER NOT NULL, `weight_metric` INTEGER NOT NULL, `height_metric` INTEGER NOT NULL, `weight_imperial` INTEGER NOT NULL, `height_imperial` INTEGER NOT NULL, `birthday` TEXT, `gender` INTEGER NOT NULL, `unit` INTEGER NOT NULL, `customLevelNum` TEXT, `customInclineNum` TEXT, `totalDistance_metric` REAL NOT NULL, `totalDistance_imperial` REAL NOT NULL, `totalRun` REAL NOT NULL, `avgPaceInMonth` REAL NOT NULL, `sleepMode` INTEGER NOT NULL, `levelDiagram` BLOB, `inclineDiagram` BLOB, `soleAccountNo` TEXT, `soleAccount` TEXT, `solePassword` TEXT, `soleEmail` TEXT, `soleSyncPassword` TEXT, `soleRegistType` TEXT, `soleHeaderImgUrl` TEXT, `wattAccumulate` REAL NOT NULL, `wattFrequency` INTEGER NOT NULL, `workoutMonth` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userImage",
+            "columnName": "userImage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userType",
+            "columnName": "userType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weight_metric",
+            "columnName": "weight_metric",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "height_metric",
+            "columnName": "height_metric",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weight_imperial",
+            "columnName": "weight_imperial",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "height_imperial",
+            "columnName": "height_imperial",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "birthday",
+            "columnName": "birthday",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customLevelNum",
+            "columnName": "customLevelNum",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customInclineNum",
+            "columnName": "customInclineNum",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalDistance_metric",
+            "columnName": "totalDistance_metric",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalDistance_imperial",
+            "columnName": "totalDistance_imperial",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalRun",
+            "columnName": "totalRun",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgPaceInMonth",
+            "columnName": "avgPaceInMonth",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sleepMode",
+            "columnName": "sleepMode",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "levelDiagram",
+            "columnName": "levelDiagram",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inclineDiagram",
+            "columnName": "inclineDiagram",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleAccountNo",
+            "columnName": "soleAccountNo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleAccount",
+            "columnName": "soleAccount",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "solePassword",
+            "columnName": "solePassword",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleEmail",
+            "columnName": "soleEmail",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleSyncPassword",
+            "columnName": "soleSyncPassword",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleRegistType",
+            "columnName": "soleRegistType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "soleHeaderImgUrl",
+            "columnName": "soleHeaderImgUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "wattAccumulate",
+            "columnName": "wattAccumulate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wattFrequency",
+            "columnName": "wattFrequency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "workoutMonth",
+            "columnName": "workoutMonth",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_user_profile_uid",
+            "unique": false,
+            "columnNames": [
+              "uid"
+            ],
+            "createSql": "CREATE  INDEX `index_user_profile_uid` ON `${TABLE_NAME}` (`uid`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "favorites",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`favoriteName` TEXT, `favoriteParentUid` INTEGER NOT NULL, `favoriteType` INTEGER NOT NULL, PRIMARY KEY(`favoriteParentUid`, `favoriteType`), FOREIGN KEY(`favoriteParentUid`) REFERENCES `user_profile`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "favoriteName",
+            "columnName": "favoriteName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "favoriteParentUid",
+            "columnName": "favoriteParentUid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "favoriteType",
+            "columnName": "favoriteType",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "favoriteParentUid",
+            "favoriteType"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_favorites_favoriteParentUid",
+            "unique": false,
+            "columnNames": [
+              "favoriteParentUid"
+            ],
+            "createSql": "CREATE  INDEX `index_favorites_favoriteParentUid` ON `${TABLE_NAME}` (`favoriteParentUid`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "favoriteParentUid"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "template",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`templateName` TEXT NOT NULL, `templateParentUid` INTEGER NOT NULL, `templateType` INTEGER NOT NULL, `level` INTEGER NOT NULL, `time` INTEGER NOT NULL, `diagramLevel` TEXT, `diagramIncline` TEXT, `someData` INTEGER NOT NULL, `baseProgramId` INTEGER NOT NULL, `useProgramId` INTEGER NOT NULL, `levelDiagram` BLOB, `inclineDiagram` BLOB, PRIMARY KEY(`templateParentUid`, `templateName`), FOREIGN KEY(`templateParentUid`) REFERENCES `user_profile`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "templateName",
+            "columnName": "templateName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateParentUid",
+            "columnName": "templateParentUid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateType",
+            "columnName": "templateType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diagramLevel",
+            "columnName": "diagramLevel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diagramIncline",
+            "columnName": "diagramIncline",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "someData",
+            "columnName": "someData",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "baseProgramId",
+            "columnName": "baseProgramId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "useProgramId",
+            "columnName": "useProgramId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "levelDiagram",
+            "columnName": "levelDiagram",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inclineDiagram",
+            "columnName": "inclineDiagram",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "templateParentUid",
+            "templateName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_template_templateName",
+            "unique": false,
+            "columnNames": [
+              "templateName"
+            ],
+            "createSql": "CREATE  INDEX `index_template_templateName` ON `${TABLE_NAME}` (`templateName`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "templateParentUid"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `historyName` TEXT, `historyParentUid` INTEGER NOT NULL, `level` INTEGER NOT NULL, `time` INTEGER NOT NULL, `diagramLevel` TEXT, `diagramIncline` TEXT, `diagramHR` TEXT, `someData` INTEGER NOT NULL, `updateTime` INTEGER, `baseProgramId` INTEGER NOT NULL, `avgSpeed` TEXT, `calories` TEXT, `avgRPM` TEXT, `avgWATT` TEXT, `avgMET` TEXT, `totalDistance` TEXT, `runTime` INTEGER NOT NULL, `unit` INTEGER NOT NULL, `avgLevel` TEXT, `maxLevel` TEXT, `avgIncline` TEXT, `maxIncline` TEXT, `maxWATT` TEXT, `uploaded` INTEGER NOT NULL, `avgHR` TEXT, `maxHR` TEXT, `pace` TEXT, `avgPace` TEXT, `trainingProcessData` TEXT, FOREIGN KEY(`historyParentUid`) REFERENCES `user_profile`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "historyName",
+            "columnName": "historyName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "historyParentUid",
+            "columnName": "historyParentUid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diagramLevel",
+            "columnName": "diagramLevel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diagramIncline",
+            "columnName": "diagramIncline",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diagramHR",
+            "columnName": "diagramHR",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "someData",
+            "columnName": "someData",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updateTime",
+            "columnName": "updateTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "baseProgramId",
+            "columnName": "baseProgramId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgSpeed",
+            "columnName": "avgSpeed",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "calories",
+            "columnName": "calories",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avgRPM",
+            "columnName": "avgRPM",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avgWATT",
+            "columnName": "avgWATT",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avgMET",
+            "columnName": "avgMET",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalDistance",
+            "columnName": "totalDistance",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "runTime",
+            "columnName": "runTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgLevel",
+            "columnName": "avgLevel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "maxLevel",
+            "columnName": "maxLevel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avgIncline",
+            "columnName": "avgIncline",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "maxIncline",
+            "columnName": "maxIncline",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "maxWATT",
+            "columnName": "maxWATT",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "uploaded",
+            "columnName": "uploaded",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgHR",
+            "columnName": "avgHR",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "maxHR",
+            "columnName": "maxHR",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pace",
+            "columnName": "pace",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avgPace",
+            "columnName": "avgPace",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "trainingProcessData",
+            "columnName": "trainingProcessData",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_history_historyParentUid",
+            "unique": false,
+            "columnNames": [
+              "historyParentUid"
+            ],
+            "createSql": "CREATE  INDEX `index_history_historyParentUid` ON `${TABLE_NAME}` (`historyParentUid`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "user_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "historyParentUid"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"32bec7252d80ddad8fb5fd1e7ce65446\")"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btFavorite_HomeScreenItem"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="288dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/btn_rrect_ffffff_inversion_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/manual"
+        android:textAllCaps="false"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTag_HomeScreenItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/btFavorite_HomeScreenItem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_inversion_preview_favorite_yes" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:scaleType="fitXY"
+        android:id="@+id/ivDiagram_HomeScreenItem"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btFavorite_HomeScreenItem"
+        app:layout_constraintEnd_toEndOf="@+id/btFavorite_HomeScreenItem"
+        app:layout_constraintStart_toStartOf="@+id/btFavorite_HomeScreenItem"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

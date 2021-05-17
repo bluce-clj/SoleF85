@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    <style name="AppThemeNewLauncher" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--        <item name="colorPrimary">@color/tool_bar</item>-->
+    <!--        <item name="colorPrimaryDark">@color/tool_bar2</item>-->
+    <!--        <item name="colorAccent">@color/tool_bar</item>-->
+    <!--        <item name="android:windowBackground">@drawable/welcome_bg</item>-->
+    <!--    </style>-->
+
+    <!-- Base application theme. -->
+<!--    <item name="android:windowContentTransitions">true</item>-->
+<!--    <item name="android:windowEnterTransition">@transition/explode</item>-->
+<!--    <item name="android:windowExitTransition">@transition/explode</item>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+<!--        <item name="android:windowIsFloating">true</item>-->
+<!--        <item name="android:windowCloseOnTouchOutside">false</item>-->
+<!--        <item name="android:colorBackgroundCacheHint">@null</item>-->
+<!--        <item name="android:backgroundDimEnabled">true</item>-->
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <style name="LauncherTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_launch_logo</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DialogProgressTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+<!--    <item name="android:windowContentOverlay">@null</item>-->
+<!--    <item name="android:windowFrame">@null</item>-->
+<!--    <item name="android:windowIsFloating">true</item>-->
+
+    <style name="WorkoutNumberStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorFFFFFF</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+<!--&lt;!&ndash;    <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">&ndash;&gt;-->
+<!--    <style name="AppTheme.TabLayout" parent="@android:style/Widget.TabWidget">-->
+<!--        <item name="android:background">@color/colorPrimary</item>-->
+<!--        <item name="tabIndicatorColor">@color/colorE4002B</item>-->
+<!--    </style>-->
+
+    <style name="TabFontStyle">
+        <item name="android:textColor">@color/colorB4BEC7</item>
+        <item name="android:fontFamily">@font/hanzel_bold</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="WorkoutUnitTextStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorFFFFFF</item>
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:lineSpacingExtra">1.5sp</item>
+    </style>
+
+    <style name="WorkoutBUnitTextStyle">
+        <item name="android:letterSpacing">0.14062</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorB4BEC7</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">1.5sp</item>
+    </style>
+
+    <style name="DiagramLevelSeekBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:layout_marginBottom">179dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxWidth">390dp</item>
+        <item name="android:minWidth">390dp</item>
+        <item name="android:max">10</item>
+        <item name="android:min">1</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal10</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="DiagramLevel01">
+        <item name="android:enabled">false</item>
+        <item name="android:layout_marginBottom">249dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxWidth">504dp</item>
+        <item name="android:minWidth">504dp</item>
+        <item name="android:max">20</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/diagram_level_pending_01</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="DiagramIncline01">
+        <item name="android:layout_marginBottom">249dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxWidth">504dp</item>
+        <item name="android:minWidth">504dp</item>
+        <item name="android:max">40</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/diagram_incline_pending_01</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="DiagramLevel02">
+        <item name="android:layout_marginBottom">246dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">17dp</item>
+        <item name="android:minHeight">17dp</item>
+        <item name="android:maxWidth">504dp</item>
+        <item name="android:minWidth">504dp</item>
+        <item name="android:max">20</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/diagram_level_pending_02</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="DiagramIncline02">
+        <item name="android:layout_marginBottom">246dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">17dp</item>
+        <item name="android:minHeight">17dp</item>
+        <item name="android:maxWidth">504dp</item>
+        <item name="android:minWidth">504dp</item>
+        <item name="android:max">40</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/diagram_incline_pending_02</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+
+
+    <style name="download_seekbar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxWidth">884dp</item>
+        <item name="android:minWidth">884dp</item>
+        <item name="android:max">100</item>
+        <item name="android:min">0</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_download</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="custom_seekbar_10" parent="@android:style/Widget.SeekBar">
+        <item name="android:layout_marginBottom">179dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxWidth">362dp</item>
+        <item name="android:minWidth">362dp</item>
+        <item name="android:max">10</item>
+        <item name="android:min">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal10</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="custom_seekbar_17" parent="@android:style/Widget.SeekBar">
+        <item name="android:layout_marginBottom">189dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxWidth">370dp</item>
+        <item name="android:minWidth">370dp</item>
+        <item name="android:max">20</item>
+        <item name="android:min">1</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal17</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="custom_seekbar_8" parent="@android:style/Widget.SeekBar">
+        <item name="android:layout_marginBottom">72dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxWidth">176dp</item>
+        <item name="android:minWidth">176dp</item>
+        <item name="android:max">7</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal8</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+    <style name="custom_seekbar_15" parent="@android:style/Widget.SeekBar">
+        <item name="android:layout_marginBottom">72dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:rotation">270</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxWidth">176dp</item>
+        <item name="android:minWidth">176dp</item>
+        <item name="android:max">14</item>
+        <item name="android:min">0</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal15</item>
+        <item name="android:thumb">@android:color/transparent</item>
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
+
+    <style name="SeekBarText2">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/color597084</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:letterSpacing">0.14062</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">1.5sp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="SeekBarText">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color597084</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:letterSpacing">0.14062</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">1.5sp</item>
+    </style>
+
+    <style name="NormalButton">
+        <item name="android:layout_width">184dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/hanzel_bold</item>
+    </style>
+
+    <style name="NormalTitleText">
+        <item name="android:layout_marginTop">128dp</item>
+        <item name="android:textColor">@color/color597084</item>
+        <item name="android:letterSpacing">0.10062</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/hanzel_bold</item>
+    </style>
+
+    <style name="NormalTitleText2">
+        <item name="android:layout_marginTop">104dp</item>
+        <item name="android:textColor">@color/color597084</item>
+        <item name="android:letterSpacing">0.14062</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/hanzel_bold</item>
+    </style>
+
+
+    <style name="text_in_layout_hint_Style">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="slide_menu_text">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/hanzel_bold</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorB4BEC7</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="text_in_layout_error_hint_Style">
+        <item name="android:textColor">@color/colorE4002B</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <declare-styleable name="MyView">
+        <attr name="title" format="string" />
+        <attr name="image" format="reference" />
+        <attr name="imageSize" format="dimension" />
+    </declare-styleable>
+
+    <style name="FullScreenDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_black"
+    android:id="@+id/cl_base"
+    tools:context=".workout.WorkoutPauseActivity">
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_sound"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_sound_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <ImageView-->
+<!--        android:contentDescription="@string/img"-->
+<!--        android:visibility="invisible"-->
+<!--        android:id="@+id/iv_sound_connected"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btn_sound"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btn_sound"-->
+<!--        android:src="@drawable/icon_header_status_done"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:id="@+id/btn_fan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round_fan0_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_fna_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fan"
+        app:layout_constraintTop_toTopOf="@+id/btn_fan"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btHeartRate_Dashboard"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="204dp"
+        android:background="@drawable/btn_round_heartrate_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/iv_hr_connected"
+        app:layout_constraintEnd_toEndOf="@+id/btHeartRate_Dashboard"
+        app:layout_constraintTop_toTopOf="@+id/btHeartRate_Dashboard"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/bt_bt"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="292dp"
+        android:background="@drawable/btn_round_bluetooth_9b9b9b_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_workout_top_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_sound_connected"
+        app:layout_constraintEnd_toEndOf="@+id/bt_bt"
+        app:layout_constraintTop_toTopOf="@+id/bt_bt"
+        android:src="@drawable/icon_header_status_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:padding="10dp"
+        android:contentDescription="@string/img"
+        android:id="@+id/iv_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toStartOf="@id/ivLineV3_Dashboard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/ivLineV3_Dashboard"
+        android:layout_width="1dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_workout_top_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_workout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text=""
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/color33FFFFFF"
+        android:id="@+id/iv_workout_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/tv_pause"
+        android:layout_marginStart="340dp"
+        android:layout_marginEnd="340dp"
+        android:gravity="center"
+        android:text="Paused"
+        android:layout_marginTop="264dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="600dp"
+        android:layout_height="64dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/text_2"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_width="0dp"
+        android:text="The program will automatically end in"
+        android:textSize="22sp"
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pause"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pause"
+        app:layout_constraintStart_toStartOf="@+id/tv_pause"
+        android:layout_height="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_time_out"
+        android:gravity="start|center_vertical"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginEnd="340dp"
+        android:layout_marginStart="340dp"
+        android:layout_width="103dp"
+        android:text="05:00"
+        android:textSize="32sp"
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="48dp"/>
+
+    <Button
+        android:gravity="center"
+        android:fontFamily="@font/hanzel_bold"
+        android:id="@+id/btNo_DialogDataLost"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="576dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="Resume"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/btYes_DialogDataLost"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:text="Finish"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        android:fontFamily="@font/hanzel_bold"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        app:layout_constraintBottom_toBottomOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintTop_toTopOf="@+id/btNo_DialogDataLost" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:height="10dp"
+        android:width="504dp"
+        android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/bar_diagram_incline_running"
+            android:scaleWidth="100%"
+            android:useIntrinsicSizeAsMinimum="false"/>
+    </item>
+
+</layer-list>

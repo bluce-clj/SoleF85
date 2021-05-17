@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F8F9"
+    tools:context=".settings.SettingLanguageFragment" >
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/language_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/language_title" />
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/language_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs"
+        android:id="@+id/clListTemplates_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btSetting01"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="English"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btSetting02"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Português"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting01"
+            app:layout_constraintTop_toTopOf="@+id/btSetting01" />
+
+
+        <Button
+            android:id="@+id/btSetting03"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="简体中文"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting02"
+            app:layout_constraintTop_toTopOf="@+id/btSetting02" />
+
+        <Button
+            android:id="@+id/btSetting04"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Pусский"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting03"
+            app:layout_constraintTop_toTopOf="@+id/btSetting03" />
+
+        <Button
+            android:id="@+id/btSetting05"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Deutshe"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btSetting01" />
+
+        <Button
+            android:id="@+id/btSetting06"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Italiano"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting05"
+            app:layout_constraintTop_toTopOf="@+id/btSetting05" />
+
+        <Button
+            android:id="@+id/btSetting07"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="繁體中文"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting06"
+            app:layout_constraintTop_toTopOf="@+id/btSetting06" />
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btSetting08"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/template_08"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting07"
+            app:layout_constraintTop_toTopOf="@+id/btSetting07" />
+
+        <Button
+            android:id="@+id/btSetting09"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Norsk"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="@+id/btSetting05"
+            app:layout_constraintTop_toBottomOf="@+id/btSetting05" />
+
+        <Button
+            android:id="@+id/btSetting10"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Français"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting09"
+            app:layout_constraintTop_toTopOf="@+id/btSetting09" />
+
+        <Button
+            android:id="@+id/btSetting11"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="日本語"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting10"
+            app:layout_constraintTop_toTopOf="@+id/btSetting10" />
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btSetting12"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/template_12"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting11"
+            app:layout_constraintTop_toTopOf="@+id/btSetting11" />
+
+
+        <Button
+            android:id="@+id/btSetting13"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Nederlands"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="@+id/btSetting09"
+            app:layout_constraintTop_toBottomOf="@+id/btSetting09" />
+
+        <Button
+            android:id="@+id/btSetting14"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Español"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting13"
+            app:layout_constraintTop_toTopOf="@+id/btSetting13" />
+
+        <Button
+            android:id="@+id/btSetting15"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="한국어"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting14"
+            app:layout_constraintTop_toTopOf="@+id/btSetting14" />
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btSetting16"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="318dp"
+            android:layout_height="110dp"
+            android:background="@drawable/btn_rrect_ffffff_288"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/template_12"
+            android:textAllCaps="false"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/btSetting15"
+            app:layout_constraintTop_toTopOf="@+id/btSetting15" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

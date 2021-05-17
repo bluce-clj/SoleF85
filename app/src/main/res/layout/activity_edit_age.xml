@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogDataLost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_popup_down"
+    tools:context=".profile.EditAgeActivity">
+
+    <Button
+        android:id="@+id/btClose"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle_UserName"
+        style="@style/NormalTitleText"
+        android:text="Edit Age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDay_SetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintEnd_toStartOf="@id/ivLeftLine_SetDate"
+        app:layout_constraintTop_toTopOf="@+id/ivLeftLine_SetDate" />
+
+    <TextView
+        android:id="@+id/tvDayText_SetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/day"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDay_SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvDay_SetDate" />
+
+    <ImageButton
+        android:paddingTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_next_up"
+        android:id="@+id/btUpDay_SetDate"
+        android:layout_marginBottom="118dp"
+        app:layout_constraintBottom_toTopOf="@id/ivLeftLine_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivLeftLine_SetDate" />
+
+    <ImageButton
+        android:paddingBottom="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_next_down"
+        android:id="@+id/btDownDay_SetDate"
+        android:layout_marginTop="118dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/ivLeftLine_SetDate" />
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewDay"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btDownDay_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/btUpDay_SetDate"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="23dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="30"
+        app:rulerMinValue="1"
+        app:rulerOrientation="vertical"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/ivLeftLine_SetDate"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="652dp"
+        android:layout_marginTop="404dp"
+        android:background="@color/colorE4002B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonth_SetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintEnd_toStartOf="@id/ivMiddleLine_SetDate"
+        app:layout_constraintTop_toTopOf="@+id/ivMiddleLine_SetDate"/>
+
+    <TextView
+        android:id="@+id/tvMonthText_SetDate"
+        android:layout_width="82dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="553dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
+        android:text="@string/month"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMonth_SetDate"
+        app:layout_constraintTop_toBottomOf="@id/tvMonth_SetDate" />
+
+    <ImageButton
+        android:paddingTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_next_up"
+        android:id="@+id/btUpMonth_SetDate"
+        android:layout_marginBottom="118dp"
+        app:layout_constraintBottom_toTopOf="@id/ivMiddleLine_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivMiddleLine_SetDate" />
+
+    <ImageButton
+        android:paddingBottom="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_next_down"
+        android:id="@+id/btDownMonth_SetDate"
+        android:layout_marginTop="118dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintTop_toBottomOf="@id/ivMiddleLine_SetDate" />
+
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewMonth"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btDownMonth_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivMiddleLine_SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/btUpMonth_SetDate"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="23dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="12"
+        app:rulerMinValue="1"
+        app:rulerOrientation="vertical"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/ivMiddleLine_SetDate"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="288dp"
+        android:background="@color/colorE4002B"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivLeftLine_SetDate" />
+
+    <TextView
+        android:id="@+id/tvYear_SetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintEnd_toStartOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintTop_toTopOf="@id/ivRightLine_SetDate" />
+
+    <ImageButton
+        android:paddingTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_next_up"
+        android:id="@+id/btUpYear_SetDate"
+        android:layout_marginBottom="118dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivRightLine_SetDate"/>
+
+    <ImageButton
+        android:paddingBottom="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:src="@drawable/icon_next_down"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btDownYear_SetDate"
+        android:layout_marginTop="118dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivRightLine_SetDate" />
+
+    <TextView
+        android:id="@+id/tvYearText_SetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="92dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
+        android:text="@string/year"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvYear_SetDate"
+        app:layout_constraintTop_toBottomOf="@id/tvYear_SetDate" />
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewYear"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btDownYear_SetDate"
+        app:layout_constraintEnd_toEndOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintStart_toStartOf="@+id/ivRightLine_SetDate"
+        app:layout_constraintTop_toBottomOf="@+id/btUpYear_SetDate"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="23dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="2040"
+        app:rulerMinValue="2000"
+        app:rulerOrientation="vertical"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/ivRightLine_SetDate"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@color/colorE4002B"
+        android:layout_marginStart="1016dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLeftLine_SetDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivLeftLine_SetDate" />
+
+
+    <Button
+        android:id="@+id/btNo_DialogDataLost"
+        style="@style/NormalButton"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="Cancel"
+        android:textColor="@color/color597084"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btYes_DialogDataLost"
+        style="@style/NormalButton"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="Save"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintTop_toTopOf="@+id/btNo_DialogDataLost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

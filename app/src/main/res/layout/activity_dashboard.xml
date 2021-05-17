@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/nhcDashboard"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:navGraph="@navigation/navigation_dashboard" />-->
+
+    <fragment
+        android:id="@+id/nhcDashboard"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_dashboard" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPanelDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btSignout_Dashboard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_round_signout_9b9b9b_64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btHeartRate_Dashboard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/btn_round_heartrate_9b9b9b_64"
+            app:layout_constraintStart_toEndOf="@+id/btSignout_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btSignout_Dashboard" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:visibility="invisible"
+            android:id="@+id/iv_hr_connected"
+            app:layout_constraintEnd_toEndOf="@+id/btHeartRate_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btHeartRate_Dashboard"
+            android:src="@drawable/icon_header_status_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btSound_Dashboard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/btn_round_sound_9b9b9b_64"
+            app:layout_constraintStart_toEndOf="@+id/btHeartRate_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btSignout_Dashboard" />
+
+<!--        <ImageView-->
+<!--            android:contentDescription="@string/img"-->
+<!--            android:visibility="invisible"-->
+<!--            android:id="@+id/iv_sound_connected"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/btSound_Dashboard"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/btSound_Dashboard"-->
+<!--            android:src="@drawable/icon_header_status_done"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btFan_Dashboard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/btn_round_fan0_9b9b9b_64"
+            app:layout_constraintStart_toEndOf="@+id/btSound_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btSound_Dashboard" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:visibility="invisible"
+            android:id="@+id/iv_fna_connected"
+            app:layout_constraintEnd_toEndOf="@+id/btFan_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btFan_Dashboard"
+            android:src="@drawable/icon_header_status_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btBlueTooth_Dashboard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/btn_round_bluetooth_9b9b9b_64"
+            app:layout_constraintStart_toEndOf="@+id/btFan_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btSound_Dashboard" />
+
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:visibility="invisible"
+            android:id="@+id/iv_sound_connected"
+            app:layout_constraintEnd_toEndOf="@+id/btBlueTooth_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btBlueTooth_Dashboard"
+            android:src="@drawable/icon_header_status_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:contentDescription="@string/img"
+            android:visibility="invisible"
+            android:id="@+id/iv_bt_connected"
+            app:layout_constraintEnd_toEndOf="@+id/btBlueTooth_Dashboard"
+            app:layout_constraintTop_toTopOf="@+id/btBlueTooth_Dashboard"
+            android:src="@drawable/icon_header_status_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.dyaco.spiritbike.support.banner.indicator.RectangleIndicator
+            android:layout_marginStart="156dp"
+            app:layout_constraintStart_toEndOf="@+id/btFan_Dashboard"
+            app:layout_constraintTop_toTopOf="@id/btFan_Dashboard"
+            app:layout_constraintBottom_toBottomOf="@+id/btFan_Dashboard"
+            android:id="@+id/indicator"
+            android:layout_width="256dp"
+            android:layout_height="16dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:scaleType="center"
+            android:id="@+id/ivAvatar_Dashboard"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="263dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:letterSpacing="0.14062"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center_vertical"
+            android:id="@+id/tvName_Dashboard"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text=""
+            android:textColor="@color/color597084"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar_Dashboard"
+            app:layout_constraintEnd_toStartOf="@id/ivLineV1_Dashboard"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLineV1_Dashboard"
+            app:layout_constraintTop_toTopOf="@id/ivLineV1_Dashboard" />
+
+        <View
+            android:background="@color/colorDEE2E6"
+            android:id="@+id/ivLineV1_Dashboard"
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="168dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:padding="10dp"
+            android:src="@drawable/icon_wifi_inversion_lv4"
+            android:contentDescription="@string/img"
+            android:id="@+id/ivWifiIcon_Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="108dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:background="@color/colorDEE2E6"
+            android:id="@+id/ivLineV2_Dashboard"
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivLineV1_Dashboard" />
+
+        <TextView
+            android:fontFamily="@font/open_sans_bold"
+            android:id="@+id/tvTime_Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/color597084"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/ivLineV2_Dashboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivOptionBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/bg_panel_menu" />
+
+        <RadioGroup
+            android:id="@+id/rgOption_Dashboard"
+            android:layout_width="992dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginEnd="80dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/ivOptionBg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivOptionBg"
+            app:layout_constraintVertical_bias="0.5">
+
+            <RadioButton
+                android:id="@+id/rbHomeScreen_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_homescreen"
+                android:checked="true" />
+
+            <RadioButton
+
+                android:id="@+id/rbPrograms_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_programs" />
+
+
+            <RadioButton
+                android:id="@+id/rbProfile_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_profile" />
+
+            <RadioButton
+                android:id="@+id/rbInternet_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_internet" />
+
+            <RadioButton
+                android:id="@+id/rbCast_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_cast" />
+
+
+            <RadioButton
+                android:id="@+id/rbSettings_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/rb_round_settings" />
+
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <ImageView-->
+<!--        android:contentDescription="@string/img"-->
+<!--        android:visibility="invisible"-->
+<!--        android:id="@+id/iv_update_notify"-->
+<!--        android:layout_marginEnd="90dp"-->
+<!--        android:layout_marginBottom="88dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:src="@drawable/update_notify"-->
+<!--        android:layout_width="288dp"-->
+<!--        android:layout_height="104dp"/>-->
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:visibility="invisible"
+        android:id="@+id/iv_update_notify"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="69dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/shape_red"
+        android:layout_width="16dp"
+        android:layout_height="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

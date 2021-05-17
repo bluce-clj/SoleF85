@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clNewBiodata"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newprofile.NewBiodataFragment">
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivPageIndex25_NewBiodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/element_pagination_profile_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btClose_NewBiodata"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tvTitle_NewBiodata"
+        android:text="@string/biodata"
+        android:textColor="@color/color597084"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="198dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/sc_unit"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorDEE2E6"
+        app:draggable="true"
+        app:ripple="false"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs3"
+        app:position="0"
+        app:radius="32dp"
+        app:selectedBackground="@color/colorE4002B"
+        app:selectedButtonRadius="32dp"
+        app:selectionAnimationDuration="200">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="IMPERIAL"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="METRIC"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <View
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="310dp"
+        android:background="@color/colorDEE2E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/m24oo1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="548dp"
+        android:layout_marginEnd="548dp"
+        android:background="@color/colorDEE2E6"
+        app:layout_constraintBottom_toTopOf="@id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTopLine_Programs" />
+
+    <TextView
+        android:layout_width="640dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.14062"
+        android:text="WEIGHT"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        tools:text="20"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/tv_left_show_num"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="86dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toStartOf="@+id/weight_unit"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/weight_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="237dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="kg"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_left_show_num"
+        app:layout_constraintEnd_toStartOf="@+id/m24oo1"/>
+
+    <TextView
+        android:layout_width="640dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.14062"
+        android:text="HEIGHT"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:id="@+id/tv_right_show_num_cm"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_left_show_num"
+        app:layout_constraintTop_toTopOf="@+id/tv_left_show_num"
+        app:layout_constraintEnd_toStartOf="@+id/height_unit_cm" />
+
+    <TextView
+        android:layout_marginEnd="8dp"
+        android:id="@+id/tv_right_show_num_ft"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toStartOf="@+id/height_unit_ft"
+        app:layout_constraintBottom_toTopOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:layout_marginEnd="321dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/height_unit_ft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="ft"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/height_unit_cm"
+        app:layout_constraintTop_toTopOf="@+id/height_unit_cm" />
+
+    <TextView
+        android:id="@+id/tv_right_show_num_in"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivBottomLine_Programs"
+        app:layout_constraintEnd_toStartOf="@+id/height_unit_in"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs" />
+
+
+    <TextView
+        android:textAllCaps="true"
+        android:layout_marginEnd="200dp"
+        android:id="@+id/height_unit_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hanzel_bold"
+        android:text="in"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/height_unit_cm"
+        app:layout_constraintTop_toTopOf="@+id/height_unit_cm" />
+
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/height_unit_cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hanzel_bold"
+        android:layout_marginEnd="230dp"
+        android:text="cm"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_right_show_num_cm"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:paddingStart="34dp"
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="10dp"
+        android:src="@drawable/r_arrow_left"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:id="@+id/bt_right_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="500dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_mins"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right_plus"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_plus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_mins" />
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewLeft"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_hours"
+        app:layout_constraintEnd_toStartOf="@+id/bt_left_plus"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_minus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="180"
+        app:rulerMinValue="30"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+
+    <ImageButton
+        android:paddingStart="10dp"
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="34dp"
+        android:src="@drawable/r_arrow_right"
+        android:background="@null"
+        android:contentDescription="@string/img"
+        android:id="@+id/bt_right_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_mins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_24_mins" />
+
+    <ImageButton
+        android:src="@drawable/r_arrow_left"
+        android:paddingStart="34dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="34dp"
+        android:paddingBottom="34dp"
+        android:contentDescription="@string/img"
+        android:id="@+id/bt_left_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@id/v_24_hours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours" />
+
+    <!--        24 分 紅線-->
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:id="@+id/rulerViewRight"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_mins"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right_plus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bt_right_minus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_mins"
+        app:layout_constraintVertical_bias="0.485"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="240"
+        app:rulerMinValue="50"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="0dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/v_24_mins"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:background="@color/colorE4002B"
+        android:layout_marginTop="201dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right_plus"
+        app:layout_constraintStart_toEndOf="@+id/bt_right_minus"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <!--        24 時 紅線-->
+    <View
+        android:id="@+id/v_24_hours"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:background="@color/colorE4002B"
+        android:layout_marginTop="201dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_left_plus"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_minus"
+        app:layout_constraintTop_toTopOf="@+id/ivTopLine_Programs" />
+
+    <ImageButton
+        android:paddingEnd="34dp"
+        android:paddingBottom="34dp"
+        android:paddingTop="34dp"
+        android:paddingStart="10dp"
+        android:src="@drawable/r_arrow_right"
+        android:contentDescription="@string/img"
+        android:id="@+id/bt_left_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="471dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/v_24_hours"
+        app:layout_constraintStart_toEndOf="@+id/bt_left_minus"
+        app:layout_constraintTop_toTopOf="@+id/v_24_hours" />
+
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivBottomLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:textColor="@color/color597084"
+        android:id="@+id/btBack_NewBiodata"
+       style="@style/NormalButton"
+        android:layout_marginStart="444dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btNext_NewBiodata"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btNext_NewBiodata"
+        style="@style/NormalButton"
+        android:layout_marginEnd="444dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="@string/next"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:visibility="invisible"
+        app:constraint_referenced_ids="tv_right_show_num_ft,height_unit_ft,height_unit_in,tv_right_show_num_in"
+        android:id="@+id/imperial_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Group
+        android:visibility="visible"
+        app:constraint_referenced_ids="height_unit_cm,tv_right_show_num_cm"
+        android:id="@+id/mm_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

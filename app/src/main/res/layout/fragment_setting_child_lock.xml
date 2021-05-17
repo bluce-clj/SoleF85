@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".settings.SettingChildLockFragment">
+
+    <TextView
+        style="@style/NormalTitleText2"
+        android:id="@+id/unit_title"
+        android:text="CHILD LOCK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="271dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/sc_unit"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorDEE2E6"
+        app:draggable="true"
+        app:ripple="false"
+        app:layout_constraintBottom_toTopOf="@+id/ivTopLine_Programs2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs"
+        app:position="1"
+        app:radius="32dp"
+        app:selectedBackground="@color/colorE4002B"
+        app:selectedButtonRadius="32dp"
+        app:selectionAnimationDuration="200">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="ON"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:lineSpacingExtra="1.5sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="OFF"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <View
+        android:layout_marginTop="23dp"
+        android:background="@color/colorDEE2E6"
+        android:id="@+id/ivTopLine_Programs2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc_unit" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="center"
+        android:lineHeight="32dp"
+        android:text="@string/child_lock_summary"
+        android:textColor="@color/color162735"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

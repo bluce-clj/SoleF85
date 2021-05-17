@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_info_record"
+    android:layout_marginStart="28dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="1224dp"
+    android:layout_height="129dp">
+
+    <TextView
+        tools:text="Manual"
+        android:lineSpacingExtra="1.23sp"
+        android:id="@+id/tv_name"
+        android:layout_width="360dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:letterSpacing="0.226"
+        android:fontFamily="@font/open_sans_bold"
+        android:id="@+id/datetime"
+        android:layout_width="360dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:lines="2"
+        android:text=""
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <View
+        android:id="@+id/vv1"
+        android:layout_width="4dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="33dp"
+        android:layout_marginStart="416dp"
+        android:background="@color/colorB4BEC7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:includeFontPadding="false"
+        android:textSize="36sp"
+        tools:text="3.91"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLength="5"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.07"
+        android:id="@+id/kmtext"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:text=""
+        android:textColor="@color/color597084"
+        app:layout_constraintBottom_toTopOf="@+id/tv_distance"
+        app:layout_constraintStart_toEndOf="@+id/vv1"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <TextView
+        tools:text="km"
+        android:textAllCaps="true"
+        android:id="@+id/tv_distance"
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:letterSpacing="0.226"
+        android:text=""
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vv1"
+        app:layout_constraintEnd_toEndOf="@+id/kmtext"
+        app:layout_constraintStart_toStartOf="@+id/kmtext"
+        app:layout_constraintTop_toBottomOf="@+id/kmtext" />
+
+    <View
+        android:id="@+id/vv2"
+        android:layout_width="4dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="624dp"
+        android:background="@color/colorB4BEC7"
+        app:layout_constraintBottom_toBottomOf="@+id/vv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vv1" />
+
+    <TextView
+        android:maxLength="8"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.07"
+        android:includeFontPadding="false"
+        android:textSize="36sp"
+        tools:text="01:17:18"
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/mintext"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:text=""
+        android:textColor="@color/color597084"
+        app:layout_constraintBottom_toBottomOf="@+id/kmtext"
+        app:layout_constraintStart_toEndOf="@+id/vv2"
+        app:layout_constraintTop_toTopOf="@+id/kmtext" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:letterSpacing="0.226"
+        android:text="MIN"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vv2"
+        app:layout_constraintStart_toStartOf="@+id/mintext"
+        app:layout_constraintTop_toBottomOf="@+id/mintext" />
+
+    <View
+        android:id="@+id/vv3"
+        android:layout_width="4dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="832dp"
+        android:background="@color/colorB4BEC7"
+        app:layout_constraintBottom_toBottomOf="@+id/vv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vv1" />
+
+    <TextView
+        android:maxLength="6"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.07"
+        android:includeFontPadding="false"
+        android:textSize="36sp"
+        tools:text="100"
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/avgtext"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:text=""
+        android:textColor="@color/color597084"
+        app:layout_constraintBottom_toBottomOf="@+id/kmtext"
+        app:layout_constraintStart_toEndOf="@+id/vv3"
+        app:layout_constraintTop_toTopOf="@+id/kmtext" />
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/tv_avg"
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:letterSpacing="0.226"
+        android:text="CALORIES"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vv2"
+        app:layout_constraintEnd_toEndOf="@+id/avgtext"
+        app:layout_constraintStart_toStartOf="@+id/avgtext"
+        app:layout_constraintTop_toBottomOf="@+id/avgtext" />
+
+
+    <Button
+        android:layout_marginEnd="47dp"
+        android:id="@+id/tv_summary"
+        android:layout_width="153dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="53dp"
+        android:background="@drawable/btn_rrect_info_summary"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:letterSpacing="0.226"
+        android:text="SUMMARY"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 底圖 -->
+    <item
+        android:height="32dp"
+        android:width="362dp"
+        android:id="@android:id/background"
+        android:drawable="@drawable/element_adjust_custom_level"/>
+    
+    <!-- 滑圖 -->
+<!--    <item android:id="@android:id/progress">-->
+
+<!--        <clip android:drawable="@drawable/s15" />-->
+<!--    </item>-->
+
+<!--    <item-->
+<!--        android:height="32dp"-->
+<!--        android:width="390dp"-->
+<!--        android:id="@android:id/progress">-->
+<!--        <clip>-->
+<!--            <shape>-->
+<!--                <solid android:color="#9D2227" />-->
+<!--            </shape>-->
+<!--        </clip>-->
+<!--    </item>-->
+
+    <item android:id="@android:id/progress">
+        <scale
+            android:scaleWidth="100%"
+            android:useIntrinsicSizeAsMinimum="true">
+            <shape android:shape="rectangle">
+                <corners android:radius="0dp" />
+                <size
+                    android:width="20dp"
+                    android:height="32dp" />
+                <stroke
+                    android:width="1dp"
+                    android:color="@color/color597084" />
+                <solid android:color="@color/color597084" />
+            </shape>
+        </scale>
+    </item>
+
+</layer-list>

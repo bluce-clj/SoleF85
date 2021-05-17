@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_popup_down"
+    tools:context=".SoundActivity">
+
+    <Button
+        android:id="@+id/btClose"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/btn_round_close_e6e6e6_64"
+        android:onClick="onClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tv_sound_title"
+        android:text="Sound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/vUnderline_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintBottom_toTopOf="@+id/sc_unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sound_title" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/sc_unit"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorDEE2E6"
+        app:draggable="true"
+        app:layout_constraintBottom_toTopOf="@+id/vUnderline_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_1"
+        app:position="0"
+        app:radius="32dp"
+        app:ripple="false"
+        app:selectedBackground="@color/colorE4002B"
+        app:selectedButtonRadius="32dp"
+        app:selectionAnimationDuration="200">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:lineSpacingExtra="1.5sp"
+            app:selectedTextColor="@color/colorFFFFFF"
+            app:selectedTextStyle="bold"
+            app:text="ON"
+            app:textColor="@color/color597084"
+            app:textSize="20sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:lineSpacingExtra="1.5sp"
+            app:selectedTextColor="@color/colorFFFFFF"
+            app:selectedTextStyle="bold"
+            app:text="OFF"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/vUnderline_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc_unit" />
+
+
+    <TextView
+        android:id="@+id/tv_sound_text"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="95dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color597084"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_2" />
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:background="@null"
+        android:src="@drawable/r_arrow_left"
+        android:onClick="onM"
+        android:id="@+id/bt_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_2" />
+
+    <ImageButton
+        android:contentDescription="@string/img"
+        android:onClick="onP"
+        android:id="@+id/bt_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="370dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/r_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_2" />
+
+    <com.dyaco.spiritbike.support.ruler.RulerView
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:id="@+id/height_ruler"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_right"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="@+id/bt_left"
+        app:rulerColor="@color/colorB4BEC7"
+        app:rulerDivideByFiveHeight="24dp"
+        app:rulerDivideByFiveWidth="4dp"
+        app:rulerDivideByTenHeight="24dp"
+        app:rulerDivideByTenWidth="4dp"
+        app:rulerHighlightColor="@color/colorB4BEC7"
+        app:rulerIntervalDistance="40dp"
+        app:rulerIntervalValue="1"
+        app:rulerIsDivideByFive="false"
+        app:rulerIsDivideByTen="false"
+        app:rulerLineHeight="24dp"
+        app:rulerLineWidth="4dp"
+        app:rulerMaxValue="15"
+        app:rulerMinValue="0"
+        app:rulerOrientation="horizontal"
+        app:rulerRetainLength="0"
+        app:rulerTextBaseLineDistance="5dp"
+        app:rulerTextColor="@android:color/black"
+        app:rulerTextSize="0sp" />
+
+    <View
+        android:id="@+id/v_movable_center"
+        android:layout_width="4dp"
+        android:layout_height="40dp"
+        android:background="@color/colorE4002B"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_left"
+        app:layout_constraintEnd_toEndOf="@+id/bt_right"
+        app:layout_constraintEnd_toStartOf="@+id/bt_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_left"
+        app:layout_constraintTop_toTopOf="@+id/bt_right" />
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--        android:id="@+id/group"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:constraint_referenced_ids="bt_right,v_movable_center,cl_movable,bt_left,tv_sound_text" />-->
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bt_right,v_movable_center,height_ruler,bt_left,tv_sound_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

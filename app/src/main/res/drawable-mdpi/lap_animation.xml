@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item android:drawable="@drawable/element_track_stage_1" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_2" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_3" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_4" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_5" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_6" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_7" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_8" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_9" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_10" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_11" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_12" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_13" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_14" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_15" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_16" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_17" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_18" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_19" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_20" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_21" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_22" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_23" android:duration="1000" />
+    <item android:drawable="@drawable/element_track_stage_24" android:duration="1000" />
+
+</animation-list>

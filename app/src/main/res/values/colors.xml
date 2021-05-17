@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="color597084">#597084</color>
+    <color name="colorB4BEC7">#B4BEC7</color>
+    <color name="colorF6F8F9">#F6F8F9</color>
+    <color name="colorE6E6E6">#E6E6E6</color>
+    <color name="colorFFFFFF">#FFFFFF</color>
+    <color name="colorE4002B">#E4002B</color>
+    <color name="color33E6E6E6">#33E6E6E6</color>
+    <color name="color222222">#222222</color>
+    <color name="colorDEE2E6">#DEE2E6</color>
+    <color name="color162735">#162735</color>
+    <color name="color2f3031">#2f3031</color>
+    <color name="grey_deep">#8b8c88</color>
+    <color name="colorf5f5f5">#f5f5f5</color>
+
+    <!--    opacity: 0.75; 不透明度  75%-->
+    <color name="black75">#BF000000</color>
+
+<!--    opacity: 0.2; 不透明度  20%-->
+    <color name="color33FFFFFF">#08FFFFFF</color>
+
+    <color name="color22FFFFFF">#D9FFFFFF</color>
+
+    <color name="color4DFFFFFF">#4DFFFFFF</color>
+    <color name="green">#00C853</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="color_11">#cacaca</color>
+    <color name="rsbColorSeekBarDefault">#c3c3c3</color>
+    <color name="rsbColorThumbPressed">#FFE7E7E7</color>
+    <color name="rsbColorThumbDefault">#FFFFFF</color>
+    <color name="rsbColorThumbBorder">#FFD7D7D7</color>
+
+</resources>

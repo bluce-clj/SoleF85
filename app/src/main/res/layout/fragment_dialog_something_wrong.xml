@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogSomethingWrong"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DialogSomethingWrongFragment">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:src="@drawable/icon_status_fail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:text="@string/something_wrong"
+        android:textColor="@color/color597084"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="808dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/something_wrong_desc"
+        android:textColor="@color/color597084"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btCancel_DialogSomethingWrong"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btTryAgain_DialogSomethingWrong"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="444dp"
+        android:text="@string/try_again"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:textAllCaps="false"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btCancel_DialogSomethingWrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btCancel_DialogSomethingWrong" />
+</androidx.constraintlayout.widget.ConstraintLayout>

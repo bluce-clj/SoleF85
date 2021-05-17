@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPrograms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".mirroring.MirroringFragment">
+
+    <View
+        android:background="@color/colorDEE2E6"
+        android:visibility="invisible"
+        android:id="@+id/ivTopLine_Programs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgOption_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbPrograms_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@drawable/rb_rect_ios"
+            android:checked="true"
+            android:text="" />
+
+        <RadioButton
+            android:id="@+id/rbFitnessTests_Programs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="80dp"
+            android:button="@drawable/rb_rect_android"
+            android:checked="false"
+            android:text="" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:textColor="@color/colorE4002B"
+        style="@style/slide_menu_text"
+        android:id="@+id/tvPrograms_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IOS"
+        app:layout_constraintStart_toStartOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/rgOption_Programs" />
+
+    <TextView
+        style="@style/slide_menu_text"
+        android:id="@+id/tvFitnessTests_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANDROID"
+        app:layout_constraintEnd_toEndOf="@+id/rgOption_Programs"
+        app:layout_constraintTop_toTopOf="@+id/tvPrograms_Programs" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs">
+
+<!--        lineSpacingMultiplier-->
+<!--        lineSpacingExtra-->
+        <TextView
+            android:id="@+id/ios_top_text"
+            android:lineSpacingExtra="1.45sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="22sp"
+            android:textColor="@color/color162735"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="128dp"
+            android:text="@string/ios_top_text"
+            android:layout_marginStart="132dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="391dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/ios_bottom_text"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="1.5sp"
+            android:letterSpacing="0.126"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorB4BEC7"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="128dp"
+            android:text="@string/ios_bottom_text"
+            android:layout_marginStart="132dp"
+            app:layout_constraintEnd_toEndOf="@+id/ios_top_text"
+            app:layout_constraintStart_toStartOf="@+id/ios_top_text"
+            app:layout_constraintTop_toBottomOf="@+id/ios_top_text"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_image"
+            android:layout_marginEnd="132dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/img_cast_ios"
+            android:layout_width="496dp"
+            android:layout_height="376dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopLine_Programs">
+
+        <TextView
+            android:id="@+id/android_top_text"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="22sp"
+            android:textColor="@color/color162735"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="128dp"
+            android:text="@string/android_top_text"
+            android:layout_marginStart="132dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_qrcode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/android_bottom_text"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="1.5sp"
+            android:letterSpacing="0.126"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorB4BEC7"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="128dp"
+            android:text="@string/ios_bottom_text"
+            android:layout_marginStart="132dp"
+            app:layout_constraintEnd_toEndOf="@+id/android_top_text"
+            app:layout_constraintStart_toStartOf="@+id/android_top_text"
+            app:layout_constraintTop_toBottomOf="@+id/android_top_text"
+            android:layout_width="392dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:layout_marginEnd="132dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="76dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/img_cast_andriod"
+            android:id="@+id/iv_qrcode"
+            android:layout_width="496dp"
+            android:layout_height="345dp"/>
+
+
+<!--        <ImageView-->
+<!--            android:src="@drawable/img_qrcode"-->
+<!--            android:layout_marginEnd="52dp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/iv_android_right"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/iv_android_image1"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/iv_android_image1"-->
+<!--            android:id="@+id/iv_qrcode"-->
+<!--            android:layout_width="184dp"-->
+<!--            android:layout_height="184dp"/>-->
+
+
+<!--        <ImageView-->
+<!--            android:background="@drawable/icon_next_morr"-->
+<!--            android:layout_marginTop="227.8dp"-->
+<!--            android:layout_marginEnd="52dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/iv_android_image1"-->
+<!--            android:id="@+id/iv_android_right"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_android_image1"-->
+<!--            android:layout_marginEnd="132dp"-->
+<!--            android:layout_marginTop="75.5dp"-->
+<!--            android:src="@drawable/android_mirroring1"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_width="184dp"-->
+<!--            android:layout_height="345dp"/>-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

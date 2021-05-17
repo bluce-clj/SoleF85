@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".settings.SettingWifiFragment">
+
+    <TextView
+        android:id="@+id/tv_sound_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/hanzel_bold"
+        android:lineHeight="48dp"
+        android:lineSpacingExtra="1.5sp"
+        android:text="@string/wifi_title"
+        android:textColor="@color/color597084"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/vUnderline_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintBottom_toTopOf="@+id/sc_unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sound_title" />
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/sc_unit"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorDEE2E6"
+        app:draggable="true"
+        app:layout_constraintBottom_toTopOf="@+id/vUnderline_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_1"
+        app:position="0"
+        app:radius="32dp"
+        app:ripple="false"
+        app:selectedBackground="@color/colorE4002B"
+        app:selectedButtonRadius="32dp"
+        app:selectionAnimationDuration="200">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:lineSpacingExtra="1.5sp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="ON"
+            app:textColor="@color/color597084"
+            app:textSize="20sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="130dp"
+            android:layout_height="64dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.226"
+            android:lineSpacingExtra="1.5sp"
+            app:selectedTextColor="@color/white"
+            app:selectedTextStyle="bold"
+            app:text="OFF"
+            app:textColor="@color/color597084"
+            app:textSize="16sp" />
+
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/reLoad"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="28dp"
+        android:clickable="true"
+        android:src="@drawable/btn_round_icon_re"
+        app:layout_constraintBottom_toBottomOf="@id/sc_unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sc_unit" />
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/vUnderline_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/line_full_screen_length"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sc_unit" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:overScrollMode = "never"
+        android:layout_marginBottom="112dp"
+        android:id="@+id/wifiList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUnderline_2" />
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progress"
+        android:outlineSpotShadowColor="@color/colorE4002B"
+        android:outlineAmbientShadowColor="@color/colorE4002B"
+        app:layout_constraintEnd_toEndOf="@+id/wifiList"
+        app:layout_constraintStart_toStartOf="@+id/wifiList"
+        app:layout_constraintBottom_toBottomOf="@+id/wifiList"
+        app:layout_constraintTop_toTopOf="@+id/wifiList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="1016dp"
+        android:layout_height="552dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/ivBg_ProgramsDetailsItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/bg_program_description_default" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDiagram_ProgramsDetailsItem"
+            android:layout_width="280dp"
+            android:layout_height="472dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="98dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvDiagramItem1_ProgramsDetailsItem"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="72dp"
+                android:text="@string/speed"
+                android:textColor="@color/color597084"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:scaleType="fitXY"
+                android:id="@+id/ivDiagramItem1_ProgramsDetailsItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/tvDiagramItem1_ProgramsDetailsItem"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiagramItem1_ProgramsDetailsItem" />
+
+            <TextView
+                android:id="@+id/tvDiagramItem2_ProgramsDetailsItem"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/incline"
+                android:textColor="@color/color597084"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivDiagramItem1_ProgramsDetailsItem" />
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:scaleType="fitXY"
+                android:id="@+id/ivDiagramItem2_ProgramsDetailsItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/tvDiagramItem2_ProgramsDetailsItem"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiagramItem2_ProgramsDetailsItem" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPhoto_ProgramsDetailsItem"
+            android:layout_width="280dp"
+            android:layout_height="472dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="98dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:id="@+id/ivPhoto_ProgramsDetailsItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/photo_programs_manual" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_custom"
+            android:layout_width="280dp"
+            android:layout_height="472dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="98dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:letterSpacing="0.14062"
+                android:id="@+id/tv_custom_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="LEVEL"
+                android:textColor="@color/color597084"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:layout_marginStart="8dp"
+                android:id="@+id/iv_level_edit"
+                app:layout_constraintStart_toEndOf="@+id/tv_custom_level"
+                app:layout_constraintTop_toTopOf="@+id/tv_custom_level"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_custom_level"
+                android:src="@drawable/icon_edit"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:id="@+id/iv_custom_level"
+                android:layout_width="217dp"
+                android:layout_height="121dp"
+                android:layout_marginTop="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/diagram_custom_empty"
+                app:layout_constraintStart_toStartOf="@+id/tv_custom_level"
+                app:layout_constraintTop_toBottomOf="@+id/tv_custom_level" />
+
+            <TextView
+                android:letterSpacing="0.14062"
+                android:id="@+id/tv_custom_incline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/incline"
+                android:textColor="@color/color597084"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_custom_level" />
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:layout_marginStart="8dp"
+                android:id="@+id/iv_incline_edit"
+                app:layout_constraintStart_toEndOf="@+id/tv_custom_incline"
+                app:layout_constraintTop_toTopOf="@+id/tv_custom_incline"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_custom_incline"
+                android:src="@drawable/icon_edit"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:scaleType="fitXY"
+                android:id="@+id/iv_custom_incline"
+                android:layout_width="217dp"
+                android:layout_height="121dp"
+                android:layout_marginTop="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:background="@drawable/diagram_custom_empty"
+                app:layout_constraintStart_toStartOf="@+id/tv_custom_incline"
+                app:layout_constraintTop_toBottomOf="@+id/tv_custom_incline" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:textAllCaps="true"
+            android:fontFamily="@font/hanzel_bold"
+            android:id="@+id/tvItem_ProgramsDetailsItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="72dp"
+            android:text=""
+            android:textColor="@color/color597084"
+            android:textSize="32sp"
+            app:layout_constraintStart_toEndOf="@+id/clDiagram_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="@+id/ivBg_ProgramsDetailsItem"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:gravity="start"
+            android:fontFamily="@font/open_sans_regular"
+            android:id="@+id/tvDesc_ProgramsDetailsItem"
+            android:layout_width="628dp"
+            android:layout_height="329dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="79dp"
+            android:text=""
+            android:textColor="@color/color162735"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/tvItem_ProgramsDetailsItem"
+            app:layout_constraintTop_toBottomOf="@+id/tvItem_ProgramsDetailsItem" />
+
+        <ImageView
+            android:contentDescription="@string/img"
+            android:id="@+id/iv_hr_attention"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDesc_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@id/tvDesc_ProgramsDetailsItem"
+            android:src="@drawable/icon_attention_s"
+            android:layout_width="16dp"
+            android:layout_height="16dp"/>
+        
+        <TextView
+            android:id="@+id/tv_hr_attention"
+            android:layout_marginStart="16dp"
+            android:text="REQUIRES THE USE OF A PAIRED HEART RATE DEVICE"
+            android:textSize="16sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorB4BEC7"
+            android:letterSpacing="0.14062"
+            app:layout_constraintEnd_toEndOf="@+id/tvDesc_ProgramsDetailsItem"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_hr_attention"
+            app:layout_constraintTop_toTopOf="@+id/iv_hr_attention"
+            app:layout_constraintStart_toEndOf="@+id/iv_hr_attention"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:letterSpacing="0.12"
+            android:id="@+id/btChoose_ProgramsDetailsItem"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="1016dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/btn_choose_1016"
+            android:paddingStart="16dp"
+            android:paddingEnd="1dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/choose"
+            android:textAllCaps="false"
+            android:textColor="@color/colorB4BEC7"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintEnd_toEndOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_custom_text"
+            android:layout_width="1016dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="18dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintEnd_toEndOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintStart_toStartOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:contentDescription="@string/img"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/icon_attention_s"
+                app:layout_constraintBottom_toBottomOf="@+id/custom_ww_text"
+                app:layout_constraintEnd_toStartOf="@+id/custom_ww_text"
+                app:layout_constraintTop_toTopOf="@+id/custom_ww_text" />
+
+            <TextView
+                android:id="@+id/custom_ww_text"
+                android:layout_width="455dp"
+                android:layout_height="24dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="start"
+                android:letterSpacing="0.14062"
+                android:text="level and incline Profiles are not set yet"
+                android:textAllCaps="true"
+                android:textColor="@color/colorB4BEC7"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <CheckBox
+            android:id="@+id/cbTag_ProgramsDetailsItem"
+            android:layout_width="34dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="52dp"
+            android:button="@drawable/cb_tag_32x48"
+            app:layout_constraintEnd_toEndOf="@+id/ivBg_ProgramsDetailsItem"
+            app:layout_constraintTop_toTopOf="@+id/ivBg_ProgramsDetailsItem" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clOptTime"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptTimeFragment">
+
+    <TextView
+        android:id="@+id/tvTitle1_OptTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="@string/manual"
+        android:textColor="@color/color597084"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle2_OptTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/time"
+        android:textColor="@color/color597084"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle1_OptTime" />
+
+    <View
+        android:id="@+id/vTopLine_OptTime"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/colorE6E6E6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="132dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/vUnderLine_OptTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle2_OptTime">
+
+        <TextView
+            android:id="@+id/tvMinValue_OptTime"
+            android:layout_width="198dp"
+            android:layout_height="match_parent"
+            android:text="20"
+            android:textColor="@color/color597084"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMinUnit_OptTime"
+            android:layout_width="51dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/color597084"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="@string/minute" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vUnderLine_OptTime"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginBottom="304dp"
+        android:background="@color/colorE6E6E6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vTopLine_OptTime" />
+
+    <Button
+        android:id="@+id/btSaveAs_OptTime"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="@string/save_as"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btStart_OptTime"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="@string/start"
+        android:textAllCaps="false"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btSaveAs_OptTime"
+        app:layout_constraintTop_toTopOf="@+id/btSaveAs_OptTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

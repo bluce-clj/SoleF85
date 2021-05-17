@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item-->
+    <!--        android:height="17dp"-->
+    <!--        android:width="504dp"-->
+    <!--        android:id="@android:id/progress"-->
+    <!--        android:drawable="@drawable/bar_diagram_incline_running">-->
+    <!--    </item>-->
+
+    <item
+        android:id="@android:id/progress"
+        android:width="504dp"
+        android:height="17dp">
+        <scale
+            android:drawable="@drawable/bar_diagram_incline_running"
+            android:scaleWidth="100%"
+            android:useIntrinsicSizeAsMinimum="false"/>
+    </item>
+
+</layer-list>

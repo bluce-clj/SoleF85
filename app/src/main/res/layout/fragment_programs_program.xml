@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clListPrograms_Programs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".programs.ProgramsProgramFragment">
+
+    <Button
+        android:layout_marginStart="28dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        android:id="@+id/btManual_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:text="@string/manual"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/btManual_Programs"
+        android:id="@+id/btHill_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/hill"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btManual_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btManual_Programs" />
+
+
+    <Button
+        android:layout_marginStart="24dp"
+        android:id="@+id/btFatburn_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/fatburn"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/btHill_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHill_Programs" />
+
+    <Button
+        android:layout_marginStart="24dp"
+        android:id="@+id/btCardio_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/cardio"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/btFatburn_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btFatburn_Programs" />
+
+    <Button
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:id="@+id/btStrength_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/strength"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btManual_Programs" />
+
+    <Button
+        android:id="@+id/btHiit_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/hiit"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/btHill_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btStrength_Programs" />
+
+    <Button
+        android:id="@+id/btHeartRate_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/heart_rate"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/btFatburn_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHiit_Programs" />
+
+    <Button
+        android:id="@+id/btCustom_Programs"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rrect_ffffff_288"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/custom"
+        android:textAllCaps="false"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/color597084"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/btCardio_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHeartRate_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagManual_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btManual_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btManual_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagHill_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btHill_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHill_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagFatburn_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btFatburn_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btFatburn_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagCardio_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btCardio_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btCardio_Programs" />
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagStrength_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btStrength_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btStrength_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagHiit_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btHiit_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHiit_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagHeartRate_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btHeartRate_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btHeartRate_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivTagCustom_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/icon_preview_favorite_yes"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btCustom_Programs"
+        app:layout_constraintTop_toTopOf="@+id/btCustom_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivManual_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_manual"
+        app:layout_constraintBottom_toBottomOf="@+id/btManual_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btManual_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btManual_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivHill_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_hill"
+        app:layout_constraintBottom_toBottomOf="@+id/btHill_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btHill_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btHill_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivFatburn_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_fatburn"
+        app:layout_constraintBottom_toBottomOf="@+id/btFatburn_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btFatburn_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btFatburn_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivCardio_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_cardio"
+        app:layout_constraintBottom_toBottomOf="@+id/btCardio_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btCardio_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btCardio_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivStrength_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_strength"
+        app:layout_constraintBottom_toBottomOf="@+id/btStrength_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btStrength_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btStrength_Programs" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivHiit_Programs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diagram_preview_hiit"
+        app:layout_constraintBottom_toBottomOf="@+id/btHiit_Programs"
+        app:layout_constraintEnd_toEndOf="@+id/btHiit_Programs"
+        app:layout_constraintStart_toStartOf="@+id/btHiit_Programs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

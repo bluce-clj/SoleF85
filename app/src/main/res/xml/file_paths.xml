@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <root-path name="root" path="" />
+        <files-path name="files" path="" />
+        <cache-path name="cache" path="" />
+        <external-path name="external" path="" />
+        <external-files-path name="external_file_path" path="" />
+        <external-cache-path name="external_cache_path" path="" />
+    </paths>
+</resources>
+
+
+<!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--<external-path path="Android/data/com.skyeyes.tw.chimei_export/" name="files_root" />-->
+<!--<external-path path="." name="external_storage_root" />-->
+<!--<root-path path="." name="camera_photos" />-->
+<!--<external-files-path path="Download/" name="Download" />-->
+<!--</paths>-->
+
+<!--    path：需要臨時授權訪問的路徑-->
+<!--    name：就是你給這個訪問路徑取的名字-->

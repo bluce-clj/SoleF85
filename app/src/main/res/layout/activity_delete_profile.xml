@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clDialogDataLost"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.DeleteProfileActivity">
+
+    <TextView
+        android:fontFamily="@font/hanzel_bold"
+        android:textAllCaps="true"
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/delete_profile_text"
+        android:textColor="@color/color597084"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:fontFamily="@font/hanzel_bold"
+        android:id="@+id/btNo_DialogDataLost"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="444dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="@string/f85_no"
+        android:textAllCaps="true"
+        android:textColor="@color/color597084"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:fontFamily="@font/hanzel_bold"
+        android:id="@+id/btYes_DialogDataLost"
+        android:layout_width="184dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="444dp"
+        android:text="@string/f85_yes"
+        android:textAllCaps="true"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="23sp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        app:layout_constraintBottom_toBottomOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintTop_toTopOf="@+id/btNo_DialogDataLost" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

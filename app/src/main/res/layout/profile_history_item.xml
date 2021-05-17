@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="13dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_width="1254dp"
+    android:layout_height="159dp">
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivBg_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_info_record" />
+
+    <TextView
+        android:id="@+id/tvItem_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/manual"
+        android:textAllCaps="false"
+        android:textColor="@color/color597084"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvTime_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="09:54 AM, SEPTEMBER 23, 2020"
+        android:textAllCaps="true"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvItem_ProfileHistoryItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvItem_ProfileHistoryItem" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivLineV1_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="431dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem"
+        app:srcCompat="@drawable/line_info_record" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivLineV2_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintStart_toEndOf="@+id/ivLineV1_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintVertical_bias="0.547"
+        app:srcCompat="@drawable/line_info_record" />
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/ivLineV3_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintStart_toEndOf="@+id/ivLineV2_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/line_info_record" />
+
+    <Button
+        android:id="@+id/btSummary_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:background="@drawable/btn_rrect_info_summary"
+        android:text="@string/summary"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintEnd_toEndOf="@+id/ivBg_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvKmValue_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="3.91"
+        app:layout_constraintStart_toEndOf="@+id/ivLineV1_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvKm_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/km"
+        android:textAllCaps="true"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvKmValue_ProfileHistoryItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvKmValue_ProfileHistoryItem" />
+
+
+    <TextView
+        android:id="@+id/tvMinValue_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="27:18"
+        app:layout_constraintStart_toEndOf="@+id/ivLineV2_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvMin_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/min"
+        android:textAllCaps="true"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvMinValue_ProfileHistoryItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinValue_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvAvgPaceValue_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:textColor="@color/color597084"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="@string/in658"
+        app:layout_constraintStart_toEndOf="@+id/ivLineV3_ProfileHistoryItem"
+        app:layout_constraintTop_toTopOf="@+id/ivBg_ProfileHistoryItem" />
+
+    <TextView
+        android:id="@+id/tvAvgPace_ProfileHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/avg_pace"
+        android:textAllCaps="true"
+        android:textColor="@color/colorB4BEC7"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAvgPaceValue_ProfileHistoryItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvgPaceValue_ProfileHistoryItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

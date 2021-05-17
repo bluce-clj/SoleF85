@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_popup_down"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:contentDescription="@string/img"
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/icon_status_fail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/NormalTitleText"
+        android:id="@+id/tv_ShowText"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:text="Error Occured"
+        android:textColor="@color/color597084"
+        android:fontFamily="@font/hanzel_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginEnd="236dp"
+        android:layout_marginStart="236dp"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:id="@+id/tv_ShowText2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="424dp"
+        android:text="This SPIRIT+ account is already linked to another profile on this machine. Please, use a different SPIRIT+ account."
+        android:textColor="@color/color162735"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        style="@style/NormalButton"
+        android:id="@+id/btn_support"
+        android:text="CANCEL"
+        android:background="@drawable/btn_rrect_e6e6e6_288"
+        android:textColor="@color/color597084"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="444dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        style="@style/NormalButton"
+        android:id="@+id/btn_try_again"
+        android:text="Try Again"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:textColor="@color/colorFFFFFF"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="444dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

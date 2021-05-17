@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clProgramsDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    tools:context=".workout.WorkoutResultSummaryFragment">
+    
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/tv_summary_title"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:fontFamily="@font/hanzel_bold"
+        android:textColor="@color/color597084"
+        android:text=""
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="1016dp"
+        android:layout_height="64dp"/>
+
+    <TextView
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:text=""
+        android:id="@+id/tv_datetime"
+        android:letterSpacing="0.14062"
+        android:textColor="@color/colorB4BEC7"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="1016dp"
+        android:layout_height="24dp"/>
+
+    <com.dyaco.spiritbike.support.banner.Banner
+        app:banner_infinite_loop="false"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="240dp"
+        android:background="@color/colorFFFFFF"
+        android:id="@+id/rcvPrograms_ProgramsDetails"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"/>
+    
+
+    <Button
+        android:textColor="@color/color597084"
+        android:id="@+id/btYes_DialogDataLost"
+        style="@style/NormalButton"
+        android:layout_marginStart="444dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/btn_rrect_e6e6e6_184"
+        android:text="@string/save_as"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btNo_DialogDataLost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btNo_DialogDataLost"
+        style="@style/NormalButton"
+        android:layout_marginEnd="444dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/btn_rrect_9d2227_184"
+        android:text="Done"
+        android:textColor="@color/colorFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.dyaco.spiritbike.support.banner.indicator.RectangleIndicator
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/indicator"
+        android:layout_width="88dp"
+        android:layout_height="16dp"
+        android:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
