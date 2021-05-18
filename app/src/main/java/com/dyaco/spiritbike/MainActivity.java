@@ -104,7 +104,7 @@ public class MainActivity extends BaseAppCompatActivity {
         checkUpdate();
 
 
-
+        
 
 //        Gson gson = new GsonBuilder()
 //                .serializeNulls()
