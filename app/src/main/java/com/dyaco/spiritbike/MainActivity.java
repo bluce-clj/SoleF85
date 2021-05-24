@@ -1,5 +1,10 @@
 package com.dyaco.spiritbike;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 
 import android.annotation.SuppressLint;
@@ -30,6 +35,7 @@ import com.dyaco.spiritbike.support.MsgEvent;
 import com.dyaco.spiritbike.support.RxBus;
 import com.dyaco.spiritbike.support.RxTimer;
 import com.dyaco.spiritbike.support.TimeZoneBean;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.room.DatabaseManager;
 import com.dyaco.spiritbike.webapi.BaseApi;
 import com.dyaco.spiritbike.webapi.IServiceApi;
@@ -54,6 +60,7 @@ import static com.dyaco.spiritbike.MyApplication.isUartConPortOpen;
 import static com.dyaco.spiritbike.MyApplication.updateNotify;
 import static com.dyaco.spiritbike.support.CommonUtils.checkSwVersion;
 import static com.dyaco.spiritbike.support.CommonUtils.convertSwVersion;
+import static com.dyaco.spiritbike.support.StrictModeManager.init;
 
 public class MainActivity extends BaseAppCompatActivity {
     DeviceSettingBean deviceSettingBean = getInstance().getDeviceSettingBean();
@@ -64,6 +71,8 @@ public class MainActivity extends BaseAppCompatActivity {
     private RxTimer checkUpdateRxTimer;
 
     private BtnExitFullScreen btnExitFullScreen = new BtnExitFullScreen(this);
+
+    public final static String TAG ="hank";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +87,8 @@ public class MainActivity extends BaseAppCompatActivity {
 //            isSupported = false;
 //            return;
 //        }
+
+        initNav();
 
 
         btnFnaI = 0;
@@ -103,7 +114,7 @@ public class MainActivity extends BaseAppCompatActivity {
 
         checkUpdate();
 
-
+        LogUtils.d(getClassName());
 
 
 //        Gson gson = new GsonBuilder()
@@ -114,6 +125,16 @@ public class MainActivity extends BaseAppCompatActivity {
 //        LogS.printJson("MMMMMMM", gson.toJson(kk),"");
 //      //  LogS.printJson("MMMMMMM", new Gson().toJson(kk),"");
 
+    }
+
+    private void initNav() {
+        Navigation.findNavController(this,R.id.nhfStartScreen).addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable @org.jetbrains.annotations.Nullable Bundle arguments) {
+                LogUtils.d(getClassName() +"onDestinationChanged() destination: " + destination.getLabel());
+
+            }
+        });
     }
 
     private void checkUARTConnect() {
@@ -158,8 +179,10 @@ public class MainActivity extends BaseAppCompatActivity {
         if (MODE == ModeEnum.XE395ENT) {
             try {
                 if (TextUtils.isEmpty(getInstance().getDeviceSettingBean().getDsInclineAd())) {
+                    LogUtils.d(getClassName() +"ModeEnum.XE395ENT() -> ad:" + getInstance().getDeviceSettingBean().getDsInclineAd());
                     getInstance().commandReadIncline();
                 } else if (getInstance().getDeviceSettingBean().getDsInclineAd().contains("0#0#0#0#0#0#0#")) {
+                    LogUtils.d(getClassName() +"ModeEnum.XE395ENT() 0#0#0#0#0#0#0#-> ad:" + getInstance().getDeviceSettingBean().getDsInclineAd());
                     getInstance().commandReadIncline();
                 }
             } catch (Exception e) {
@@ -187,9 +210,12 @@ public class MainActivity extends BaseAppCompatActivity {
 
         try {
             if (deviceSettingBean.isFirst_launch()) {
+                LogUtils.d(getClassName() +"deviceSettingBean.isFirst_launch() ->" +deviceSettingBean.isFirst_launch());
                 checkTimeZone();
                 Navigation.findNavController(this, R.id.nhfStartScreen).navigate(R.id.firstLaunchSetDateFragment);
             } else {
+                LogUtils.d(getClassName() +"!deviceSettingBean.isFirst_launch() ->" +deviceSettingBean.isFirst_launch());
+
                 Navigation.findNavController(this, R.id.nhfStartScreen).navigate(R.id.startScreenFragment);
             }
         } catch (Exception e) {
@@ -201,6 +227,7 @@ public class MainActivity extends BaseAppCompatActivity {
 
         Disposable d = RxBus.getInstance().toObservable(MsgEvent.class).subscribe(msg -> {
 
+            LogUtils.d(getClassName() +"MsgEvent() + msg.getType()" + msg.getType());
 
             //onDestroy比下一頁的onResume慢
             if (isNext) return;
@@ -210,6 +237,7 @@ public class MainActivity extends BaseAppCompatActivity {
                 isConnected = true;
                 //設定一般模式
                 getInstance().commandSetLwrMode(Device.LWR_MODE.NORMAL);
+                LogUtils.d(getClassName() +"ON_DEVICE_INFO()");
             }
 
             //2.一般模式
@@ -218,12 +246,14 @@ public class MainActivity extends BaseAppCompatActivity {
                 isConnected = true;
                 if ((msg.getObj()) == Device.LWR_MODE.NORMAL) {
                     //檢查AD
+                    LogUtils.d(getClassName() +"Device.LWR_MODE.NORMAL");
                     getAD();
                 }
             }
 
             //error 下控給的錯誤
             if (msg.getType() == ON_ERROR) {
+                LogUtils.d(getClassName() +"ON_ERROR");
                 goNext();
                 isConnected = true;
                 if (checkRetry < 3) {
@@ -282,6 +312,8 @@ public class MainActivity extends BaseAppCompatActivity {
 //        }
     }
 
+
+
     private void checkStart() {
 //        if (!isSupported) {
 //            showErrorDialogAlert3();
@@ -289,9 +321,12 @@ public class MainActivity extends BaseAppCompatActivity {
 //        }
 
         Log.d("休眠", "onResume:isBootUp: " + isBootUp + ", fragment_id:" + fragment_id);
+
+        LogUtils.d(getClassName() + "checkStart 休眠  onResume:isBootUp:" + isBootUp + ", fragment_id:" + fragment_id);
         if (fragment_id > 0) {
             //Guest Create Profile
             try {
+                LogUtils.d(getClassName() + "checkStart ->  onResume:isBootUp:" + isBootUp + ", fragment_id:" + fragment_id);
                 Navigation.findNavController(this, R.id.nhfStartScreen).navigate(fragment_id);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -304,8 +339,10 @@ public class MainActivity extends BaseAppCompatActivity {
                 //   checkUpdate();
             } else {
                 if (deviceSettingBean.isFirst_launch()) {
+                    LogUtils.d(getClassName() + "checkStart ->  firstLaunchSetDateFragment, fragment_id:" + fragment_id);
                     Navigation.findNavController(this, R.id.nhfStartScreen).navigate(R.id.firstLaunchSetDateFragment);
                 } else {
+                    LogUtils.d(getClassName() + "checkStart ->  startScreenFragment, fragment_id:" + fragment_id);
                     Navigation.findNavController(this, R.id.nhfStartScreen).navigate(R.id.startScreenFragment);
                 }
             }

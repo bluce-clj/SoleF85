@@ -35,6 +35,7 @@ import com.dyaco.spiritbike.support.LogS;
 import com.dyaco.spiritbike.support.MsgEvent;
 import com.dyaco.spiritbike.support.RxBus;
 import com.dyaco.spiritbike.support.banner.util.BannerUtils;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.kProgressHudUtil;
 import com.dyaco.spiritbike.support.room.DatabaseCallback;
 import com.dyaco.spiritbike.support.room.DatabaseManager;
@@ -103,7 +104,9 @@ public class StartScreenFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
+        if(getVisibleFragment() != null){
+            LogUtils.d(getCurrentFragmentName());
+        }
         //  getInstance().commandSetDeviceReset();
 
         isBootUp = true;
@@ -133,6 +136,7 @@ public class StartScreenFragment extends BaseFragment {
 //                ViewGroup.LayoutParams.WRAP_CONTENT));
 
 
+        //進度動畫
         kProgressHUD = kProgressHudUtil.getInstance().getProgressHud(mActivity);
 
         initView(view);
@@ -254,6 +258,7 @@ public class StartScreenFragment extends BaseFragment {
 
     private void initView(View view) {
 
+        //設定wifi懸浮按鈕
         ivWifi = view.findViewById(R.id.ivWifiIcon_StartScreen);
         ivWifi.setOnClickListener(v -> new FloatingWidget(requireActivity()).callSetting(0, MainActivity.class));
 
