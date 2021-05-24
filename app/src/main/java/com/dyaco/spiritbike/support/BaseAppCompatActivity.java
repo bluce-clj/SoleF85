@@ -9,8 +9,11 @@ import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.dyaco.spiritbike.MyApplication;
+
+import java.util.List;
 
 public class BaseAppCompatActivity extends AppCompatActivity {
 
@@ -55,4 +58,20 @@ public class BaseAppCompatActivity extends AppCompatActivity {
         super.onDestroy();
      //   MyApplication.SSEB = true;
     }
+
+    public String getClassName(){
+       return getClass().getSimpleName() + "->";
+    }
+
+    public Fragment getVisibleFragment()
+    {
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        for(Fragment fragment:fragments)
+        {
+            if(fragment != null && fragment.isVisible())
+                return fragment;
+        }
+        return null;
+    }
+
 }

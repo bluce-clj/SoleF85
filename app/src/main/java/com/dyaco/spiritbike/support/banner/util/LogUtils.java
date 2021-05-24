@@ -3,7 +3,7 @@ package com.dyaco.spiritbike.support.banner.util;
 import android.util.Log;
 
 public class LogUtils {
-    public static final String TAG = "banner_log";
+    public static final String TAG = "hank";
 
     private static final boolean DEBUG = true;
 

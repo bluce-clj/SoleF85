@@ -1,7 +1,11 @@
 package com.dyaco.spiritbike;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.NavHostController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -56,6 +60,7 @@ import com.dyaco.spiritbike.support.RxTimer;
 import com.dyaco.spiritbike.support.banner.Banner;
 import com.dyaco.spiritbike.support.banner.indicator.RectangleIndicator;
 import com.dyaco.spiritbike.support.banner.util.BannerUtils;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.room.DatabaseCallback;
 import com.dyaco.spiritbike.support.room.DatabaseManager;
 import com.dyaco.spiritbike.support.room.UserProfileEntity;
@@ -173,6 +178,8 @@ public class DashboardActivity extends BaseAppCompatActivity {
 
         initDelay();
 
+        initNav();
+
         if (getInstance().getUserProfile().getSleepMode() == 1) {
             Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_OFF_TIMEOUT, 2147483647);
         } else {
@@ -205,6 +212,15 @@ public class DashboardActivity extends BaseAppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    private void initNav() {
+        Navigation.findNavController(this,R.id.nhcDashboard).addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable @org.jetbrains.annotations.Nullable Bundle arguments) {
+                LogUtils.d(getClassName() +"onDestinationChanged() destination: " + destination.getLabel());
+            }
+        });
     }
 
     /**

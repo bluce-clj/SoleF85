@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
@@ -48,14 +49,17 @@ import com.dyaco.spiritbike.mirroring.MirroringFragment;
 import com.dyaco.spiritbike.support.BaseFragment;
 import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.MsgEvent;
+import com.dyaco.spiritbike.support.PackageManagerUtils;
 import com.dyaco.spiritbike.support.RxBus;
 import com.dyaco.spiritbike.support.RxTimer;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.workout.WorkoutDashboardActivity;
 
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 import im.delight.android.webview.AdvancedWebView;
@@ -104,6 +108,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             isWorkout = getArguments().getBoolean("isWorkout", false);
+            LogUtils.d(getCurrentFragmentName() +"isWorkout:" + isWorkout);
         }
 
 
@@ -175,6 +180,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             } else {
                 ((DashboardActivity) mActivity).changeTopWidgetStyle(false);
                 ((DashboardActivity) mActivity).changeSignOutToBack(false, false, 0, -1);
+
+                LogUtils.d(getCurrentFragmentName() +"initDelay-> isWorkout:" + isWorkout);
             }
 
 
@@ -222,18 +229,27 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             btCNN_InternetDashboard.setOnClickListener(btInternetOnClick);
             btFoxNews_InternetDashboard.setOnClickListener(btInternetOnClick);
 
+            LogUtils.d(getCurrentFragmentName() +"initDelay:");
+
             return false;
         });
     }
 
+    //解決 WebView異常BUG
     private void initHookWebView() {
         // 如果是非系統程序則按正常程式走
 //        if (Process.myUid() != Process.SYSTEM_UID) {
 //            return;
 //        }
+
+
         if (ApplicationInfo.FLAG_SYSTEM != 1) {
+            LogUtils.d(getCurrentFragmentName() +"initHookWebView() -> ApplicationInfo.FLAG_SYSTEM != 1 , ApplicationInfo.FLAG_SYSTEM:" + ApplicationInfo.FLAG_SYSTEM);
             return;
         }
+
+
+
 
         int sdkInt = Build.VERSION.SDK_INT;
         try {
@@ -241,6 +257,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             Field field = factoryClass.getDeclaredField("sProviderInstance");
             field.setAccessible(true);
             Object sProviderInstance = field.get(null);
+
+            LogUtils.d(getCurrentFragmentName() + "sProviderInstance:" +  field.get(null));
             if (sProviderInstance != null) {
                 Log.d("HOOK_WEB", "sProviderInstance isn't null");
                 return;
@@ -265,6 +283,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                 if (providerConstructor != null) {
                     providerConstructor.setAccessible(true);
                     sProviderInstance = providerConstructor.newInstance(delegateConstructor.newInstance());
+
+                    LogUtils.d(getCurrentFragmentName() +"providerConstructor != null" +" ,sProviderInstance:" + sProviderInstance.toString());
                 }
             } else {
                 Field chromiumMethodName = factoryClass.getDeclaredField("CHROMIUM_WEBVIEW_FACTORY_METHOD");
@@ -282,8 +302,10 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             if (sProviderInstance != null) {
                 field.set("sProviderInstance", sProviderInstance);
                 Log.e("HOOK_WEB", "Hook success!");
+                LogUtils.d(getCurrentFragmentName() + "HOOK_WEB ,Hook success!");
             } else {
                 Log.e("HOOK_WEB", "Hook failed!");
+                LogUtils.d(getCurrentFragmentName() + "HOOK_WEB ,Hook Fail!");
             }
         } catch (Exception e) {
             Log.e("HOOK_WEB", e.getLocalizedMessage());
@@ -295,12 +317,30 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //判斷是否有網路,沒有的話警示彈窗
         if (!isConnected(mActivity)) {
             showToastAlert(getString(R.string.no_internet_toast_text), mActivity);
         }
 
         initHookWebView();
         initDelay(view);
+        getLog();
+    }
+
+    private void getLog() {
+//        PackageManagerUtils.instance(getActivity()).getPackageSystemDataLog();
+        getPackageSystemDataLog();
+    }
+
+    public void getPackageSystemDataLog() {
+        final PackageManager pm = getActivity().getPackageManager();
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        for (ApplicationInfo packageInfo : packages) {
+            if ((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0)
+                LogUtils.d(getCurrentFragmentName() +"Installed package (System) :" + packageInfo.packageName);
+            else
+                LogUtils.d(getCurrentFragmentName() +"Installed package (User) :" + packageInfo.packageName);
+        }
     }
 
     private void openBrowser(boolean open) {

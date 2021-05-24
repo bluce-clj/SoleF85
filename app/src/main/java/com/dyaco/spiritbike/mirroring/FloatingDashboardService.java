@@ -39,6 +39,7 @@ import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.GlideApp;
 import com.dyaco.spiritbike.support.MsgEvent;
 import com.dyaco.spiritbike.support.RxBus;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.room.UserProfileEntity;
 
 import java.util.List;
@@ -138,6 +139,8 @@ public class FloatingDashboardService extends Service {
 
         layoutParams.gravity = Gravity.BOTTOM;
         windowManager.addView(viewBottom, layoutParams);
+
+        LogUtils.d("FloatingDashboardService ->" + "initView()");
     }
 
 
@@ -150,6 +153,8 @@ public class FloatingDashboardService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         type = intent.getIntExtra("TYPE", 5);
+
+        LogUtils.d("FloatingDashboardService ->" + "onStartCommand()" + "type:" +type );
         showFloatingWindow();
         return super.onStartCommand(intent, flags, startId);
     }

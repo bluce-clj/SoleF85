@@ -29,7 +29,7 @@ public class BaseApi {
     public static <T> T createApi(Class<T> service) {
 
         //默認情況下，Gson是嚴格的，只接受RFC 4627指定的JSON。此選項使解析器在接受的內容中更加自由。
-        //    Gson gson = new GsonBuilder().setLenient().create();
+        //    Gson gson = new GsonBu;;ilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(LOCAL_SERVER_URL)
