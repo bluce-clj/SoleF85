@@ -12,6 +12,7 @@ import android.app.AlarmManager;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -38,6 +39,7 @@ import com.dyaco.spiritbike.support.RxTimer;
 import com.dyaco.spiritbike.support.TimeZoneBean;
 import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.room.DatabaseManager;
+import com.dyaco.spiritbike.support.rxtimer.PackageManagerUtils;
 import com.dyaco.spiritbike.webapi.BaseApi;
 import com.dyaco.spiritbike.webapi.IServiceApi;
 import com.google.gson.Gson;
@@ -91,6 +93,7 @@ public class MainActivity extends BaseAppCompatActivity {
 
         initNav();
 
+        getLog();
 
         btnFnaI = 0;
         getInstance().mDevice.setFan(Device.FAN.STOP);
@@ -127,6 +130,32 @@ public class MainActivity extends BaseAppCompatActivity {
 //        LogS.printJson("MMMMMMM", gson.toJson(kk),"");
 //      //  LogS.printJson("MMMMMMM", new Gson().toJson(kk),"");
 
+    }
+
+    private void getLog() {
+//        com.hulu.plus
+//        com.foxnews.android
+//        com.netflix.mediaclient
+//        com.cnn.mobile.android.phone
+//        com.abc.abcnews
+
+        com.dyaco.spiritbike.support.rxtimer.PackageManagerUtils packageManagerUtils = new PackageManagerUtils();
+        packageManagerUtils.getPackageSystemDataLog(this);
+
+        PackageInfo plusInfo = packageManagerUtils.getPackageInfo(this,"com.hulu.plus");
+        PackageInfo foxNewsInfo = packageManagerUtils.getPackageInfo(this,"com.foxnews.android");
+        PackageInfo netflixInfo = packageManagerUtils.getPackageInfo(this,"com.netflix.mediaclient");
+        PackageInfo cnnInfo = packageManagerUtils.getPackageInfo(this,"com.cnn.mobile.android.phone");
+        PackageInfo abcNewsInfo = packageManagerUtils.getPackageInfo(this,"com.abc.abcnews");
+
+
+        LogUtils.d(
+                "版本名:" + plusInfo.packageName +"/版本:" + plusInfo.versionName +"/版號:" + plusInfo.versionCode + "\n"+
+                "版本名:" + foxNewsInfo.packageName +"/版本:" + foxNewsInfo.versionName +"/版號:" + foxNewsInfo.versionCode + "\n"+
+                "版本名:" + netflixInfo.packageName +"/版本:" + netflixInfo.versionName +"/版號:" + netflixInfo.versionCode + "\n"+
+                "版本名:" + cnnInfo.packageName +"/版本:" + cnnInfo.versionName +"/版號:" + cnnInfo.versionCode + "\n"+
+                "版本名:" + abcNewsInfo.packageName +"/版本:" + abcNewsInfo.versionName +"/版號:" + abcNewsInfo.versionCode + "\n"
+        );
     }
 
     private void initNav() {
@@ -479,6 +508,7 @@ public class MainActivity extends BaseAppCompatActivity {
                     @Override
                     public void onSuccess(UpdateBean data) {
                         LogS.printJson("更新",new Gson().toJson(data),"");
+                        String body = new Gson().toJson(data).toString();
                      //   Log.d("更新", "@@@data: " + data.toString());
                         try {
 

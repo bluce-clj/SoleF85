@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:sharedUserId="android.uid.system"
-    package="com.dyaco.spiritbike">
-
-<!--    Caused by: java.lang.SecurityException: Permission Denial: forceStopPackage() from pid=11359, uid=10073 requires android.permission.FORCE_STOP_PACKAGES-->
-    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" tools:ignore="ProtectedPermissions"/>
-
+    package="com.dyaco.spiritbike"
+    android:sharedUserId="android.uid.system">
+    <!-- Caused by: java.lang.SecurityException: Permission Denial: forceStopPackage() from pid=11359, uid=10073 requires android.permission.FORCE_STOP_PACKAGES -->
+    <uses-permission
+        android:name="android.permission.FORCE_STOP_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
-
-    <!-- <permission -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" /> <!-- <permission -->
     <!-- android:name="android.permission.CONFIGURE_WIFI_DISPLAY" -->
     <!-- android:protectionLevel="normal" /> -->
     <!-- <permission -->
     <!-- android:name="android.permission.CONTROL_WIFI_DISPLAY" -->
     <!-- android:protectionLevel="normal" /> -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-
-     <uses-permission android:name="android.permission.SET_TIME_ZONE" tools:ignore="ProtectedPermissions" />
-
-    <!-- <uses-permission android:name="com.google.android.things.permission.SET_TIME" /> -->
-    <uses-permission android:name="android.permission.SET_TIME" tools:ignore="ProtectedPermissions" />
-    <!-- tools:ignore="ProtectedPermissions" /> -->
+    <uses-permission
+        android:name="android.permission.SET_TIME_ZONE"
+        tools:ignore="ProtectedPermissions" /> <!-- <uses-permission android:name="com.google.android.things.permission.SET_TIME" /> -->
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" /> <!-- tools:ignore="ProtectedPermissions" /> -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -42,31 +42,31 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
-<!--    android:supportsPictureInPicture="true"-->
-
     <application
-        android:hardwareAccelerated="true"
-        android:extractNativeLibs="true"
-        android:largeHeap="true"
-        android:requestLegacyExternalStorage="true"
         android:name=".MyApplication"
         android:allowBackup="true"
         android:configChanges="orientation|keyboardHidden|screenSize"
+        android:extractNativeLibs="true"
         android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="landscape"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup">
+        <activity android:name=".settings.appupdate.AppUpadteActivity"></activity>
         <activity
-            android:launchMode="singleTask"
             android:name=".MainActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape"
             android:theme="@style/LauncherTheme">
             <intent-filter>
@@ -77,10 +77,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".settings.UsbUpdateActivity"
-            />
-        <activity android:name=".engineer.EngineerActivity"/>
+        <activity android:name=".settings.UsbUpdateActivity" />
+        <activity android:name=".engineer.EngineerActivity" />
         <activity android:name=".programs.TemplateFullActivity" />
         <activity
             android:name=".programs.AdjustCustomInclineActivity"
@@ -92,8 +90,8 @@
             android:name=".programs.TemplateStartActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:launchMode="singleTask"
             android:name=".workout.WorkoutPauseActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape" />
         <activity
             android:name=".workout.WorkoutDashboardActivity"
@@ -138,10 +136,9 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".profile.EditIconActivity"
-            android:screenOrientation="landscape" />
-<!--        <activity-->
-<!--            android:name=".SoundActivity"-->
-<!--            android:screenOrientation="landscape" />-->
+            android:screenOrientation="landscape" /> <!-- <activity -->
+        <!-- android:name=".SoundActivity" -->
+        <!-- android:screenOrientation="landscape" /> -->
         <activity
             android:name=".HeartRateActivity"
             android:screenOrientation="landscape" />
@@ -150,14 +147,12 @@
             android:launchMode="singleTask"
             android:screenOrientation="landscape" />
         <activity
-            android:launchMode="singleTask"
             android:name=".settings.UpdateSoftwareActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape" />
-        <activity android:name=".engineer.UsbUpdateCommandActivity"
-            android:screenOrientation="landscape"/>
-
-
-        <!-- authorities：你app的包名.fileProvider -->
+        <activity
+            android:name=".engineer.UsbUpdateCommandActivity"
+            android:screenOrientation="landscape" /> <!-- authorities：你app的包名.fileProvider -->
         <!-- grantUriPermissions：必須是true，表示授予URI臨時訪問權限 -->
         <!-- exported：必須是false -->
         <!-- resource：中的@xml/file_paths是我們接下來要添加的文件 -->
@@ -178,49 +173,26 @@
         <service android:name=".mirroring.FloatingDashboardService" />
         <service android:name=".mirroring.FloatingWorkoutDashboardService" />
 
-        <meta-data android:value="${CHANNEL_VALUE}" android:name="CHANNEL"/>
-
-
-<!--        <service-->
-<!--            android:name=".product_flavors.InstallService"-->
-<!--            android:process=":install"-->
-<!--            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.accessibilityservice.AccessibilityService" />-->
-<!--            </intent-filter>-->
-
-<!--            &lt;!&ndash;在xml文件配置輔助功能,也可在onServiceConnected()中使用setServiceInfo()動態配置&ndash;&gt;-->
-<!--            <meta-data-->
-<!--                android:name="android.accessibilityservice"-->
-<!--                android:resource="@xml/accessibility_config" />-->
-<!--        </service>-->
-
-
-        <!--安裝完畢-->
+        <meta-data
+            android:name="CHANNEL"
+            android:value="${CHANNEL_VALUE}" /> <!-- <service -->
+        <!-- android:name=".product_flavors.InstallService" -->
+        <!-- android:process=":install" -->
+        <!-- android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.accessibilityservice.AccessibilityService" /> -->
+        <!-- </intent-filter> -->
+        <!-- &lt;!&ndash;在xml文件配置輔助功能,也可在onServiceConnected()中使用setServiceInfo()動態配置&ndash;&gt; -->
+        <!-- <meta-data -->
+        <!-- android:name="android.accessibilityservice" -->
+        <!-- android:resource="@xml/accessibility_config" /> -->
+        <!-- </service> -->
+        <!-- 安裝完畢 -->
         <receiver android:name=".product_flavors.MyReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
-
-
-
-<!--        <receiver android:name=".product_flavors.MyReceiver"-->
-<!--            android:enabled="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.PACKAGE_ADDED" />-->
-<!--                <action android:name="android.intent.action.PACKAGE_REPLACED" />-->
-<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
-<!--                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />-->
-<!--                <data android:scheme="package"/>-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-
-<!--        <service-->
-<!--            android:name=".product_flavors.LauncherService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false"/>-->
-
     </application>
 
 </manifest>

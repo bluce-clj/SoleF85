@@ -153,7 +153,7 @@
     <string name="software_title">Software</string>
     <string name="time_title">Time</string>
     <string name="unit_title">Units</string>
-<!--    <string name="ios_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Press the\n‘Screen Mirroring’ button on your\ndevice, then select the ‘%1$s’ device.</string>-->
+    <!--    <string name="ios_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Press the\n‘Screen Mirroring’ button on your\ndevice, then select the ‘%1$s’ device.</string>-->
     <string name="ios_top_text">Connect your device to the same WiFi\nnetwork as the equipment. Press the\n‘Screen Mirroring’ button on your\ndevice, then select the SPIRIT device.</string>
     <string name="ios_top_text2">Connect your device to the\nsame WiFi network as the\nequipment. Press the\n‘Screen Mirroring’ button\non your device,then select\nthe SPIRIT device.</string>
     <string name="ios_bottom_text">WIFI NAME: %1$s\n(A STRONG CONNECTION IS REQUIRED)\nDEVICE NAME: %2$s</string>

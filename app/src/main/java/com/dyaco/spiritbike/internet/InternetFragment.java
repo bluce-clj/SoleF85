@@ -41,18 +41,21 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.dyaco.spiritbike.DashboardActivity;
+import com.dyaco.spiritbike.MainActivity;
 import com.dyaco.spiritbike.MyApplication;
 import com.dyaco.spiritbike.R;
 import com.dyaco.spiritbike.mirroring.FloatingDashboardService;
 import com.dyaco.spiritbike.mirroring.FloatingWorkoutDashboardService;
 import com.dyaco.spiritbike.mirroring.MirroringFragment;
+import com.dyaco.spiritbike.settings.UpdateSoftwareActivity;
+import com.dyaco.spiritbike.settings.appupdate.AppUpadteActivity;
 import com.dyaco.spiritbike.support.BaseFragment;
 import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.MsgEvent;
-import com.dyaco.spiritbike.support.PackageManagerUtils;
 import com.dyaco.spiritbike.support.RxBus;
 import com.dyaco.spiritbike.support.RxTimer;
 import com.dyaco.spiritbike.support.banner.util.LogUtils;
+import com.dyaco.spiritbike.support.rxtimer.PackageManagerUtils;
 import com.dyaco.spiritbike.workout.WorkoutDashboardActivity;
 
 
@@ -103,6 +106,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
     private String mNetflixUrl;
     private MyChrome myChrome;
 
+    private PackageManagerUtils packageManagerUtils;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +116,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             LogUtils.d(getCurrentFragmentName() +"isWorkout:" + isWorkout);
         }
 
+        packageManagerUtils = new PackageManagerUtils();
 
     }
 
@@ -485,18 +491,33 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                 }
                 //   });
             } else if (view.getId() == R.id.btCNN_InternetDashboard) {
-                startFloatingDashboard();
-                //   new RxTimer().timer(500, number -> {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setClassName("com.cnn.mobile.android.phone", "com.cnn.mobile.android.phone.features.splash.SplashActivity");
-                    startActivity(intent);
-                    mActivity.overridePendingTransition(0, 0);
-                } catch (Exception e) {
-                    removeFloatView();
-                    Toasty.warning(getInstance(), "NO CNN APP", Toasty.LENGTH_LONG).show();
+
+                if(packageManagerUtils.isUpgrade("","")){
+                    //需要更新
+//                    MyApplication.SSEB = false;
+//                    Intent intent = new Intent(getActivity(), AppUpadteActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString("fileUrl", data.getDownloadURL());
+//                    bundle.putString("md5", data.getMD5());
+//                    bundle.putBoolean("isForce", true);
+//                    intent.putExtras(bundle);
+//                    startActivity(intent);
+
+                }else {
+                    startFloatingDashboard();
+                    //   new RxTimer().timer(500, number -> {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setClassName("com.cnn.mobile.android.phone", "com.cnn.mobile.android.phone.features.splash.SplashActivity");
+                        startActivity(intent);
+                        mActivity.overridePendingTransition(0, 0);
+                    } catch (Exception e) {
+                        removeFloatView();
+                        Toasty.warning(getInstance(), "NO CNN APP", Toasty.LENGTH_LONG).show();
+                    }
+                    //    });
                 }
-                //    });
+
             } else if (view.getId() == R.id.btFoxNews_InternetDashboard) {
                 startFloatingDashboard();
                 //      new RxTimer().timer(500, number -> {
