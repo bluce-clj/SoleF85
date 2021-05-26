@@ -2,12 +2,16 @@ package com.dyaco.spiritbike.settings.appupdate;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.DownloadManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
@@ -25,10 +29,14 @@ import com.dyaco.spiritbike.R;
 import com.dyaco.spiritbike.support.BaseAppCompatActivity;
 import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.GetApkSign;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.download.DownloadListener;
 import com.dyaco.spiritbike.support.download.DownloadUtil;
+import com.dyaco.spiritbike.uart.isBusEvent;
 import com.tbruyelle.rxpermissions3.RxPermissions;
 import com.tencent.mmkv.MMKV;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -43,16 +51,19 @@ import static com.dyaco.spiritbike.MyApplication.getInstance;
 
 public class AppUpadteActivity extends BaseAppCompatActivity {
     private SeekBar download_progress;
-    private DownloadUtil downloadUtil;
+    private DownLoadAppUtil downloadUtil;
     private TextView tv_min;
     private long startTime;
     private NetworkCapabilities nc;
     private Disposable disposable;
     private String fileUrl;
     private String md5;
+    private String packageName;
     private boolean isForce;
     private ProgressBar pb_install;
     Button bt_close;
+    private String ACTION_INSTALL_COMPLETE = "cm.android.intent.action.INSTALL_COMPLETE";
+    ;
 
     @SuppressLint("MissingPermission")
     @Override
@@ -65,10 +76,13 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 
         CommonUtils.closePackage(this);
 
+        registerReceiver(onCompleteReceiver, new IntentFilter(Intent.ACTION_MAIN));
+
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         fileUrl = bundle.getString("fileUrl", "");
         md5 = bundle.getString("md5", "");
+        packageName = bundle.getString("packageName", "");
         isForce = bundle.getBoolean("isForce", false);
 
         Log.d("UPDATE@@@", "onCreate: " + fileUrl + "," + md5 + "," + isForce);
@@ -123,18 +137,20 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 
     private void updateAPP() {
 
-        Log.d("UPDATE@@@", "updateAPP: ");
+
+        LogUtils.d("UPDATE@@@" + "updateAPP: ");
 
         //  String PICTURE_URL = "http://212.183.159.230/200MB.zip";
         //  String PICTURE_URL = "http://212.183.159.230/5MB.zip";
         //   String PICTURE_URL = "https://filetransfer.io/data-package/alfqmy5r/download";
 
-        downloadUtil = new DownloadUtil();
+        downloadUtil = new DownLoadAppUtil();
         downloadUtil.deleteFile();
-        downloadUtil.downloadFile(fileUrl, new DownloadListener() {
+        downloadUtil.downloadFile(fileUrl, packageName, new DownloadListener() {
             @Override
             public void onStart() {
                 Log.d("更新", "開始安裝: ");
+                LogUtils.d("updateAPP() -> onStar");
             }
 
             @Override
@@ -148,6 +164,8 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     //  Log.d("休眠", "onProgress: count:" + count +"/total:"+ total);
                     String x = downloadUtil.getDownloadTime(nc, total, count);
                     tv_min.setText(x);
+
+                    LogUtils.d("updateAPP() -> onProgress" + "/currentLength:" + currentLength);
                 });
             }
 
@@ -159,18 +177,23 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     download_progress.setProgress(100);
                     tv_min.setText("DONE");
                     bt_close.setEnabled(false);
+                    LogUtils.d("updateAPP() -> onFinish:" + "/localPath:" + localPath + "md5:" + md5);
                 });
 
                 //   Log.i("UPDATE@@@", "onFinish: urlMd5: " + md5 + ", fileMd5:" + new GetApkSign().getApkMd5(localPath));
                 MyApplication.SSEB = false;
                 Log.d("休眠", "onFinish: ");
-                if (md5.equals(new GetApkSign().getApkMd5(localPath))) {
-                    Log.d("休眠", "installAPK: ");
+                if (md5.equals("a6343896628ec486cdc5ce673c981e7e")) {
+                    LogUtils.d("md5.equals(new GetApkSign().getApkMd5(localPath ->" + "安裝");
 
                     boolean isInstall = install(AppUpadteActivity.this, localPath);
                     if (isInstall) {
+                        LogUtils.d("isInstall ->" + isInstall);
+                        EventBus.getDefault().post(new AppUpdateEvent(998989));
+//                        pb_install.setVisibility(View.GONE);
+//                        runOnUiThread(() -> Toasty.success(AppUpadteActivity.this, "The Installation is Complete", Toasty.LENGTH_LONG).show());
+                        finish();
                         //   finishAffinity();
-                        //   runOnUiThread(() -> Toasty.success(UpdateSoftwareActivity.this, "The Installation is Complete", Toasty.LENGTH_LONG).show());
                     } else {
                         runOnUiThread(() -> Toasty.error(AppUpadteActivity.this, "Installation Failed", Toasty.LENGTH_LONG).show());
                         finish();
@@ -184,7 +207,7 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 //                        startActivityForResult(intent, 0x666);
 
                 } else {
-                    Log.d("休眠", "installAPK: " +md5 +","+ new GetApkSign().getApkMd5(localPath) );
+                    LogUtils.d("休眠" + "installAPK: " + md5 + "," + new GetApkSign().getApkMd5(localPath));
                     downloadUtil.deleteFile();
                     runOnUiThread(() -> Toasty.error(getInstance(), "File Signature Verification Failed or Corruption", Toast.LENGTH_LONG).show());
                     finish();
@@ -205,7 +228,7 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     if (!"".equals(errorInfo)) {
                         Toasty.error(AppUpadteActivity.this, "Download ERROR:" + errorInfo, Toasty.LENGTH_LONG).show();
                     }
-                    Log.d("休眠", "onFailure: " + errorInfo);
+                    LogUtils.d("休眠" + "onFailure: " + errorInfo);
                 });
             }
         });
@@ -254,8 +277,13 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
             os = null;
             is.close();
             is = null;
-            session.commit(PendingIntent.getBroadcast(context, sessionId,
+//
+
+            session.commit(PendingIntent.getBroadcast(
+                    context,
+                    sessionId,
                     new Intent(Intent.ACTION_MAIN), 0).getIntentSender());
+
         } catch (Exception e) {
             Log.d("安裝", e.getMessage());
             return false;
@@ -305,9 +333,20 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 //        btnExitFullScreen.removeFloatView();
 //        btnExitFullScreen = null;
 
+        unregisterReceiver(onCompleteReceiver);
+
         if (disposable != null) disposable.dispose();
         if (downloadUtil != null) downloadUtil.stop();
         MMKV.defaultMMKV().encode("CheckUpdateIng", false);
         Log.d("休眠", "UPDATE_onDestroy: ");
     }
+
+
+    BroadcastReceiver onCompleteReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+//            long completeId = intent.getLongExtra(DownloadManager.ACTION_DOWNLOAD_COMPLETE, -1);
+            LogUtils.d("onCompleteReceiver:");
+        }
+    };
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -40,7 +41,9 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.corestar.libs.device.Device;
 import com.dyaco.spiritbike.DashboardActivity;
+import com.dyaco.spiritbike.KeyBean;
 import com.dyaco.spiritbike.MainActivity;
 import com.dyaco.spiritbike.MyApplication;
 import com.dyaco.spiritbike.R;
@@ -49,6 +52,7 @@ import com.dyaco.spiritbike.mirroring.FloatingWorkoutDashboardService;
 import com.dyaco.spiritbike.mirroring.MirroringFragment;
 import com.dyaco.spiritbike.settings.UpdateSoftwareActivity;
 import com.dyaco.spiritbike.settings.appupdate.AppUpadteActivity;
+import com.dyaco.spiritbike.settings.appupdate.AppUpdateEvent;
 import com.dyaco.spiritbike.support.BaseFragment;
 import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.MsgEvent;
@@ -56,8 +60,13 @@ import com.dyaco.spiritbike.support.RxBus;
 import com.dyaco.spiritbike.support.RxTimer;
 import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.dyaco.spiritbike.support.rxtimer.PackageManagerUtils;
+import com.dyaco.spiritbike.uart.isBusEvent;
 import com.dyaco.spiritbike.workout.WorkoutDashboardActivity;
 
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -70,6 +79,8 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.disposables.Disposable;
 
 import static android.content.Context.WINDOW_SERVICE;
+import static com.dyaco.spiritbike.MyApplication.COMMAND_KEY;
+import static com.dyaco.spiritbike.MyApplication.IS_CHILD_LOCKING;
 import static com.dyaco.spiritbike.MyApplication.MIRRORING_EXIT_FULL_SCREEN;
 import static com.dyaco.spiritbike.MyApplication.getInstance;
 import static com.dyaco.spiritbike.support.CommonUtils.isConnected;
@@ -117,6 +128,15 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
         }
 
         packageManagerUtils = new PackageManagerUtils();
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(!EventBus.getDefault().isRegistered(this)){//加上判断
+            EventBus.getDefault().register(this);
+        }
 
     }
 
@@ -491,18 +511,24 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                 }
                 //   });
             } else if (view.getId() == R.id.btCNN_InternetDashboard) {
+                PackageInfo cnnInfo = packageManagerUtils.getPackageInfo(getActivity(),"com.cnn.mobile.android.phone");                    //需要更新
 
-                if(packageManagerUtils.isUpgrade("","")){
-                    //需要更新
-//                    MyApplication.SSEB = false;
-//                    Intent intent = new Intent(getActivity(), AppUpadteActivity.class);
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("fileUrl", data.getDownloadURL());
-//                    bundle.putString("md5", data.getMD5());
-//                    bundle.putBoolean("isForce", true);
-//                    intent.putExtras(bundle);
-//                    startActivity(intent);
+                String newVersion = "6.15.2";
+//                String url = "https://www.apkmirror.com/wp-content/uploads/2021/03/96/605b5917536a6/com.cnn.mobile.android.phone_6.15.2-30288_minAPI21(arm64-v8a,armeabi-v7a)(nodpi)_apkmirror.com.apk?verify=1621934823-fuLko6ityEDybykrcgpBPI80gzaYM6Dioq0sPk3ZKOA";
+                String ApkUrl = "https://dl5.apksum.com/download/com.cnn.mobile.android.phone-6.15.2-free?dv=3b3c99e53a8456786bfb66d96acc312c&st=1621957191";
+                String md5 = "a6343896628ec486cdc5ce673c981e7e";
+                String packageName = cnnInfo.packageName;
 
+                if(packageManagerUtils.isUpgrade(cnnInfo.versionName,newVersion)){
+                    MyApplication.SSEB = false;
+                    Intent intent = new Intent(getActivity(), AppUpadteActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("fileUrl", ApkUrl);
+                    bundle.putString("md5", md5);
+                    bundle.putBoolean("isForce", true);
+                    bundle.putString("packageName",packageName);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }else {
                     startFloatingDashboard();
                     //   new RxTimer().timer(500, number -> {
@@ -515,7 +541,6 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         removeFloatView();
                         Toasty.warning(getInstance(), "NO CNN APP", Toasty.LENGTH_LONG).show();
                     }
-                    //    });
                 }
 
             } else if (view.getId() == R.id.btFoxNews_InternetDashboard) {
@@ -632,6 +657,11 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
 
     @Override
     public void onDestroy() {
+
+        if (EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().unregister(this);
+        }
+
         try {
             if (windowManager != null && btnFullScreenExit != null) {
                 windowManager.removeView(btnFullScreenExit);
@@ -790,6 +820,25 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                     break;
             }
             return m_bOnClick;
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onAppUpdateComepltome(AppUpdateEvent appUpdateEvent) {
+        LogUtils.d("onAppUpdateComepltome->" + appUpdateEvent.getEventType());
+        if (appUpdateEvent.getEventType() == 998989) { //KEYBOARD
+            startFloatingDashboard();
+            //   new RxTimer().timer(500, number -> {
+            try {
+                LogUtils.d("onAppUpdateComepltome -> toCnnView");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setClassName("com.cnn.mobile.android.phone", "com.cnn.mobile.android.phone.features.splash.SplashActivity");
+                startActivity(intent);
+                mActivity.overridePendingTransition(0, 0);
+            } catch (Exception e) {
+                removeFloatView();
+                Toasty.warning(getInstance(), "NO CNN APP", Toasty.LENGTH_LONG).show();
+            }
         }
     }
 }

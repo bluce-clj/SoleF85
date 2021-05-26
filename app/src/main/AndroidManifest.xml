@@ -63,7 +63,10 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup">
-        <activity android:name=".settings.appupdate.AppUpadteActivity"></activity>
+
+        <activity android:name=".settings.appupdate.AppUpadteActivity">
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask"

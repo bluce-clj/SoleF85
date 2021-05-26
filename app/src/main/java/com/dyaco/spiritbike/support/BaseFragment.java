@@ -6,6 +6,8 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
+
 import java.util.List;
 
 public abstract class BaseFragment extends Fragment {
@@ -17,6 +19,7 @@ public abstract class BaseFragment extends Fragment {
 
         if (context instanceof Activity) {
             mActivity = (Activity) context;
+            LogUtils.d("當前acitivty:" + mActivity.getClass().getSimpleName());
         }
     }
 
@@ -41,4 +44,6 @@ public abstract class BaseFragment extends Fragment {
     public String getCurrentFragmentName(){
         return getVisibleFragment().getClass().getSimpleName() +"->";
     }
+
+
 }
