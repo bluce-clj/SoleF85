@@ -593,10 +593,10 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             if (view.getId() == R.id.btNetflix_InternetDashboard) {
                 //  if (CommonUtils.isFastClick()) return;
 
-                if(!CommonUtils.isConnected(getActivity())){
-                    Toasty.warning(getInstance(), "沒有網路", Toasty.LENGTH_LONG).show();
-                    return;
-                }
+//                if (!CommonUtils.isConnected(getActivity())) {
+//                    Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+//                    return;
+//                }
 
                 if (appUpdateBeans != null) {
                     String appUpdateNetflixVersion = AppUpdateManager.getInstance(getActivity()).getAppUpdateVersion(appUpdateBeans, AppUpdateManager.PACKAGE_NAME_NETFLIX);
@@ -626,6 +626,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         });
                     }
                 }else {
+                    Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
                     checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btHulu_InternetDashboard) {
@@ -659,6 +660,9 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                     }
 
 
+                }else {
+                    Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+                    checkAppUpdate();
                 }
 
 
@@ -703,7 +707,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         //    });
                     }
                 } else {
-
+                        Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+                        checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btNBC_InternetDashboard) {
                 if (appUpdateBeans != null) {
@@ -738,6 +743,9 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         }
                         //   });
                     }
+                }else {
+                    Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+                    checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btCNN_InternetDashboard) {
                 if (appUpdateBeans != null && CommonUtils.isConnected(getActivity())) {
@@ -772,7 +780,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         }
                     }
                 }else {
-                    Toasty.warning(getInstance(), "沒有網路", Toasty.LENGTH_LONG).show();
+                        Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+                        checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btFoxNews_InternetDashboard) {
                 if (appUpdateBeans != null) {
@@ -808,6 +817,9 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                         }
                         //     });
                     }
+                }else {
+                    Toasty.error(getActivity(), "NetWork ERROR:" + "沒有網路!", Toasty.LENGTH_LONG).show();
+                    checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btHome_InternetDashboard) {
                 //HOME按鈕
