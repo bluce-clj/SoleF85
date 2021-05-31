@@ -1,0 +1,58 @@
+{
+  "appUpdateBeans": [
+    {
+      "MD5": "",
+      "Download URL": "https://dl5.apksum.com/download/com.netflix.mediaclient-7.87.2-free?dv\u003de17c044eec5b0983d55f9e62eda4ede9\u0026st\u003d1622427108",
+      "Force updates": "YES",
+      "Package Name": "com.netflix.mediaclient",
+      "Path": "netflix_v7.87.2.apk",
+      "Version": " 7.87.2",
+      "Version Code": 0
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://www.apkmirror.com/wp-content/uploads/2021/05/01/60aee0df30dac/com.hulu.plus_4.26.0_5673-google-4005673_minAPI21(nodpi)_apkmirror.com.apk?verify\u003d1622428519-ifJSGxgovKPuvxykSii9EfcionU81WhaX2jE4gsGCb0",
+      "Force updates": "NO",
+      "Package Name": "com.hulu.plus",
+      "Path": "hulu_v4.26.0.apk",
+      "Version": "4.26.0",
+      "Version Code": 5673
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://www.apkmirror.com/wp-content/uploads/2021/05/53/60abad90761d4/com.abc.abcnews_5.5.9-53300099_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk?verify\u003d1622428718-BfRY_7fJX3uY-n9m4w0OqoaoRHudsI-CZ_-Q6eujV7g",
+      "Force updates": "NO",
+      "Package Name": "com.abc.abcnews",
+      "Path": "abc_news_v5.5.9.apk",
+      "Version": "5.5.9",
+      "Version Code": 53300099
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://www.apkmirror.com/wp-content/uploads/2021/03/20/604121a8ce104/com.zumobi.msnbc_6.0.21-1720210072_minAPI21(nodpi)_apkmirror.com.apk?verify\u003d1622428919-JADLaM3EYCA5n9sSf8r4h2oJaxgYhKiZwz-V0d9FHXs",
+      "Force updates": "NO",
+      "Package Name": "com.zumobi.msnbc",
+      "Path": "nbc_news_v6.0.21.apk",
+      "Version": "6.0.21",
+      "Version Code": 1720210072
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://dl5.apksum.com/download/com.cnn.mobile.android.phone-6.15.2-free?dv\u003d5a57ebd9af0c74c2ad07cbce3b7f5a25\u0026st\u003d1622427155",
+      "Force updates": "YES",
+      "Package Name": "com.cnn.mobile.android.phone",
+      "Path": "cnn_v6.15.2.apk",
+      "Version": "6.15.2",
+      "Version Code": 0
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://www.apkmirror.com/wp-content/uploads/2021/05/68/60ae68c902752/com.foxnews.android_4.27.0-2021051901_minAPI23(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk?verify\u003d1622429182-NkTLtvDI6gwqcjqhceKcPTZ8X3O7auwct_ccRZKLDNQ",
+      "Force updates": "NO",
+      "Package Name": "com.foxnews.android",
+      "Path": "fox_news_v4.27.0.apk",
+      "Version": "4.27.0",
+      "Version Code": 2021051901
+    }
+  ]
+}

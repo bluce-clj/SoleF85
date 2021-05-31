@@ -28,12 +28,16 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.constraintlayout.utils.widget.ImageFilterButton;
 import androidx.core.content.ContextCompat;
 
+import com.allenliu.badgeview.BadgeFactory;
+import com.allenliu.badgeview.BadgeView;
 import com.dyaco.spiritbike.MyApplication;
 import com.dyaco.spiritbike.R;
 import com.dyaco.spiritbike.product_flavors.InitProduct;
 import com.dyaco.spiritbike.product_flavors.ModeEnum;
+import com.dyaco.spiritbike.support.banner.util.LogUtils;
 import com.google.gson.Gson;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -1298,6 +1302,7 @@ public class CommonUtils {
             method.invoke(activityManager, "com.redstone.ota.ui");
             //  method.invoke(activityManager, "com.android.launcher3");
         } catch (Exception e) {
+            LogUtils.d("closePackage -> e:" + e.toString());
             e.printStackTrace();
         }
     }
@@ -1357,5 +1362,21 @@ public class CommonUtils {
         }
         return i;
     }
+
+
+    public static void setBadger(Context context, ImageButton imageButton, int badgeCount) {
+        BadgeFactory.create(context)
+                .setTextColor(Color.WHITE)
+                .setWidthAndHeight(25, 25)
+                .setBadgeBackground(Color.RED)
+                .setTextSize(10)
+                .setBadgeGravity(Gravity.RIGHT | Gravity.TOP)
+                .setMargin(0, 3, 3, 0)
+                .setBadgeCount(badgeCount)
+                .setShape(BadgeView.SHAPE_CIRCLE)
+                .setSpace(10, 10)
+                .bind(imageButton);
+    }
+
 
 }

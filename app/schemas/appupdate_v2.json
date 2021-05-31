@@ -1,0 +1,58 @@
+{
+  "appUpdateBeans": [
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/netflix_v7.87.2.apk",
+      "Force updates": "YES",
+      "Package Name": "com.netflix.mediaclient",
+      "Path": "netflix_v7.87.2.apk",
+      "Version": " 7.87.2",
+      "Version Code": 0
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/hulu_v4.26.0.apk",
+      "Force updates": "NO",
+      "Package Name": "com.hulu.plus",
+      "Path": "hulu_v4.26.0.apk",
+      "Version": "4.26.0",
+      "Version Code": 5673
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/abc_news_v5.5.9.apk",
+      "Force updates": "NO",
+      "Package Name": "com.abc.abcnews",
+      "Path": "abc_news_v5.5.9.apk",
+      "Version": "5.5.9",
+      "Version Code": 53300099
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/nbc_news_v6.0.21.apk",
+      "Force updates": "NO",
+      "Package Name": "com.zumobi.msnbc",
+      "Path": "nbc_news_v6.0.21.apk",
+      "Version": "6.0.21",
+      "Version Code": 1720210072
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/cnn_v6.15.2.apk",
+      "Force updates": "YES",
+      "Package Name": "com.cnn.mobile.android.phone",
+      "Path": "cnn_v6.15.2.apk",
+      "Version": "6.15.2",
+      "Version Code": 0
+    },
+    {
+      "MD5": "",
+      "Download URL": "https://ucaremedi-ugym.s3-ap-northeast-1.amazonaws.com/spirit/production/fox_news_v4.27.0.apk",
+      "Force updates": "NO",
+      "Package Name": "com.foxnews.android",
+      "Path": "fox_news_v4.27.0.apk",
+      "Version": "4.27.0",
+      "Version Code": 2021051901
+    }
+  ]
+}

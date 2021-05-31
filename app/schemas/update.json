@@ -1,18 +1,21 @@
-{
-  "Version": "6.16",
-  "Version Code": 71770,
-  "Force updates": "NO",
-  "OS_Version": "V30",
-  "Territory": "International",
-  "Brand": "Spirit",
-  "Model": "Elliptical",
-  "Model Name": "XE395ENT",
-  "MD5": "a6343896628ec486cdc5ce673c981e7e",
-  "Download URL": "https://www.apkmirror.com/wp-content/uploads/2021/04/68/608c1a9ed93a5/com.cnn.mobile.android.phone_6.16-71770_minAPI21(arm64-v8a,armeabi-v7a)(nodpi)_apkmirror.com.apk?verify=1621823901-Bro_aHmwQi-cKgYIgCqr1Lx7oO6WXEwCSxzYVO9GWX8",
-  "Modifications": [
-    "1. Description A",
-    "2. Description B",
-    "3. Description C"
-  ],
-  "PATH": "cnn.apk"
-}
+[
+  {
+    "MD5": "NO",
+    "Version": "6.16",
+    "Version Code": 71770,
+    "Download URL": "a6343896628ec486cdc5ce673c981e7e",
+    "Force updates": "https://www.apkmirror.com/wp-content/uploads/2021/04/68/608c1a9ed93a5/com.cnn.mobile.android.phone_6.16-71770_minAPI21(arm64-v8a,armeabi-v7a)(nodpi)_apkmirror.com.apk?verify\u003d1621823901-Bro_aHmwQi-cKgYIgCqr1Lx7oO6WXEwCSxzYVO9GWX8",
+    "Package Name": "com.cnn.mobile.android.phone",
+    "Path": "cnn.apk"
+  },
+  {
+    "MD5": "NO",
+    "Version": "6.17",
+    "Version Code": 71770,
+    "Download URL": "a6343896628ec486cdc5ce673c981e7e",
+    "Force updates": "https://www.apkmirror.com/wp-content/uploads/2021/04/68/608c1a9ed93a5/com.cnn.mobile.android.phone_6.16-71770_minAPI21(arm64-v8a,armeabi-v7a)(nodpi)_apkmirror.com.apk?verify\u003d1621823901-Bro_aHmwQi-cKgYIgCqr1Lx7oO6WXEwCSxzYVO9GWX8",
+    "Package Name": "com.cnn.mobile.android.phone",
+    "Path": "cnn.apk"
+  }
+]
+

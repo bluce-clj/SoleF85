@@ -10,6 +10,8 @@ import android.util.Log;
 
 import com.dyaco.spiritbike.support.banner.util.LogUtils;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.List;
 
 public class PackageManagerUtils {
@@ -19,24 +21,24 @@ public class PackageManagerUtils {
     /**
      * 获取当前设备上安装的所有App
      */
-    public List<PackageInfo> getAllApp(Context context){
+    public List<PackageInfo> getAllApp(Context context) {
         PackageManager pm = context.getPackageManager();
-        List<PackageInfo>  packageInfos = pm.getInstalledPackages(PackageManager.GET_ACTIVITIES);
+        List<PackageInfo> packageInfos = pm.getInstalledPackages(PackageManager.GET_ACTIVITIES);
         return packageInfos;
     }
 
     /**
      * 判断 App 是否安装
      */
-    public boolean isInstalled (Context context,String packageName){
-        if(packageName == null || packageName.length() < 1){
+    public boolean isInstalled(Context context, String packageName) {
+        if (packageName == null || packageName.length() < 1) {
             return false;
         }
         PackageManager pm = context.getPackageManager();
-        try{
-            PackageInfo packageInfo = pm.getPackageInfo(packageName,PackageManager.GET_ACTIVITIES);
+        try {
+            PackageInfo packageInfo = pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
             return packageInfo != null;
-        }catch(Throwable ignore){
+        } catch (Throwable ignore) {
 
         }
 
@@ -46,15 +48,15 @@ public class PackageManagerUtils {
     /**
      * 根据包名获取 PackageInfo
      */
-    public PackageInfo getPackageInfo (Context context,String packageName){
-        if(packageName == null || packageName.length() < 1){
+    public PackageInfo getPackageInfo(Context context, String packageName) {
+        if (packageName == null || packageName.length() < 1) {
             return null;
         }
         PackageManager pm = context.getPackageManager();
-        try{
-            PackageInfo packageInfo = pm.getPackageInfo(packageName,PackageManager.GET_ACTIVITIES);
-            return packageInfo ;
-        }catch(Throwable ignore){
+        try {
+            PackageInfo packageInfo = pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            return packageInfo;
+        } catch (Throwable ignore) {
 
         }
 
@@ -64,21 +66,21 @@ public class PackageManagerUtils {
     /**
      * 根据包名获取 版本号
      */
-    public int getPackageVersionCode (Context context,String packageName){
-        PackageInfo packageInfo = getPackageInfo (context, packageName);
-        if(packageName != null){
+    public int getPackageVersionCode(Context context, String packageName) {
+        PackageInfo packageInfo = getPackageInfo(context, packageName);
+        if (packageName != null) {
             return packageInfo.versionCode;
         }
 
-        return-1;
+        return -1;
     }
 
     /**
      * 根据包名获取 版本名
      */
-    public String getPackageVersionName (Context context,String packageName){
-        PackageInfo packageInfo = getPackageInfo (context, packageName);
-        if(packageName != null){
+    public String getPackageVersionName(Context context, String packageName) {
+        PackageInfo packageInfo = getPackageInfo(context, packageName);
+        if (packageName != null) {
             return packageInfo.versionName;
         }
 
@@ -88,13 +90,13 @@ public class PackageManagerUtils {
     /**
      * 获取 App名
      */
-    public String getApplicationLabel (Context context,String packageName){
-        if(packageName == null || packageName.length() < 1){
+    public String getApplicationLabel(Context context, String packageName) {
+        if (packageName == null || packageName.length() < 1) {
             return null;
         }
         PackageManager pm = context.getPackageManager();
-        PackageInfo packageInfo = getPackageInfo (context, packageName);
-        if(packageInfo != null){
+        PackageInfo packageInfo = getPackageInfo(context, packageName);
+        if (packageInfo != null) {
             return packageInfo.applicationInfo.loadLabel(pm).toString();
         }
         return null;
@@ -103,13 +105,13 @@ public class PackageManagerUtils {
     /**
      * 获取 App的 icon
      */
-    public Drawable getApplicationIcon (Context context, String packageName){
-        if(packageName == null || packageName.length()< 1){
+    public Drawable getApplicationIcon(Context context, String packageName) {
+        if (packageName == null || packageName.length() < 1) {
             return null;
         }
         PackageManager pm = context.getPackageManager();
-        PackageInfo packageInfo = getPackageInfo (context, packageName);
-        if(packageInfo != null){
+        PackageInfo packageInfo = getPackageInfo(context, packageName);
+        if (packageInfo != null) {
             return packageInfo.applicationInfo.loadIcon(pm);
         }
         return null;
@@ -118,22 +120,27 @@ public class PackageManagerUtils {
     /**
      * 通过Apk路径，获取Apk信息
      */
-    public PackageInfo getPackageArchiveInfo (Context context, String apkPath){
-        try{
+    public PackageInfo getPackageArchiveInfo(Context context, String apkPath) {
+        try {
             PackageManager pm = context.getPackageManager();
-            PackageInfo packageInfo = pm.getPackageArchiveInfo(apkPath,PackageManager.GET_ACTIVITIES);
+            PackageInfo packageInfo = pm.getPackageArchiveInfo(apkPath, PackageManager.GET_ACTIVITIES);
             return packageInfo;
-        }catch(Throwable ignore){
+        } catch (Throwable ignore) {
             return null;
         }
     }
 
-    public  boolean isUpgrade(String oldVersion, String newVersion) {
+    public boolean isUpgrade(String oldVersion, String newVersion) {
         if (newVersion == null || TextUtils.isEmpty(newVersion)) {
             newVersion = "0";
         }
-        String tempOldVersion = oldVersion.replace(".", "");
-        String tempNewVersion = newVersion.replace(".", "");
+
+
+        LogUtils.d("isUpgrade-> v1 " + "isUpgrade:" + oldVersion + "/newVersion:" + newVersion);
+        String tempOldVersion = oldVersion.replaceAll("[^0-9]", "");
+        String tempNewVersion = newVersion.replaceAll("[^0-9]", "");
+
+        LogUtils.d("isUpgrade-> v2 " + "tempOldVersion:" + tempOldVersion + "/tempNewVersion:" + tempNewVersion);
         if (tempOldVersion.length() < tempNewVersion.length()) {
             int fillNumber = tempNewVersion.length() - tempOldVersion.length();
             for (int i = 0; i < fillNumber; i++) {
@@ -145,23 +152,36 @@ public class PackageManagerUtils {
                 tempNewVersion = tempNewVersion + "0";
             }
         }
-        int intOldVersion = Integer.parseInt(tempOldVersion);
-        int intNewVersion = Integer.parseInt(tempNewVersion);
-        if (intOldVersion >= intNewVersion) {
+        LogUtils.d("isUpgrade-> v3 " + "tempOldVersion:" + tempOldVersion + "/tempNewVersion:" + tempNewVersion);
+//        int intOldVersion = Integer.parseInt(tempOldVersion);
+//        int intNewVersion = Integer.parseInt(tempNewVersion);
+
+//        if (intOldVersion >= intNewVersion) {
+//            return false;
+//        } else {
+//            return true;
+//        }
+
+        BigInteger bigOldVersion = new BigInteger(tempOldVersion);
+
+        BigInteger bigIntNewVersion = new BigInteger(tempNewVersion);
+
+        if (bigOldVersion.compareTo(bigIntNewVersion) == -1) {
+            return true;
+        } else if (bigIntNewVersion.compareTo(bigIntNewVersion) > 0) {
             return false;
         } else {
-            return true;
+            return false;
         }
     }
 
-    public  void getPackageSystemDataLog(Context context) {
+    public void getPackageSystemDataLog(Context context) {
         PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
         for (ApplicationInfo packageInfo : packages) {
             if ((packageInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
                 LogUtils.d("Installed package (System) :" + packageInfo.packageName);
-            }
-            else
+            } else
                 LogUtils.d("Installed package (User) :" + packageInfo.packageName);
         }
     }

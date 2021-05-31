@@ -217,4 +217,7 @@ dependencies {
 //      debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 //      implementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 
+    //應用程式通知紅點
+    implementation 'com.allenliu.badgeview:library:1.1.1'
+
 }

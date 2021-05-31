@@ -62,8 +62,7 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
     private boolean isForce;
     private ProgressBar pb_install;
     Button bt_close;
-    private String ACTION_INSTALL_COMPLETE = "cm.android.intent.action.INSTALL_COMPLETE";
-    ;
+
 
     @SuppressLint("MissingPermission")
     @Override
@@ -76,7 +75,11 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 
         CommonUtils.closePackage(this);
 
-        registerReceiver(onCompleteReceiver, new IntentFilter(Intent.ACTION_MAIN));
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_VIEW);
+        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+
+        registerReceiver(onCompleteReceiver, intentFilter);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -189,10 +192,9 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     boolean isInstall = install(AppUpadteActivity.this, localPath);
                     if (isInstall) {
                         LogUtils.d("isInstall ->" + isInstall);
-                        EventBus.getDefault().post(new AppUpdateEvent(998989));
-//                        pb_install.setVisibility(View.GONE);
+
 //                        runOnUiThread(() -> Toasty.success(AppUpadteActivity.this, "The Installation is Complete", Toasty.LENGTH_LONG).show());
-                        finish();
+//                        finish();
                         //   finishAffinity();
                     } else {
                         runOnUiThread(() -> Toasty.error(AppUpadteActivity.this, "Installation Failed", Toasty.LENGTH_LONG).show());
@@ -246,9 +248,10 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 
     public boolean install(Context context, String apkPath) {
         PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
-        PackageInstaller.SessionParams params = new PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL);
+        PackageInstaller.SessionParams params = new PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL); //初始化MODE_FULL_INSTALL模式取得物件
         String pkgName = getApkPackageName(context, apkPath);
-        Log.d("安裝", "pkgName:" + pkgName);
+        LogUtils.d("安裝" + "install -> pkgName:" + pkgName);  //com.cnn.mobile.android.phone
+        LogUtils.d("安裝" + "install -> apkPath:" + apkPath);
         if (pkgName == null) {
             return false;
         }
@@ -257,16 +260,21 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
             Method allowDowngrade = PackageInstaller.SessionParams.class.getMethod("setAllowDowngrade", boolean.class);
             allowDowngrade.setAccessible(true);
             allowDowngrade.invoke(params, true);
+            Log.d("安裝", "install -> allowDowngrade.getName():" + allowDowngrade.getName());
         } catch (Exception e) {
             e.printStackTrace();
         }
         OutputStream os = null;
         InputStream is = null;
         try {
+            //創建一個session
             int sessionId = packageInstaller.createSession(params);
             PackageInstaller.Session session = packageInstaller.openSession(sessionId);
             os = session.openWrite(pkgName, 0, -1);
             is = new FileInputStream(apkPath);
+
+            Log.d("安裝", "install -> sessionId" + sessionId); //204982862
+
             byte[] buffer = new byte[1024];
             int len;
             while ((len = is.read(buffer)) != -1) {
@@ -282,10 +290,11 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
             session.commit(PendingIntent.getBroadcast(
                     context,
                     sessionId,
-                    new Intent(Intent.ACTION_MAIN), 0).getIntentSender());
+                    new Intent(Intent.ACTION_VIEW), 0).getIntentSender());
 
         } catch (Exception e) {
             Log.d("安裝", e.getMessage());
+            LogUtils.d("安裝" + "e->" + e.getMessage());
             return false;
         } finally {
             if (os != null) {
@@ -293,6 +302,7 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     os.close();
                 } catch (IOException e) {
                     e.printStackTrace();
+                    LogUtils.d("安裝" + "e->" + e.getMessage());
                 }
             }
             if (is != null) {
@@ -300,6 +310,7 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
                     is.close();
                 } catch (IOException e) {
                     e.printStackTrace();
+                    LogUtils.d("安裝" + "e->" + e.getMessage());
                 }
             }
         }
@@ -333,7 +344,9 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
 //        btnExitFullScreen.removeFloatView();
 //        btnExitFullScreen = null;
 
-        unregisterReceiver(onCompleteReceiver);
+        if(onCompleteReceiver != null){
+            unregisterReceiver(onCompleteReceiver);
+        }
 
         if (disposable != null) disposable.dispose();
         if (downloadUtil != null) downloadUtil.stop();
@@ -342,11 +355,19 @@ public class AppUpadteActivity extends BaseAppCompatActivity {
     }
 
 
-    BroadcastReceiver onCompleteReceiver = new BroadcastReceiver() {
+    public BroadcastReceiver onCompleteReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-//            long completeId = intent.getLongExtra(DownloadManager.ACTION_DOWNLOAD_COMPLETE, -1);
-            LogUtils.d("onCompleteReceiver:");
+            LogUtils.d("onCompleteReceiver:" + intent.getAction());
+            if (intent.getAction().equals(Intent.ACTION_VIEW)) {
+                pb_install.setVisibility(View.GONE);;
+                finish();
+            }else if(intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION)){
+                LogUtils.d("onCompleteReceiver -> 網路斷線");
+            }
         }
     };
+
+
+
 }

@@ -40,7 +40,7 @@
         android:layout_height="match_parent"
         android:visibility="visible">
 
-        <Button
+        <ImageButton
             android:id="@+id/btNetflix_InternetDashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btHulu_InternetDashboard"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
             app:layout_constraintStart_toEndOf="@+id/btNetflix_InternetDashboard"
             app:layout_constraintTop_toTopOf="@+id/btNetflix_InternetDashboard" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btYoutube_InternetDashboard"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
             app:layout_constraintStart_toEndOf="@+id/btHulu_InternetDashboard"
             app:layout_constraintTop_toTopOf="@+id/btHulu_InternetDashboard" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btABC_InternetDashboard"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
             app:layout_constraintTop_toTopOf="@+id/btYoutube_InternetDashboard" />
 
 
-        <Button
+        <ImageButton
             android:id="@+id/btNBC_InternetDashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
             app:layout_constraintStart_toStartOf="@id/btNetflix_InternetDashboard"
             app:layout_constraintTop_toBottomOf="@id/btNetflix_InternetDashboard" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btCNN_InternetDashboard"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
             app:layout_constraintStart_toStartOf="@+id/btHulu_InternetDashboard"
             app:layout_constraintTop_toTopOf="@+id/btNBC_InternetDashboard" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btFoxNews_InternetDashboard"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
@@ -134,80 +134,80 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clView_InternetDashboard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteY="1dp">
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clViewTopBar_InternetDashboard"
+            android:id="@+id/clView_InternetDashboard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteY="35dp">
 
-            <ImageView
-                android:id="@+id/ivTopBar_InternetDashboard"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clViewTopBar_InternetDashboard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/bg_internet_transparent_header"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/ivLineV_InternetDashboard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="463dp"
-                android:layout_marginTop="28dp"
-                android:src="@drawable/line_inversion_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/ivTopBar_InternetDashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_internet_transparent_header"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivLineV_InternetDashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="463dp"
+                    android:layout_marginTop="28dp"
+                    android:src="@drawable/line_inversion_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btHome_InternetDashboard"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/btn_round_home_e6e6e6"
+                    app:layout_constraintStart_toEndOf="@+id/ivLineV_InternetDashboard"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btFullScreen_InternetDashboard"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/btn_round_fullscreen_e6e6e6"
+                    app:layout_constraintStart_toEndOf="@+id/btHome_InternetDashboard"
+                    app:layout_constraintTop_toTopOf="@+id/btHome_InternetDashboard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <Button
-                android:id="@+id/btHome_InternetDashboard"
+                android:id="@+id/btFullScreenExit_InternetDashboard"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="23dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/btn_round_home_e6e6e6"
-                app:layout_constraintStart_toEndOf="@+id/ivLineV_InternetDashboard"
+                android:layout_width="172dp"
+                android:layout_height="172dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/btn_icon_screenfull_exit"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btFullScreen_InternetDashboard"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/btn_round_fullscreen_e6e6e6"
-                app:layout_constraintStart_toEndOf="@+id/btHome_InternetDashboard"
-                app:layout_constraintTop_toTopOf="@+id/btHome_InternetDashboard" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <Button
-            android:id="@+id/btFullScreenExit_InternetDashboard"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="172dp"
-            android:layout_height="172dp"
-            android:layout_marginEnd="100dp"
-            android:background="@drawable/btn_icon_screenfull_exit"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,6 +1,7 @@
 package com.dyaco.spiritbike.webapi;
 
 import com.dyaco.spiritbike.settings.UpdateBean;
+import com.dyaco.spiritbike.settings.appupdate.AppUpdateData;
 import com.dyaco.spiritbike.support.TimeZoneBean;
 
 import java.util.Map;
@@ -48,6 +49,9 @@ public interface IServiceApi {
   //  @GET("spirit/xe395/debug/update.json")
     @GET("update.json")
     Observable<UpdateBean> apiCheckUpdate();
+
+    @GET("app_update.json")
+    Observable<AppUpdateData> apiCheckAppUpdate();
 
     @GET("json.gp")
     Observable<TimeZoneBean> apiGetTimeZone();

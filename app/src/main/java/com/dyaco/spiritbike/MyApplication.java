@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
+import android.os.Parcelable;
 import android.os.PowerManager;
 import android.util.Log;
 
@@ -31,6 +32,7 @@ import com.dyaco.spiritbike.engineer.RxSettingBean;
 import com.dyaco.spiritbike.product_flavors.ModeEnum;
 
 import com.dyaco.spiritbike.product_flavors.InitProduct;
+import com.dyaco.spiritbike.settings.appupdate.AppUpdateData;
 import com.dyaco.spiritbike.support.CommonUtils;
 import com.dyaco.spiritbike.support.ConnectionStateMonitor;
 import com.dyaco.spiritbike.support.MsgEvent;
@@ -223,6 +225,7 @@ public class MyApplication extends Application {
     public static final int MIRRORING_SWITCH_DASHBOARD_5 = 9955;
 
     DeviceSettingBean deviceSettingBean;
+    AppUpdateData appUpdateData;
 
     @Override
     public void onCreate() {
@@ -1603,7 +1606,15 @@ public class MyApplication extends Application {
         MMKV.defaultMMKV().encode("DeviceSettingBean", deviceSettingBean);
     }
 
-//    private void initSetting() {
+    public AppUpdateData getAppUpdateData() {
+        return appUpdateData = MMKV.defaultMMKV().decodeParcelable("AppUpdateData", AppUpdateData.class, new AppUpdateData());
+    }
+
+    public void setAppUpdateData(AppUpdateData appUpdateData) {
+        MMKV.defaultMMKV().encode("AppUpdateData", appUpdateData);
+    }
+
+    //    private void initSetting() {
 //
 //        //  MMKV.defaultMMKV().remove("DeviceSettingBean");
 //

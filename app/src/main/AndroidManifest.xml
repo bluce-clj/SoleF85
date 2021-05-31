@@ -196,6 +196,21 @@
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
+
+
+        <receiver android:name=".internet.InternetFragment$AppUpdateReceiver">
+            <intent-filter>
+                <!-- 應用安裝  -->
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <!-- 應用卸載 -->
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <!-- 應用替換  -->
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>

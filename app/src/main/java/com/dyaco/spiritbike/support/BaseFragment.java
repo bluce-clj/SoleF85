@@ -41,8 +41,13 @@ public abstract class BaseFragment extends Fragment {
         return null;
     }
 
-    public String getCurrentFragmentName(){
-        return getVisibleFragment().getClass().getSimpleName() +"->";
+    public String getCurrentFragmentName() {
+        if (getVisibleFragment() != null) {
+            return getVisibleFragment().getClass().getSimpleName() + "->";
+        } else {
+            return null;
+        }
+
     }
 
 
