@@ -245,6 +245,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
 
 
 //            initBtnBadgeView();
+            checkAppUpdate();
 
             m_btHome_InternetDashboard.setAlpha(0.9f);
             m_btFullScreenExit_InternetDashboard.setAlpha(0.9f);
@@ -410,10 +411,12 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
         initHookWebView();
         initDelay(view);
 
-        Looper.myQueue().addIdleHandler(() -> {
-            initBtnBadgeView();
-            return false;
-        });
+//        Looper.myQueue().addIdleHandler(() -> {
+//            initBtnBadgeView();
+//            return false;
+//        });
+
+        checkAppUpdate();
 //        getLog();
     }
 
@@ -1092,10 +1095,12 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
 
         int installPackageStatus = appUpdateEvent.getEventType();
 
-        Looper.myQueue().addIdleHandler(() -> {
-            initBtnBadgeView();
-            return false;
-        });
+//        Looper.myQueue().addIdleHandler(() -> {
+//            initBtnBadgeView();
+//            return false;
+//        });
+
+        checkAppUpdate();
 
         switch (installPackageStatus) {
             case AppUpdateManager.REPLACED_STATUS_NETFLIX:
@@ -1247,12 +1252,12 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
 
 
     private void checkAppUpdate() {
-        Log.d("更新", "checkAppUpdate: ");
+        LogUtils.d("checkAppUpdate: ");
         BaseApi.request(BaseApi.createApi2(IServiceApi.class).apiCheckAppUpdate(),
                 new BaseApi.IResponseListener<AppUpdateData>() {
                     @Override
                     public void onSuccess(AppUpdateData data) {
-                        LogS.printJson("更新", new Gson().toJson(data), "");
+                        LogS.printJson("checkAppUpdate ->", new Gson().toJson(data), "");
                         try {
                             appUpdateBeans = data.getAppUpdateBeans();
                             if (appUpdateBeans != null) {
@@ -1315,7 +1320,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
-                                LogUtils.d("WEB_API-checkUpdate失敗");
+                                LogUtils.d("checkAppUpdate" +"checkUpdate Exception:" + e.toString());
 
 
                         }
@@ -1324,6 +1329,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                     @Override
                     public void onFail() {
                         Log.d("WEB_API-checkUpdate", "失敗");
+                        LogUtils.d("checkAppUpdate" +"checkUpdate error:" );
                     }
                 });
     }
