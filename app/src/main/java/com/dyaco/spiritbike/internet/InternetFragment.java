@@ -133,7 +133,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
         }
 
         packageManagerUtils = new PackageManagerUtils();
-        initTestData();
+//        initTestData();
         LogUtils.d(getCurrentFragmentName() + "onCreate()");
     }
 
@@ -593,6 +593,11 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
             if (view.getId() == R.id.btNetflix_InternetDashboard) {
                 //  if (CommonUtils.isFastClick()) return;
 
+                if(!CommonUtils.isConnected(getActivity())){
+                    Toasty.warning(getInstance(), "沒有網路", Toasty.LENGTH_LONG).show();
+                    return;
+                }
+
                 if (appUpdateBeans != null) {
                     String appUpdateNetflixVersion = AppUpdateManager.getInstance(getActivity()).getAppUpdateVersion(appUpdateBeans, AppUpdateManager.PACKAGE_NAME_NETFLIX);
                     String appUpdateNetflixDownloadUrl = AppUpdateManager.getInstance(getActivity()).getAppUpdateDownloadUrl(appUpdateBeans, AppUpdateManager.PACKAGE_NAME_NETFLIX);
@@ -620,6 +625,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                             }
                         });
                     }
+                }else {
+                    checkAppUpdate();
                 }
             } else if (view.getId() == R.id.btHulu_InternetDashboard) {
                 if (appUpdateBeans != null) {
@@ -733,7 +740,7 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                     }
                 }
             } else if (view.getId() == R.id.btCNN_InternetDashboard) {
-                if (appUpdateBeans != null) {
+                if (appUpdateBeans != null && CommonUtils.isConnected(getActivity())) {
                     String appUpdateCnnVersion = AppUpdateManager.getInstance(getActivity()).getAppUpdateVersion(appUpdateBeans, AppUpdateManager.PACKAGE_NAME_CNN);
                     String appUpdateCnnDownloadUrl = AppUpdateManager.getInstance(getActivity()).getAppUpdateDownloadUrl(appUpdateBeans, AppUpdateManager.PACKAGE_NAME_CNN);
                     String packageCnnVersion = AppUpdateManager.getInstance(getActivity()).getCnnInfo().versionName;
@@ -764,6 +771,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                             Toasty.warning(getInstance(), "NO CNN APP", Toasty.LENGTH_LONG).show();
                         }
                     }
+                }else {
+                    Toasty.warning(getInstance(), "沒有網路", Toasty.LENGTH_LONG).show();
                 }
             } else if (view.getId() == R.id.btFoxNews_InternetDashboard) {
                 if (appUpdateBeans != null) {
@@ -1257,7 +1266,8 @@ public class InternetFragment extends BaseFragment implements AdvancedWebView.Li
                 new BaseApi.IResponseListener<AppUpdateData>() {
                     @Override
                     public void onSuccess(AppUpdateData data) {
-                        LogS.printJson("checkAppUpdate ->", new Gson().toJson(data), "");
+                        LogS.printJson("checkAppUpdate -> onSuccess", new Gson().toJson(data), "");
+                        LogUtils.d("checkAppUpdate -> onSuccess -> AppUpdateData:" + new Gson().toJson(data));
                         try {
                             appUpdateBeans = data.getAppUpdateBeans();
                             if (appUpdateBeans != null) {
